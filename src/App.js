@@ -28,6 +28,7 @@ import IRRCalculator from "./components/calculator/IRR";
 import RentalYeildCalculator from "./components/calculator/RentalYeild";
 import MortgageBorrowerCalculator from "./components/calculator/MortgageBorrower";
 import Budget_Boss from "./components/calculator/Budget_Boss";
+import CreditCard from "./components/calculator/CreditCard";
 import ScrollToTop from "./components/ScrolltoTop";
 import Blogs from "./components/Blogs";
 import BlogsWriting from "./components/BlogsWriting";
@@ -36,7 +37,9 @@ import UnderConst from "./components/UnderDevelopement";
 import PrivacyNotice from "./components/Homepage/Footer Files/privacyNotice";
 import ADMINDASHBOARD from "./components/ADMINDASHBOARD";
 import Errors from "./components/error";
-import Books from "./components/Resources";
+import Books from "./components/Books";
+import Test from "./components/calculator/test/MortgageTest";
+
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import Stocks from "./components/stock";
 import BasicsOfTechnicalAnalysis from "./components/Resources/basicsOfTechnicalAnalysis";
@@ -110,6 +113,7 @@ const App = () => {
             <Route path="/finance" element={<Finance baseURL={baseURL} />} />
             <Route path="/comingSoon" element={<Coming baseURL={baseURL}/>} />
             <Route path="/getNow" element={<GetNow baseURL={baseURL}/>} />
+            <Route path="/tools/credit-card" element={<CreditCard />} />
             <Route
               path="/profile"
               element={
