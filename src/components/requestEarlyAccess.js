@@ -99,18 +99,18 @@ const writeDate = formatDate(date);
 
   if (submitted) {
     return (
-      <div className="bg-white text-[#223876] font-inter min-h-screen flex justify-center items-center">
+      <div className="bg-[#070707] text-gray-100 font-inter min-h-screen flex justify-center items-center">
         <div className="text-center">
           <img
             src={successImg}
             alt="Success"
             className="mx-auto mb-4 w-32 md:w-48"
           />
-          <h1 className="text-2xl md:text-4xl font-semibold mb-4">Success!</h1>
-          <p className="text-lg md:text-xl">Thank you for submitting the form.</p>
-          <p className="text-lg md:text-xl mt-4">Check your email for further details.</p>
+          <h1 className="text-2xl md:text-4xl font-semibold mb-4 text-gray-200">Success!</h1>
+          <p className="text-lg md:text-xl text-gray-200">Thank you for submitting the form.</p>
+          <p className="text-lg md:text-xl mt-4 text-gray-200">Check your email for further details.</p>
           <div className="mt-6">
-            <a href="/" className="inline-flex items-center bg-[#3CB371] text-white text-lg md:text-xl font-semibold py-2 px-6 rounded-full">
+            <a href="/" className="inline-flex items-center bg-[#9061f9] text-white text-lg md:text-xl font-semibold py-2 px-6 rounded-full">
               <FaHome className="mr-2" />
               Home
             </a>
@@ -121,7 +121,7 @@ const writeDate = formatDate(date);
   }
 
   return (
-    <div className="bg-white text-[#223876] font-inter min-h-screen flex justify-center items-center">
+    <div className="bg-[#070707] text-gray-100 font-inter min-h-screen flex justify-center items-center bg-gradient-to-tr from-[#070707] via-[#7020b530] to-black">
       {submissionError && (
         <div className="absolute top-0 left-0 w-full bg-red-500 text-white text-center py-2">
           {submissionError}
@@ -139,14 +139,14 @@ const writeDate = formatDate(date);
             <div className="flex items-center mb-4">
               <button
                 onClick={handleStart}
-                className="bg-[#3CB371] text-white text-lg md:text-xl font-semibold py-2 px-6 rounded-lg"
+                className="bg-[#9061f9] text-white text-lg md:text-xl font-semibold py-2 px-6 rounded-lg"
               >
                 Start
               </button>
             </div>
             <div className="flex items-center text-sm md:text-base">
-              <span className="text-[#3CB371]">&#x25CF;</span>
-              <span className="ml-2 text-[#223876]">Takes less than a minute</span>
+              <span className="text-[#9061f9]">&#x25CF;</span>
+              <span className="ml-2 text-gray-400">Takes less than a minute</span>
             </div>
           </div>
         </div>
@@ -156,10 +156,10 @@ const writeDate = formatDate(date);
             {formStep === 1 && (
               <div className="flex flex-col items-start pb-2 mb-8 w-full">
                 <label htmlFor="name" className="flex items-center space-x-2 text-lg md:text-xl font-normal">
-                  <span className="text-[#3CB371] text-xl md:text-2xl">
+                  <span className="text-[#9061f9] text-xl md:text-2xl">
                     <FaUser />
                   </span>
-                  <span className="text-[#223876] text-lg md:text-xl">Name*</span>
+                  <span className="text-gray-200 text-lg md:text-xl">Name*</span>
                 </label>
                 <input
                   id="name"
@@ -168,14 +168,14 @@ const writeDate = formatDate(date);
                   placeholder="Type your answer here..."
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full bg-transparent border-b-2 border-[#223876] text-[#223876] placeholder-[#223876] mt-4 focus:outline-none focus:ring-0 text-lg md:text-xl"
+                  className="w-full bg-transparent text-gray-200 placeholder-[#C8C8C8] mt-4 focus:outline-none focus:ring-0 text-lg md:text-xl"
                 />
                 {errors.name && <p className="text-red-500 mt-2">{errors.name}</p>}
                 <div className="flex justify-end w-full mt-4">
                   <button
                     type="button"
                     onClick={handleNextStep}
-                    className="bg-[#3CB371] text-white font-semibold py-2 px-6 rounded-full"
+                    className="bg-[#9061f9] text-white font-semibold py-2 px-6 rounded-full"
                   >
                     Next <i className="fas fa-chevron-right"></i>
                   </button>
@@ -186,10 +186,10 @@ const writeDate = formatDate(date);
             {formStep === 2 && (
               <div className="flex flex-col items-start pb-2 mb-8 w-full">
                 <label htmlFor="email" className="flex items-center space-x-2 text-lg md:text-xl font-normal">
-                  <span className="text-[#3CB371] text-xl md:text-2xl">
+                  <span className="text-[#9061f9] text-xl md:text-2xl">
                     <FaEnvelope />
                   </span>
-                  <span className="text-[#223876] text-lg md:text-xl">Email*</span>
+                  <span className="text-[#223876] text-lg md:text-xl text-gray-200">Email*</span>
                 </label>
                 <input
                   id="email"
@@ -198,21 +198,21 @@ const writeDate = formatDate(date);
                   placeholder="Type your answer here..."
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full bg-transparent border-b-2 border-[#223876] text-[#223876] placeholder-[#223876] mt-4 focus:outline-none focus:ring-0 text-lg md:text-xl"
+                  className="w-full bg-transparent text-gray-200 placeholder-[#C8C8C8] mt-4 focus:outline-none focus:ring-0 text-lg md:text-xl"
                 />
                 {errors.email && <p className="text-red-500 mt-2">{errors.email}</p>}
                 <div className="flex justify-between items-center mt-8 w-full">
                   <button
                     type="button"
                     onClick={handlePrevStep}
-                    className="bg-[#3CB371] text-white font-semibold py-2 px-4 rounded-full flex items-center"
+                    className="bg-[#9061f9] text-white font-semibold py-2 px-4 rounded-full flex items-center"
                   >
                     <i className="fas fa-chevron-left"></i>
                   </button>
                   <button
                     type="button"
                     onClick={handleNextStep}
-                    className="bg-[#3CB371] text-white font-semibold py-2 px-6 rounded-full"
+                    className="bg-[#9061f9] text-white font-semibold py-2 px-6 rounded-full"
                   >
                     Next <i className="fas fa-chevron-right"></i>
                   </button>
@@ -223,10 +223,10 @@ const writeDate = formatDate(date);
             {formStep === 3 && (
               <div className="flex flex-col items-start pb-2 mb-8 w-full">
                 <label htmlFor="phone" className="flex items-center space-x-2 text-lg md:text-xl font-normal">
-                  <span className="text-[#3CB371] text-xl md:text-2xl" style={{ transform: 'rotateY(180deg)' }}>
+                  <span className="text-gray-200 text-xl md:text-2xl" style={{ transform: 'rotateY(180deg)' }}>
                     <FaPhone />
                   </span>
-                  <span className="text-[#223876] text-lg md:text-xl">Phone*</span>
+                  <span className="text-gray-200 text-lg md:text-xl">Phone*</span>
                 </label>
                 <div className="w-full mt-4">
                   <PhoneInput
@@ -236,7 +236,7 @@ const writeDate = formatDate(date);
                     inputStyle={{
                       background: 'transparent',
                       borderBottom: '2px solid #223876',
-                      color: '#223876',
+                      color: '#C8C8C8',
                       fontSize: '1.25rem',
                       width: '100%',
                     }}
@@ -255,14 +255,14 @@ const writeDate = formatDate(date);
                   <button
                     type="button"
                     onClick={handlePrevStep}
-                    className="bg-[#3CB371] text-white font-semibold py-2 px-4 rounded-full flex items-center"
+                    className="bg-[#9061f9] text-white font-semibold py-2 px-4 rounded-full flex items-center"
                   >
                     <i className="fas fa-chevron-left"></i>
                   </button>
                   <button
                     type="button"
                     onClick={handleNextStep}
-                    className="bg-[#3CB371] text-white font-semibold py-2 px-6 rounded-full"
+                    className="bg-[#9061f9] text-white font-semibold py-2 px-6 rounded-full"
                   >
                     Next <i className="fas fa-chevron-right"></i>
                   </button>
@@ -283,13 +283,13 @@ const writeDate = formatDate(date);
                   <button
                     type="button"
                     onClick={handlePrevStep}
-                    className="bg-[#3CB371] text-white font-semibold py-2 px-4 rounded-full flex items-center"
+                    className="bg-[#9061f9] text-white font-semibold py-2 px-4 rounded-full flex items-center"
                   >
                     <i className="fas fa-chevron-left"></i>
                   </button>
                   <button
                     type="submit"
-                    className="bg-[#3CB371] text-white font-semibold py-2 px-6 rounded-full"
+                    className="bg-[#9061f9] text-white font-semibold py-2 px-6 rounded-full"
                   >
                     Submit
                   </button>

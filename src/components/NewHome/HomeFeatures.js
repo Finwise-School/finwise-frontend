@@ -45,7 +45,7 @@ const Features = () => {
                                     border: '1px solid rgba(255, 255, 255, 0.3)',
                                     // marginLeft: '40px',
                                 }}
-                                data-aos="fade-right"
+            
                             >
                                 <div className="text-left">
                                     <i className="fas fa-shopping-cart text-2xl text-white mb-2"></i>
@@ -71,7 +71,7 @@ const Features = () => {
                                     border: '1px solid rgba(255, 255, 255, 0.3)',
                                     // marginLeft: '40px',
                                 }}
-                                data-aos="fade-right"
+            
                             >
                                 <div className="text-left">
                                     <i className="fas fa-money-bill-wave text-2xl text-white mb-2"></i>
@@ -97,7 +97,7 @@ const Features = () => {
                                     border: '1px solid rgba(255, 255, 255, 0.3)',
                                     // marginLeft: '40px',
                                 }}
-                                data-aos="fade-right"
+            
                             >
                                 <div className="text-left">
                                     <i className="fas fa-tags text-2xl text-white mb-2"></i>

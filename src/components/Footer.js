@@ -51,6 +51,7 @@ const Footer = () => {
 
   return (
     <div className="w-full">
+      <hr></hr>
       {/* Modal */}
       <Modal show={openModal} size="md" onClose={() => setOpenModal(false)} popup>
         <Modal.Header />

@@ -8,7 +8,7 @@ import Profile from "./components/Profile";
 import FAQ from "./components/FAQ";
 import HomePage from "./components/NewLandingPage";
 import EarlyAccess from "./components/requestEarlyAccess";
-import Contact from "./components/Contact";
+import Contact from "./components/NewContact";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Calculator from "./components/Calculator";
@@ -51,7 +51,6 @@ import Smart from "./components/Resources/Smartmoney";
 import Finance from "./components/Resources/finance";
 import Coming from "./components/comingSoon";
 import GetNow from "./components/Resources/getNow";
-import VideoFrame from "./components/VideoFrame";
 import Resources from "./components/NewResources";
 import ViewAllFAQs from "./components/ViewAllFAQs";
 
@@ -86,7 +85,6 @@ const App = () => {
             <Route path="/tools" element={<Calculator baseURL={baseURL} />} />
             <Route path="/maintainence" element={<UnderConst baseURL={baseURL} />} />
             <Route path="/about" element={<AboutUs baseURL={baseURL} />} />
-            <Route path="/videoframe" element={<VideoFrame baseURL={baseURL} />} />
             <Route path="/signup" element={<SignupPage baseURL={baseURL} />} />
             <Route path="/login" element={<LoginPage baseURL={baseURL} />} />
             <Route path="/clients" element={<Cards baseURL={baseURL} />} />
