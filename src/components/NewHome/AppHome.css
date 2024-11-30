@@ -1,0 +1,23 @@
+
+.bgaddsback{
+    background-image: url('../../assets/images/homeimages/gradient.svg');
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size:contain;
+    /* background-size: ; */
+}
+.bgaddsf{
+    background-image: url("../../assets/images/homeimages/featureshome.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+}
+@media (max-width:768px){
+    .bgaddsf{
+        background-image: url("../../assets/images/homeimages/featureshome.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+    }
+}
+

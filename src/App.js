@@ -6,13 +6,13 @@ import "slick-carousel/slick/slick-theme.css";
 import Cards from "./components/carouselCards";
 import Profile from "./components/Profile";
 import FAQ from "./components/FAQ";
-import HomePage from "./components/HomePage";
+import HomePage from "./components/NewLandingPage";
 import EarlyAccess from "./components/requestEarlyAccess";
 import Contact from "./components/Contact";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Calculator from "./components/Calculator";
-import AboutUs from "./components/Abouts/AboutUs";
+import AboutUs from "./components/NewAboutUs";
 import LoginPage from "./components/Login/logining";
 import SignupPage from "./components/Login/SignupPage";
 import Fire from "./components/calculator/Fire";
@@ -51,6 +51,9 @@ import Smart from "./components/Resources/Smartmoney";
 import Finance from "./components/Resources/finance";
 import Coming from "./components/comingSoon";
 import GetNow from "./components/Resources/getNow";
+import VideoFrame from "./components/VideoFrame";
+import Resources from "./components/NewResources";
+import ViewAllFAQs from "./components/ViewAllFAQs";
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated } = useAuth();
@@ -83,6 +86,7 @@ const App = () => {
             <Route path="/tools" element={<Calculator baseURL={baseURL} />} />
             <Route path="/maintainence" element={<UnderConst baseURL={baseURL} />} />
             <Route path="/about" element={<AboutUs baseURL={baseURL} />} />
+            <Route path="/videoframe" element={<VideoFrame baseURL={baseURL} />} />
             <Route path="/signup" element={<SignupPage baseURL={baseURL} />} />
             <Route path="/login" element={<LoginPage baseURL={baseURL} />} />
             <Route path="/clients" element={<Cards baseURL={baseURL} />} />
@@ -102,7 +106,8 @@ const App = () => {
             <Route path="/blogswriting" element={<BlogsWriting baseURL={baseURL} />} />
             <Route path="/blogs/uk-tax-system" element={<Blogs baseURL={baseURL} />} />
             <Route path="/admindashboard" element={<ADMINDASHBOARD baseURL={baseURL} />} />
-            <Route path="/books" element={<Books baseURL={baseURL} />} />
+            {/* <Route path="/books" element={<Books baseURL={baseURL} />} /> */}
+            <Route path="/resources" element={<Resources baseURL={baseURL} />} />
             <Route path="/stock" element={<Stocks baseURL={baseURL} />} />
             <Route path="/basics" element={<BasicsOfTechnicalAnalysis baseURL={baseURL} />} />
             <Route path="/budgetBlue" element={<BudgetBlueprint baseURL={baseURL} />} />
@@ -113,6 +118,7 @@ const App = () => {
             <Route path="/finance" element={<Finance baseURL={baseURL} />} />
             <Route path="/comingSoon" element={<Coming baseURL={baseURL}/>} />
             <Route path="/getNow" element={<GetNow baseURL={baseURL}/>} />
+            <Route path="/alls" element={<ViewAllFAQs baseURL={baseURL}/>} />
             <Route path="/tools/credit-card" element={<CreditCard />} />
             <Route
               path="/profile"

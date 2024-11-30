@@ -1,294 +1,219 @@
-import React from "react";
-import FooterColumn from "./Homepage/Footer Files/FooterColumn";
-import EmailSubscription from "./Homepage/Footer Files/EmailSubscription";
-import {
-  FaFacebookF,
-  FaLinkedinIn,
-  FaTwitter,
-  FaYoutube,
-  FaInstagram,
-} from "react-icons/fa";
-import { useMediaQuery } from "react-responsive";
-// import { Link } from "react-router-dom";
-import { Link as RouterLink } from "react-router-dom";
-import { Link, animateScroll as scroll } from "react-scroll";
+import React, { useState } from 'react';
+import footerimg from '../assets/images/footerimg.svg';
+import { Link } from 'react-router-dom';
+import { Spinner, Button, Modal } from "flowbite-react";
+import axios from 'axios';
 
-function Footer() {
-  const footerColumns = [
-    {
-      title: "Tools",
-      items: [
-        { name: "Budget Boss", path: "/maintainence" },
-        { name: "Goal SIP", path: "/tools/goal-sip" },
-        { name: "SIP Calculator", path: "/tools/sip" },
-        { name: "F.I.R.E", path: "/tools/fire" },
-        { name: "Many more", path: "/tools" },
-      ],
-    },
-    {
-      title: "Blogs",
-      items: [
-        { name: "UK Tax System", path: "/blogs/uk-tax-system" },
-        { name: "Debt Management", path: "/blogs" },
-        { name: "Negotiation Wizardry", path: "/blogs" },
-        { name: "How to Budget", path: "/blogs" },
-        { name: "Investing Yes or No ?", path: "/blogs" },
-      ],
-    },
-    {
-      title: "Resources",
-      items: [
-        { name: "Budgeting", path: "/budgeting" },
-        { name: "Stock Market", path: "/stock" },
-        { name: "Taxation", path: "/taxation" },
-        { name: "Retirement Planning", path: "/retirement" },
-        { name: "More", path: "/books" },
-      ],
-    },
-    {
-      title: "Contact Us",
-      items: [
-        { name: "Contact", path: "/contact" },
-        { name: "Our Offices", path: "/contact" },
-      ],
-    },
-  ];
+const Footer = () => {
+  const [phone, setPhone] = useState('');
+  const [submit, isSubmit] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
-  const socialIcons = [
-    {
-      icon: <FaInstagram />,
-      alt: "Instagram",
-      url: "https://www.instagram.com/finwiseschool/",
-    },
-    {
-      icon: <FaLinkedinIn />,
-      alt: "LinkedIn",
-      url: "https://uk.linkedin.com/company/finwiseschool",
-    },
-    {
-      icon: <FaYoutube />,
-      alt: "YouTube",
-      url: "https://www.youtube.com/@finwiseschool",
-    },
-  ];
+  const formatDate = (date) => {
+    const options = { day: 'numeric', month: 'short', year: '2-digit' };
+    return new Intl.DateTimeFormat('en-GB', options).format(date);
+  };
 
-  const isLarge = useMediaQuery({ minWidth: 1024 });
-  const isMedium = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
-  const isSmall = useMediaQuery({ maxWidth: 767 });
+  const date = new Date();
+  const writeDate = formatDate(date);
 
-  const scrollToTestimonials = () => {
-    const testimonialsSection = document.getElementById("testimonials");
-    if (testimonialsSection) {
-      testimonialsSection.scrollIntoView({ behavior: "smooth" });
+  const handlePhoneChange = (e) => {
+    const { value } = e.target;
+    const cleanedValue = value.replace(/\D/g, '').slice(0, 10);
+    setPhone(cleanedValue);
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    if (phone.length === 10) {
+      isSubmit(true);
+      const phoneData = { phone, writeDate };
+
+      try {
+        const response = await axios.post('https://api.finwiseschool.com/api/phoneData', phoneData);
+
+        if (response.status === 201) {
+          console.log('Phone Number Received');
+          setOpenModal(true);
+        } else {
+          console.error('Error saving data:', response.data);
+        }
+      } catch (error) {
+        console.error('Error submitting the form:', error);
+      } finally {
+        isSubmit(false);
+      }
+    } else {
+      console.error('Invalid phone number. It should be exactly 10 digits.');
     }
   };
 
   return (
-    <>
-      {isLarge || isMedium ? (
-        <footer className="flex flex-col w-full bg-black">
-          {/* Top Section */}
-          <div className="flex flex-wrap gap-2 items-start px-2 py-6 w-full justify-between md:justify-center max-md:flex-col max-md:items-center max-md:text-center">
-            <EmailSubscription />
+    <div className="w-full">
+      {/* Modal */}
+      <Modal show={openModal} size="md" onClose={() => setOpenModal(false)} popup>
+        <Modal.Header />
+        <Modal.Body>
+          <div className="text-center">
+            <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+              Thank you for subscribing to our newsletter. We’ll keep you updated!
+            </h3>
+            <div className="flex justify-center gap-4">
+              <Button color="gray" onClick={() => setOpenModal(false)}>
+                OK
+              </Button>
+            </div>
+          </div>
+        </Modal.Body>
+      </Modal>
 
-            {/* Footer Columns */}
-            <div className="flex flex-1 gap-2 justify-between items-start font-medium flex-grow flex-wrap max-md:flex-col max-md:items-center max-md:text-center">
-              {footerColumns.map((column, index) => (
-                <FooterColumn
-                  key={index}
-                  title={column.title}
-                  items={column.items}
-                />
-              ))}
+      <footer className="bg-black w-full">
+        <div className="max-w-screen-xl mx-auto px-0 py-16">
+          <div className="flex flex-col lg:flex-row items-center justify-between lg:items-start">
+
+            {/* Newsletter Section */}
+            <div className="text-center lg:text-left mb-8 lg:mb-0">
+              <h1
+                className="md:text-4xl md:text-left text-center text-3xl font-bold text-transparent"
+                style={{
+                  backgroundImage: "linear-gradient(to right, #22c55e, #a855f7)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Master your Finance with Finwise
+              </h1>
+              <form
+                onSubmit={onSubmit}
+                className="flex items-center mt-6 space-x-4"
+              >
+                <div className="flex items-center p-8 space-x-2 flex-col md:flex-row">
+                  <input
+                    type="text"
+                    placeholder="Phone no"
+                    className="bg-gray-800 text-white px-4 py-3 rounded-full w-64 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  />
+                  <div className='w-full md:px-0 px-20 mt-3 md:mt-0'>
+                    <button className="bg-purple-500 md:w-[100%] w-full text-white px-6 md:mt-0 py-3 rounded-full flex items-center justify-center hover:bg-purple-600">
+                      Send <i className="fas fa-paper-plane ml-2"></i>
+                    </button>
+                  </div>
+
+                </div>
+
+              </form>
             </div>
           </div>
 
-          {/* Bottom Sectidsfsdfsdfdsfsdon */}
-          <div className="flex flex-col md:flex-row items-center justify-between px-4 py-2 bg-zinc-900 text-xs text-center">
-            {/* Text Links */}
-            <div className="flex flex-col md:flex-row items-center text-white justify-center md:justify-start w-full md:w-auto">
-              <p className="text-xs md:text-sm m-auto md:m-0">
-                @2024 Finwise School All Rights Reserved.
-              </p>
-              <a
-                href="#terms"
-                className="text-gray-400 hover:text-white text-xs md:text-sm p-1 m-auto"
-              >
-                Terms & Conditions
+          <hr className="border-black my-8" />
+
+          {/* Footer Links */}
+          <div className="grid-for-calci grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
+            <div>
+              <h3 className="text-white font-semibold mb-4">Tools</h3>
+              <ul className="text-gray-400 space-y-2">
+                <li><Link to="/tools/budget-boss">Budget Boss</Link></li>
+                <li><Link to="/tools/goal-sip">Goal SIP</Link></li>
+                <li><Link to="/tools/sip">SIP Calculator</Link></li>
+                <li><Link to="/tools/fire">F.I.R.E</Link></li>
+                <li><Link to="/tools/">Many more</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-white font-semibold mb-4">Blogs</h3>
+              <ul className="text-gray-400 space-y-2">
+                <li><Link to="blogs/uk-tax-system">UK Tax System</Link></li>
+                <li><Link to="blogs/">Debt Management</Link></li>
+                <li><Link to="blogs/">Negotiation Wizardry</Link></li>
+                <li><Link to="blogs/">How to Budget</Link></li>
+                <li><Link to="blogs/">Investing Yes or No?</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-white font-semibold mb-4">Resources</h3>
+              <ul className="text-gray-400 space-y-2">
+                <li><Link to="/budgeting">Budgeting</Link></li>
+                <li><Link to="/stock">Stock Market</Link></li>
+                <li><Link to="/taxation">Taxation</Link></li>
+                <li><Link to="/retirement">Retirement Planning</Link></li>
+                <li><Link to="/books">More</Link></li>
+              </ul>
+            </div>
+            <div>
+              <img
+                id="footerimgg"
+                src={footerimg}
+                alt="Footer Image"
+                className="w-full rounded-lg shadow-lg"
+                style={{
+                  width: "70%",
+                  marginTop: "0",
+                }}
+              />
+              <style>
+                {`
+                  @media (min-width: 1024px) {
+                    #footerimgg {
+                      position: relative;
+                      top: -10rem;
+                      width: 100%;
+                    }
+                  }
+                `}
+              </style>
+            </div>
+          </div>
+
+          <hr className="border-gray-700 my-8" />
+
+          {/* Footer Bottom */}
+          <div className="flex flex-col lg:flex-row items-center justify-between">
+            <div className="flex items-center space-x-4 mb-6 lg:mb-0">
+              <span className="text-gray-400">Follow us</span>
+              <a href="#" className="text-gray-400 hover:text-white">
+                <i className="fab fa-spotify"></i>
               </a>
-              <a
-                href="/privacy"
-                target="_blank"
-                className="text-gray-400 hover:text-white text-xs md:text-sm p-1 m-auto"
-              >
-                Privacy Notice
+              <a href="#" className="text-gray-400 hover:text-white">
+                <i className="fab fa-facebook-f"></i>
               </a>
-            </div>
-            {/* Social Icons */}
-            <div className="flex gap-2 items-center justify-center md:justify-end mt-4 md:mt-0">
-              {socialIcons.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.alt}
-                  className="flex items-center justify-center p-1.5 bg-neutral-900 h-8 w-8 rounded-full text-white cursor-pointer hover:bg-neutral-700 transition-colors"
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
-          </div>
-        </footer>
-      ) : (
-        <div className="footerMobile py-[50px] gap-[40px] bg-black">
-          <div className="fmUpperContainer gap-[50px] px-[16px] bg-black">
-            <div className="fmUpperSubContainer gap-5">
-              <EmailSubscription />
-            </div>
-            <div className="fmBottomSubContainer flex flex-col">
-              <div className="frame1 gap-5 flex flex-row justify-center">
-                <div className="border-b border-[#262626] pb-5 gap-4 w-2/4">
-                  <p className="finwise-para font-medium text-base">
-                    {footerColumns[0].title}
-                  </p>
-                  <div className="flex flex-col">
-                    {footerColumns[0].items.map((items, index) =>
-                      items.path.startsWith("#") ? (
-                        <Link
-                          to={items.path.substring(1)} // Remove the '#' from the path
-                          smooth={true}
-                          duration={500}
-                          key={index}
-                          className={
-                            index > 0
-                              ? "font-medium text-sm leading-6 text-[#FFFFFF] mb-1"
-                              : ""
-                          }
-                        >
-                          {items.name}
-                        </Link>
-                      ) : (
-                        <RouterLink
-                          key={index}
-                          to={items.path}
-                          className="font-medium text-sm leading-6 text-[#FFFFFF] mb-1"
-                        >
-                          {items.name}
-                        </RouterLink>
-                      )
-                    )}
-                  </div>
-                </div>
-                <div className="border-b border-l border-[#262626] pb-5 pl-5 gap-4 w-2/4">
-                  <p className="finwise-para font-medium text-base">
-                    {footerColumns[1].title}
-                  </p>
-                  <div className="flex flex-col">
-                    {footerColumns[1].items.map((items, index) =>
-                      items.path.startsWith("#") ? (
-                        <Link
-                          to={items.path.substring(1)} // Remove the '#' from the path
-                          smooth={true}
-                          duration={500}
-                          key={index}
-                          className={
-                            index > 0
-                              ? "font-medium text-sm leading-6 text-[#FFFFFF] mb-1"
-                              : ""
-                          }
-                        >
-                          {items.name}
-                        </Link>
-                      ) : (
-                        <RouterLink
-                          key={index}
-                          to={items.path}
-                          className="font-medium text-sm leading-6 text-[#FFFFFF] mb-1"
-                        >
-                          {items.name}
-                        </RouterLink>
-                      )
-                    )}
-                  </div>
-                </div>
-              </div>
-              <div className="frame2 gap-2">
-                <div className="frame1 gap-2 flex flex-row justify-center">
-                  <div className="border-b border-[#262626] pb-5 gap-4 w-2/4 flex flex-col">
-                    <div>
-                      <p className="finwise-para font-medium text-base">
-                        {footerColumns[3].title}
-                      </p>
-                      <div className="flex flex-col">
-                        {footerColumns[3].items.map((items, index) => (
-                          <RouterLink
-                            key={index}
-                            to={items.path}
-                            className="font-medium text-sm leading-6 text-[#FFFFFF] mb-1"
-                          >
-                            {items.name}
-                          </RouterLink>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
+              <a href="https://www.instagram.com/finwiseschool?igsh=MWNkNHNsam1kcXM5dQ==" className="text-gray-400 hover:text-white">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.tiktok.com/@finwise.school?_t=8rpn5Dg3Dsn&_r=1" className="text-gray-400 hover:text-white">
+                <i className="fab fa-tiktok"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/finwiseschool/" className="text-gray-400 hover:text-white">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://youtube.com/@finwiseschool?si=HtlrLSelgF0_JTCv" className="text-gray-400 hover:text-white">
+                <i className="fab fa-youtube"></i>
+              </a>
 
-                  <div className="border-b border-l border-[#262626] pb-5 pl-5 gap-4 w-2/4">
-                    <p className="finwise-para font-medium text-base">
-                      {footerColumns[2].title}
-                    </p>
-                    <div className="flex flex-col">
-                      {footerColumns[2].items.map((items, index) => (
-                        <RouterLink
-                          key={index}
-                          to={items.path}
-                          className="font-medium text-sm leading-6 text-[#FFFFFF] mb-1"
-                        >
-                          {items.name}
-                        </RouterLink>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
+            <Link to="/contact" className="bg-purple-500 text-white px-8 py-3 rounded-full hover:bg-purple-600">
+              Contact Us
+            </Link>
           </div>
-          <div className="fmBottomContainer gap-5 border-t py-5 px-4 bg-[#1A1A1A]">
-            <div className="gap-2 flex flex-row justify-center items-center">
-              {socialIcons.map((items, index) => (
-                <a
-                  key={index}
-                  href={items.url}
-                  className="rounded-full p-5 gap-2 bg-[#141414] mx-1"
-                >
-                  {items.icon}
-                </a>
-              ))}
-            </div>
-            <div className="flex justify-center flex-col items-center py-4">
-              <p className="font-medium text-sm leading-6 text-[#FFFFFF]">
-                @2024 Finwise School All Rights Reserved.
+          <div className="flex flex-col lg:flex-row justify-between items-center mt-4">
+            <p className="text-gray-400 text-center lg:text-left order-2 lg:order-1 mt-4 lg:mt-0 w-full lg:w-auto">
+              &copy; 2024 Finwise School All Rights Reserved
+            </p>
+
+            <div className="flex flex-col lg:flex-row lg:space-x-4 text-center lg:text-left space-y-2 lg:space-y-0 order-1 lg:order-2">
+              <p className="text-gray-400">
+                <Link to="/privacy">Privacy Notice</Link>
               </p>
-              <Link
-                to="#"
-                className="font-medium text-sm leading-6 text-[#FFFFFF]"
-              >
-                Terms & Conditions
-              </Link>
-              <Link
-                to="/privacy"
-                className="font-medium text-sm leading-6 text-[#FFFFFF]"
-              >
-                Privacy
-              </Link>
+              <p className="text-gray-400">
+                <Link to="#">Terms and Conditions</Link>
+              </p>
             </div>
           </div>
+
         </div>
-      )}
-    </>
+      </footer>
+    </div>
   );
-}
+};
 
 export default Footer;

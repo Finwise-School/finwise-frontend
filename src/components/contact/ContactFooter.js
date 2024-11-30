@@ -40,7 +40,7 @@ const ContactFooter = () => {
           </a>
 
           {/* Social Media Links */}
-          <a href="https://youtube.com/@finwiseschool" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center relative group">
+          <a href="https://youtube.com/@finwiseschool?si=HtlrLSelgF0_JTCv" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center relative group">
             <div className="relative shiny-effect z-10 flex flex-col items-center justify-center bg-green-500 p-4 rounded-md shadow-md transition-transform duration-300 ease-in-out transform w-full h-full" style={{ backgroundColor: "#1A1A1A" }}>
               <div className="relative mb-2">
                 <img src={youtubeImg} alt="Social Media Icon" className="w-14 h-14" />

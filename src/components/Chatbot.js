@@ -177,7 +177,7 @@ const Chatbot = ({ baseURL }) => {
 
     return (
         <div>
-            <div className={`fixed md:bottom-12 bottom-10 right-4 z-50 border border-[#262626] rounded-lg overflow-hidden bg-[#1A1A1A] flex flex-col transition-all duration-300 ease-in-out ${ isOpen ? "w-[90vw] max-w-[400px] h-[80vh]" : "w-32 h-10 rounded-lg"}`}>
+                <div className={`fixed md:bottom-12 backdrop-blur-sm bottom-10 right-4 z-50 border-purple-500 border-[2px] rounded-lg overflow-hidden  flex flex-col transition-all duration-300 ease-in-out ${ isOpen ? "w-[90vw] max-w-[400px] h-[80vh]" : "w-32 h-10 rounded-lg"}`}>
                 {isOpen ? (
                     <>
                         <IoIosCloseCircleOutline className='w-6 h-6 absolute top-2 right-2 cursor-pointer' onClick={openButton}/>

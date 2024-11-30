@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+/*   font-family: "Sora", sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/*   font-family: "Inter", sans-serif; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: #070707;
+    color: white;
+}
+
+.bgadd{
+    background-image: url('../../assets/images/about/gradient.svg');
+    /* background-size: 100% 100%; */
+    color: white;
+    background-position:bottom;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+}
+.bgadds{
+    background-image: url('../../assets/images/about/txtgradient.svg');
+    background-size: 50% 50%;
+    color: white;
+    background-position:center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+}
+.bgresrc{
+    background-image: url('../../assets/images/about/resrcsmen.svg');
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.bgaddsab{
+    background-image: url('../../assets/images/about/aboutback.png');
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@media(max-width:768px){
+    .bgresrc{
+        background-image: none;
+        /* background-color: transparent; */
+    }
+}
+.bgresrcads{
+    background-image: url('../../assets/images/about/booksall.svg');
+    background-position: right;
+    background-repeat: no-repeat;
+}
+@media(max-width:768px){
+    .bgresrcads{
+        background-image: url('../../assets/images/about/booksall.svg');
+        background-position: bottom;
+        background-size:90% 40%;
+        background-repeat: no-repeat;
+    }
+}
+.navadd{
+    background-color: transparent;
+    position:absolute;
+    width: 100%;
+}

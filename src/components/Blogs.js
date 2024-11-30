@@ -1,4 +1,5 @@
-import {useEffect, useState} from 'react';
+
+import { useEffect, useState } from 'react';
 import Wallimg from '../assets/images/Blogs/img2.png'
 import Sidecards from './Blogs/sidecards';
 import axios from 'axios';
@@ -18,12 +19,12 @@ function Blogs({ baseURL }) {
 
   useEffect(() => {
     axios.get('/api/blogsContentFetch')
-    .then(response => {
-      // setData(response.data[0].Heading);
-      setData(response.data);
-      setFront(response.data[0]);
-    })
-    .catch(error => console.error('Error fetching data:', error));
+      .then(response => {
+        // setData(response.data[0].Heading);
+        setData(response.data);
+        setFront(response.data[0]);
+      })
+      .catch(error => console.error('Error fetching data:', error));
   }, []);
 
   const handleIsOpen = () => {
@@ -34,78 +35,82 @@ function Blogs({ baseURL }) {
     setFront(item);
   };
 
-    return (
-      <>
+  return (
+    <>
       {data.length > 0 ? (
         <>
           <div className='m-4 md:px-12 gap-20'>
-      <h1 className='flex justify-center m-4 font-semibold text-5xl leading-[72px] finwise-blue'>Blogs</h1>
-      <h2 className='flex sm:justify-start justify-center text-2xl font-bold my-8 finwise-blue'>Top Stories</h2>
-        <div>
-            <div className={`flex md:flex-row flex-col ${data.length > 1 ? 'justify-between' : 'justify-center'}`}>
-    <div className={`mainCard ${isOpen ? 'md:w-full' : 'md:w-4/6'} bg-white shadow-lg rounded-xl overflow-hidden`}>
-    <div className="flex justify-center overflow-hidden border-b border-gray-300">
-        <img className='object-cover w-full h-60 md:h-96' src={front.imageUrl} alt="" />
-    </div>
-    <div className='content p-6'>
-        <div className="flex flex-col justify-start gap-4">
-            <>
-                <h3 className="text-3xl font-bold text-gray-800 hover:text-blue-600 transition-colors duration-300">{front.title}</h3>
-                <div className={`blogPara text-gray-600 ${isOpen ? 'h-auto' : 'h-14 overflow-hidden'}`}>
-                    <p dangerouslySetInnerHTML={{ __html: front.content }} />
-                    <div className='commentSection my-10'>
-                      <CommentSection baseURL={baseURL} blogID={front._id} />
-                    </div>
-                </div>
-            </>
-        </div>
-        <div className="footer flex justify-between items-center my-4">
+            <h1 className='flex justify-center m-4 font-semibold text-5xl leading-[72px] finwise-blue'>Blogs</h1>
+            <h2 className='flex sm:justify-start justify-center text-2xl font-bold my-8 finwise-blue'>Top Stories</h2>
             <div>
-                <h1 className='font-bold text-gray-700 my-4'>{front.writeDate}</h1>
-                <h1 className='font-semibold text-gray-600 my-4'>{front.By}</h1>
+              <div className={`flex md:flex-row flex-col ${data.length > 1 ? 'justify-between' : 'justify-center'}`}>
+                <div className={`mainCard ${isOpen ? 'md:w-full' : 'md:w-4/6'} bg-white shadow-lg rounded-xl overflow-hidden`}>
+                  <div className="flex justify-center overflow-hidden border-b border-gray-300">
+                    <img className='object-cover w-full h-60 md:h-96' src={front.imageUrl} alt="" />
+                  </div>
+                  <div className='content p-6'>
+                    <div className="flex flex-col justify-start gap-4">
+                      <>
+                        <h3 className="text-3xl font-bold text-gray-800 hover:text-blue-600 transition-colors duration-300">{front.title}</h3>
+                        <div className={`blogPara text-gray-600 ${isOpen ? 'h-auto' : 'h-14 overflow-hidden'}`}>
+                          <p dangerouslySetInnerHTML={{ __html: front.content }} />
+                          <div className='commentSection my-10'>
+                            <CommentSection baseURL={baseURL} blogID={front._id} />
+                          </div>
+                        </div>
+                      </>
+                    </div>
+                    <div className="footer flex justify-between items-center my-4">
+                      <div>
+                        <h1 className='font-bold text-gray-700 my-4'>{front.writeDate}</h1>
+                        <h1 className='font-semibold text-gray-600 my-4'>{front.By}</h1>
+                      </div>
+                      <button
+                        onClick={handleIsOpen}
+                        className='font-bold bg-[#3CB371] text-white rounded-[10px] py-3 px-6 transition duration-300 hover:bg-[#2a9e56]'
+                      >
+                        {isOpen ? "Show Less" : "Full Story"}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                {(data.length > 1 && !isOpen) &&
+                  <div className={`sideCard md:flex flex-col md:w-1/6 hidden`}>
+                    <Sidecards baseURL={baseURL} sidedata={data.slice(0, 3)} onToggle={handleCardClick} />
+                  </div>
+                }
+              </div>
             </div>
-            <button 
-                onClick={handleIsOpen} 
-                className='font-bold bg-[#3CB371] text-white rounded-[10px] py-3 px-6 transition duration-300 hover:bg-[#2a9e56]'
-            >
-                {isOpen ? "Show Less" : "Full Story"}
-            </button>
-        </div> 
-    </div> 
-</div>
-            {(data.length > 1 && !isOpen) &&
-              <div className={`sideCard md:flex flex-col md:w-1/6 hidden`}>
-            <Sidecards baseURL={baseURL} sidedata={data.slice(0, 3)} onToggle={handleCardClick}/> 
-            </div>
-            }
-            </div>
-        </div>
-        {data.length > 2 && (<CardsBottom baseURL={baseURL} onToggle={handleCardClick}/>)}
-        </div>
-        <EATemplate />
+            {data.length > 2 && (<CardsBottom baseURL={baseURL} onToggle={handleCardClick} />)}
+          </div>
+          <EATemplate />
         </>
       ) : (
-        <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-        <div className="bg-white shadow-lg rounded-lg p-8 text-center">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">No Blogs Available</h2>
-            <p className="text-gray-600 mb-6">
-                It seems there are currently no blogs to display. Check back later for updates!
+        <div className="flex flex-col items-center justify-center h-screen bg-[#070707]">
+          <div style={{
+            background: "linear-gradient(26deg, #2D2D2D, #757F9A)",
+          }} className="rounded-lg p-8 text-center">
+            <h2 className="text-2xl font-bold mb-4" style={{ color: "white" }}>
+              No Blogs Available
+            </h2>
+            <p className="text-gray-300 mb-6">
+              It seems there are currently no blogs to display. Check back later for updates!
             </p>
-            <button 
-                className="bg-[#3CB371] text-white font-bold py-2 px-4 rounded transition duration-300 hover:bg-[#2a9e56]"
-                onClick={() => window.location.reload()} // Example action
+            <button
+              className="bg-[#8239ef] text-white font-bold py-2 px-4 rounded transition duration-300 hover:bg-[#c95cf0]"
+              onClick={() => window.location.reload()} // Example action
             >
-                Refresh
+              Refresh
             </button>
+          </div>
+
         </div>
-    </div>
       )}
-        </>
-    )
+    </>
+  )
 }
 
 export default Blogs;
-
 
 
 

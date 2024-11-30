@@ -37,7 +37,8 @@ const QuotesHeader = () => {
   }, [quotes.length]);
 
   return (
-    <div className="w-full bg-white text-gray-800 text-center font-bold my-4">
+    <div className="w-full bg-[#070707] text-gray-200 text-center pt-2
+     text-sm mb-[-8px]">
       <span>{quotes[currentQuoteIndex]}</span>
       <hr className="h-0.5 my-2 bg-black mx-auto w-full" />
     </div>

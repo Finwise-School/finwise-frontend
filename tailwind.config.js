@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'radial-custom': 'radial-gradient(circle, #000000, #8a3ff26c)',
+      },
       keyframes: {
         scroll: {
           '0%': { transform: 'translateX(0)' },
