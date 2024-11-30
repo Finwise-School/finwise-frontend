@@ -15,7 +15,7 @@ const ContactFooter = () => {
         { 
             icon: 'fas fa-map-marker-alt', 
             text: 'Glasgow, UK', 
-            link: 'https://www.google.com/maps/place/Glasgow,+UK' // Google Maps link for location
+            link: 'https://maps.app.goo.gl/gN66sHs84S44Ba5J8' // Google Maps link for location
         },
         { 
             icon: 'fab fa-youtube', 

@@ -72,7 +72,6 @@ const Footer = () => {
       <footer className="bg-black w-full">
         <div className="max-w-screen-xl mx-auto px-0 py-16">
           <div className="flex flex-col lg:flex-row items-center justify-between lg:items-start">
-
             {/* Newsletter Section */}
             <div className="text-center lg:text-left mb-8 lg:mb-0">
               <h1
@@ -87,22 +86,30 @@ const Footer = () => {
               </h1>
               <form
                 onSubmit={onSubmit}
-                className="flex items-center mt-6 space-x-4"
+                className="flex flex-col justify-center items-center mt-6 space-x-4"
               >
-                <div className="flex items-center p-8 space-x-2 flex-col md:flex-row">
+                <div className="flex flex-col justify-center items-center mt-6 space-x-4">
                   <input
                     type="text"
-                    placeholder="Phone no"
+                    value={phone}
+                    onChange={handlePhoneChange}
+                    placeholder="Enter Your Phone Number"
                     className="bg-gray-800 text-white px-4 py-3 rounded-full w-64 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    required
                   />
-                  <div className='w-full md:px-0 px-20 mt-3 md:mt-0'>
-                    <button className="bg-purple-500 md:w-[100%] w-full text-white px-6 md:mt-0 py-3 rounded-full flex items-center justify-center hover:bg-purple-600">
-                      Send <i className="fas fa-paper-plane ml-2"></i>
-                    </button>
+                  <div className="mt-4">
+                    {submit ? (
+                      <Spinner aria-label="Submitting" />
+                    ) : (
+                      <button
+                        type="submit"
+                        className="bg-purple-500 text-white px-6 py-3 rounded-full flex items-center hover:bg-purple-600"
+                      >
+                        Submit <i className="fas fa-paper-plane ml-2"></i>
+                      </button>
+                    )}
                   </div>
-
                 </div>
-
               </form>
             </div>
           </div>
@@ -190,27 +197,16 @@ const Footer = () => {
               <a href="https://youtube.com/@finwiseschool?si=HtlrLSelgF0_JTCv" className="text-gray-400 hover:text-white">
                 <i className="fab fa-youtube"></i>
               </a>
-
             </div>
             <Link to="/contact" className="bg-purple-500 text-white px-8 py-3 rounded-full hover:bg-purple-600">
               Contact Us
             </Link>
           </div>
           <div className="flex flex-col lg:flex-row justify-between items-center mt-4">
-            <p className="text-gray-400 text-center lg:text-left order-2 lg:order-1 mt-4 lg:mt-0 w-full lg:w-auto">
-              &copy; 2024 Finwise School All Rights Reserved
+            <p className="text-gray-500 text-sm">
+              &copy; {writeDate} Finwise School. All Rights Reserved.
             </p>
-
-            <div className="flex flex-col lg:flex-row lg:space-x-4 text-center lg:text-left space-y-2 lg:space-y-0 order-1 lg:order-2">
-              <p className="text-gray-400">
-                <Link to="/privacy">Privacy Notice</Link>
-              </p>
-              <p className="text-gray-400">
-                <Link to="#">Terms and Conditions</Link>
-              </p>
-            </div>
           </div>
-
         </div>
       </footer>
     </div>

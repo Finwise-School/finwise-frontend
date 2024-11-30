@@ -183,7 +183,7 @@ const Chatbot = ({ baseURL }) => {
                         <IoIosCloseCircleOutline className='w-6 h-6 absolute top-2 right-2 cursor-pointer' onClick={openButton}/>
                         <div className="flex-1 p-3 overflow-y-auto flex flex-col" ref={chatContainerRef}>
                             {messages.map((msg, index) => (
-                                <div key={index} className={`my-2 p-3 rounded-lg max-w-[80%] break-words ${msg.isBot ? 'bg-gray-200 self-start' : 'finwise-green-bg text-white self-end'}`}>
+                                <div key={index} className={`my-2 p-3 rounded-lg max-w-[80%] break-words ${msg.isBot ? 'bg-gray-700 self-start' : 'finwise-green-bg text-white self-end'}`}>
                                     {msg.text}
                                 </div>
                             ))}
