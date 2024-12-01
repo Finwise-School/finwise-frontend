@@ -44,7 +44,7 @@ function Blogs({ baseURL }) {
             <h2 className='flex sm:justify-start justify-center text-2xl font-bold my-8 text-gray-300'>Top Stories</h2>
             <div>
               <div className={`flex md:flex-row flex-col ${data.length > 1 ? 'justify-between' : 'justify-center'}`}>
-                <div className={`mainCard ${isOpen ? 'md:w-full' : 'md:w-4/6'} bg-white shadow-lg rounded-xl overflow-hidden`}>
+                <div className={`mainCard ${isOpen ? 'md:w-full' : 'md:w-4/6'} bg-[#070707] text-white shadow-lg rounded-xl overflow-hidden`}>
                   <div className="flex justify-center overflow-hidden border-b border-gray-300">
                     <img className='object-cover w-full h-60 md:h-96' src={front.imageUrl} alt="" />
                   </div>
@@ -67,7 +67,7 @@ function Blogs({ baseURL }) {
                       </div>
                       <button
                         onClick={handleIsOpen}
-                        className='font-bold bg-[#3CB371] text-white rounded-[10px] py-3 px-6 transition duration-300 hover:bg-[#2a9e56]'
+                        className='font-bold bg-purple-500 text-white rounded-[10px] py-3 px-6 transition duration-300 hover:bg-purple-700'
                       >
                         {isOpen ? "Show Less" : "Full Story"}
                       </button>
