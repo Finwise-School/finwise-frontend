@@ -37,8 +37,8 @@ const LandingPage = () => {
 
     return (
         <div className="bg-[#070707] text-white">
-            <div className="relative h-[100vh] md:h-[150vh] text-center pt-10 pb-10">
-                <div className="absolute h-[100vh] bgaddsback inset-0 bg-gradient-to-b bg-[#070707] opacity-60"></div>
+            <div className="relative h-[120vh] sm:h-[100vh] md:h-[130vh] text-center pt-10 pb-6">
+                <div className="absolute h-[100vh] bgaddsback inset-0"></div>
 
                 <div className="relative z-10 w-full h-auto flex justify-center mt-2">
                     <img

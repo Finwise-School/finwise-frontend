@@ -27,7 +27,7 @@ const PlayLeagues = () => {
 
                 {/* Text Section (on the right in desktop, swapped to the top in mobile) */}
                 <div className="w-full text-center md:text-left space-y-6"    data-aos="fade-right">
-                    <h1 className="text-5xl md:text-5xl text-white font-semibold leading-tight">
+                    <h1 className="text-5xl md:text-6xl text-white font-semibold leading-tight">
                         Play leagues and <br /> win rewards
                     </h1>
                     <p className="text-gray-400 w-full text-sm  md:w-[28rem] leading-relaxed md:text-lg">

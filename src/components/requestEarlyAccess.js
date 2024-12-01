@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaEnvelope, FaPhone, FaUser, FaHome } from 'react-icons/fa';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import successImg from "../assets/images/book/success.gif";
+import successImg from "../assets/images/success.png";
 
 const EarlyAccessForm = () => {
   const formatDate = (date) => {

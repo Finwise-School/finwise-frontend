@@ -46,7 +46,7 @@ const images =[
 const Stocks = () => {
   return (
     <div className='p-[5%]'>
-    <h1 className="finwise-blue text-5xl md:text-5xl font-bold mb-[8%] text-center">Stock Market</h1>
+    <h1 className="text-gray-200 text-5xl md:text-5xl font-bold mb-[8%] text-center">Stock Market</h1>
    
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-[8%]">
       {images.map((image, index) => (
@@ -58,7 +58,7 @@ const Stocks = () => {
               className="w-full h-[80%] mt-0 m-0"
             />
           </Link>
-          <h2 className="font-bold mt-4 mb-2 text-sm text-center text-black">
+          <h2 className="font-bold mt-4 mb-2 text-sm text-center text-gray-200">
             {image.name}
           </h2>
         </div>

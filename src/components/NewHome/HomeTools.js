@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import exploreIcon from '../../assets/images/homeimages/toolsbutton.svg';
 import toolImage2 from '../../assets/images/homeimages/fireimg.svg';
 import toolImage3 from '../../assets/images/homeimages/goaltool.svg';
@@ -21,13 +22,15 @@ const HomeTools = () => {
                             Tailor your journey to financial freedom<br /> with our exclusive financial planning tools.
                         </p>
 
-                        <div className="mt-6 flex items-left py-3 rounded-full bg-transparent cursor-pointer transition">
-                            <img
-                                src={exploreIcon}
-                                alt="Explore More Tools"
-                                className="w-[50vh] h-auto mr-2 transition-transform transform hover:scale-105" // Added scale effect on hover
-                            />
-                        </div>
+                        <Link to="/tools">
+                            <div className="mt-6 flex items-left py-3 rounded-full bg-transparent cursor-pointer transition">
+                                <img
+                                    src={exploreIcon}
+                                    alt="Explore More Tools"
+                                    className="w-[50vh] h-auto mr-2 transition-transform transform hover:scale-105" // Added scale effect on hover
+                                />
+                            </div>
+                        </Link>
 
                     </div>
                 </div>

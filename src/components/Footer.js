@@ -73,8 +73,14 @@ const Footer = () => {
         <div className="max-w-screen-xl mx-auto px-0 py-16">
           <div className="flex flex-col lg:flex-row items-center justify-between lg:items-start">
             {/* Newsletter Section */}
-            <div className="text-center lg:text-left mb-8 lg:mb-0">
-              <h1
+            <div className="text-center lg:text-left w-full mb-8 lg:mb-0">
+              
+              <form
+                onSubmit={onSubmit}
+                className="flex flex-row justify-center   items-center mt-6 space-x-4"
+              >
+                <div className="flex flex-col md:flex-row justify-between items-center w-full mt-6 space-x-4">
+                <h1
                 className="md:text-4xl md:text-left text-center text-3xl font-bold text-transparent"
                 style={{
                   backgroundImage: "linear-gradient(to right, #22c55e, #a855f7)",
@@ -84,20 +90,16 @@ const Footer = () => {
               >
                 Master your Finance with Finwise
               </h1>
-              <form
-                onSubmit={onSubmit}
-                className="flex flex-col justify-center items-center mt-6 space-x-4"
-              >
-                <div className="flex flex-col justify-center items-center mt-6 space-x-4">
+              <div className='flex flex-col justify-center items-center mt-2 md:mt-0 md:flex-row'>
                   <input
                     type="text"
                     value={phone}
                     onChange={handlePhoneChange}
                     placeholder="Enter Your Phone Number"
-                    className="bg-gray-800 text-white px-4 py-3 rounded-full w-64 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="bg-gray-800 text-white px-4 py-3 rounded-full w-[300px] focus:outline-none focus:ring-2 focus:ring-purple-500"
                     required
                   />
-                  <div className="mt-4">
+                  <div className="pl-3 mt-4 md:mt-0">
                     {submit ? (
                       <Spinner aria-label="Submitting" />
                     ) : (
@@ -105,9 +107,10 @@ const Footer = () => {
                         type="submit"
                         className="bg-purple-500 text-white px-6 py-3 rounded-full flex items-center hover:bg-purple-600"
                       >
-                        Submit <i className="fas fa-paper-plane ml-2"></i>
+                        Send <i className="fas fa-paper-plane ml-2"></i>
                       </button>
                     )}
+                  </div>
                   </div>
                 </div>
               </form>
@@ -117,7 +120,7 @@ const Footer = () => {
           <hr className="border-black my-8" />
 
           {/* Footer Links */}
-          <div className="grid-for-calci grid-cols-2 md:grid-cols-4 gap-6 text-center md:text-left">
+          <div className="grid-for-calci grid-cols-2 md:grid-cols-4 gap-6 text-center py-10 md:text-left">
             <div>
               <h3 className="text-white font-semibold mb-4">Tools</h3>
               <ul className="text-gray-400 space-y-2">
@@ -148,15 +151,14 @@ const Footer = () => {
                 <li><Link to="/books">More</Link></li>
               </ul>
             </div>
-            <div>
+            <div className=' h-4'>
               <img
                 id="footerimgg"
                 src={footerimg}
                 alt="Footer Image"
-                className="w-full rounded-lg shadow-lg"
+                className="w-full rounded-lg shadow-lg mt-3 md:mt-[100px]"
                 style={{
                   width: "70%",
-                  marginTop: "0",
                 }}
               />
               <style>
@@ -203,9 +205,18 @@ const Footer = () => {
             </Link>
           </div>
           <div className="flex flex-col lg:flex-row justify-between items-center mt-4">
-            <p className="text-gray-500 text-sm">
-              &copy; {writeDate} Finwise School. All Rights Reserved.
+            <p className="text-gray-400 text-center lg:text-left order-2 lg:order-1 mt-4 lg:mt-0 w-full lg:w-auto">
+              &copy; 2024 Finwise School All Rights Reserved
             </p>
+
+            <div className="flex flex-col lg:flex-row lg:space-x-4 text-center lg:text-left space-y-2 lg:space-y-0 order-1 lg:order-2">
+              <p className="text-gray-400">
+                <Link to="/privacy">Privacy Notice</Link>
+              </p>
+              <p className="text-gray-400">
+                <Link to="#">Terms and Conditions</Link>
+              </p>
+            </div>
           </div>
         </div>
       </footer>

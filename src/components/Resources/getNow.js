@@ -45,7 +45,7 @@ const gets =[
 const GetNow = () => {
   return (
     <div className='p-[5%]'>
-    <h1 className="finwise-blue text-5xl md:text-5xl font-bold mb-[8%] text-center">Get Now</h1>
+    <h1 className="text-gray-200 text-5xl md:text-5xl font-bold mb-[8%] text-center">Get Now</h1>
    
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-[8%]">
       {gets.map((image, index) => (
