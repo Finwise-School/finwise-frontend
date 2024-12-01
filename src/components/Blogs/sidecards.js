@@ -5,7 +5,7 @@ function Sidecards({ sidedata = [], onToggle, baseURL }) { // Destructure sideda
     <>
       {sidedata.map((item, index) => {
         return (
-          <div key={item._id || index} onClick={() => onToggle(item)} className='cursor-pointer mb-4  bg-slate-100 rounded-lg'>
+          <div key={item._id || index} onClick={() => onToggle(item)} className='cursor-pointer mb-4  bg-gray-800 text-white rounded-lg'>
             <div className="rounded-t flex justify-center flex-wrap overflow-hidden">
               <img className='object-cover w-full h-36' src={item.imageUrl} alt="" />
             </div>

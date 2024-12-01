@@ -90,8 +90,8 @@ const Category = () => {
 
 const Ads = () => {
     return (
-        <div>
-            <div class="mx-auto p-10 flex items-center justify-center">
+        <div className=''>
+            <div class="mx-auto flex items-center justify-center">
                 <div class="text-white my-20 w-[96%] h-auto rounded-2xl bg-gradient-to-b from-[#8A3FF2] via-[#50248C] to-[#50248C]  p-[2px]">
                     <div className='bgresrcads h-[70vh]'>
                         <div className='p-12 w-[100%] sm:w-[60%] h-full flex flex-col md:justify-center items-start'>
