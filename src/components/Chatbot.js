@@ -183,7 +183,7 @@ const Chatbot = ({ baseURL }) => {
                         <IoIosCloseCircleOutline className='w-6 h-6 absolute top-2 right-2 cursor-pointer' onClick={openButton}/>
                         <div className="flex-1 p-3 overflow-y-auto flex flex-col" ref={chatContainerRef}>
                             {messages.map((msg, index) => (
-                                <div key={index} className={`my-2 p-3 rounded-lg max-w-[80%] break-words ${msg.isBot ? 'bg-gray-700 self-start' : 'finwise-green-bg text-white self-end'}`}>
+                                <div key={index} className={`my-2 p-3 rounded-lg max-w-[80%] break-words ${msg.isBot ? 'bg-gray-700 self-start' : 'text-[#9B4DCA]-bg text-white self-end'}`}>
                                     {msg.text}
                                 </div>
                             ))}
@@ -200,7 +200,7 @@ const Chatbot = ({ baseURL }) => {
                         <div className="p-3 space-y-2">
                             {currentLevel === 'main' ? (
                                 options.map((option, index) => (
-                                    <button key={index} onClick={() => handleMajorOptionClick(option)} className="w-full p-3 finwise-blue-bg text-white rounded-lg hover:bg-blue-600 text-sm">{option}</button>
+                                    <button key={index} onClick={() => handleMajorOptionClick(option)} className="w-full p-3 text-gray-300-bg text-white rounded-lg hover:bg-blue-600 text-sm">{option}</button>
                                 ))
                             ) : (
                                 <>
@@ -210,7 +210,7 @@ const Chatbot = ({ baseURL }) => {
                                     <button className="w-full p-3 bg-red-500 text-white rounded-lg hover:bg-red-600 text-sm" onClick={handleClear}>Go Back to Main Options</button>
                                 </>
                             )}
-                            <button className="w-full p-3 bg-green-500 text-white rounded-lg hover:bg-green-600 text-sm" onClick={downloadPDF}>Download Chat as PDF</button>
+                            <button className="w-full p-3 bg-purple-600 text-white rounded-lg hover:bg-green-600 text-sm" onClick={downloadPDF}>Download Chat as PDF</button>
                         </div>
                     </>
                 ) : (

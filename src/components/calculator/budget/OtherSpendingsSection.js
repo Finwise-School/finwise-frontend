@@ -67,8 +67,8 @@ const OtherSpendingsSection = ({
 
   // Render input fields for each spending
   const renderSpendingInputs = (spending, index, category) => (
-    <div key={index} className="flex flex-col md:flex-row md:items-center md:space-x-4 mb-4">
-      <label className="font-semibold mb-2 text-gray-400">{`Spending ${index + 1}`}</label>
+    <div key={index} className="flex flex-col text-gray-900 md:flex-row md:items-center md:space-x-4 mb-4">
+      <label className="font-semibold mb-2 text-gray-900">{`Spending ${index + 1}`}</label>
       <input
         type="text"
         value={spending.name}
@@ -98,7 +98,7 @@ const OtherSpendingsSection = ({
         </select>
         <button 
           onClick={() => handleSpendingDelete(category, index)} 
-          className="ml-2 text-red-500" 
+          className="ml-2 text-gray-900" 
           aria-label={`Delete spending ${index + 1} from ${category}`}
         >
           <i className="fas fa-times"></i>
@@ -109,12 +109,12 @@ const OtherSpendingsSection = ({
 
   // Function to render category sections
   const renderCategory = (category, spendings, setSpendings) => (
-    <div className="border rounded-lg p-4 mb-4 bg-gradient-to-r from-green-100 to-green-200">
+    <div className="border rounded-lg p-4 mb-4 bg-gradient-to-r from-purple-100 to-purple-500">
       <div className="flex justify-between items-center">
-        <h3 className="text-xl font-semibold mt-2 mb-2">{category}</h3>
+        <h3 className="text-xl font-semibold mt-2 mb-2 text-gray-900">{category}</h3>
         <button
           onClick={() => setExpandedCategories({ ...expandedCategories, [category]: !expandedCategories[category] })}
-          className="text-green-500 font-semibold text-2xl"
+          className="text-gray-900 font-semibold text-2xl"
         >
           {expandedCategories[category] ? '-' : '+'}
         </button>
@@ -126,7 +126,7 @@ const OtherSpendingsSection = ({
             const newSpending = { name: '', spending: 0, frequency: 'monthly' };
             setSpendings([...spendings, newSpending]);
           }}
-          className="bg-green-500 text-white p-3 rounded-lg hover:bg-green-600 mt-2 text-sm"
+          className="bg-purple-600 text-white p-3 rounded-lg hover:bg-purple-800 mt-2 text-sm"
         >
           Add {category} Spending
         </button>
@@ -137,7 +137,7 @@ const OtherSpendingsSection = ({
 
   return (
     <div className="section mb-6">
-      <h2 className="text-2xl font-semibold text-green-600 mb-4">Other Spendings 💸</h2>
+      <h2 className="text-2xl font-semibold text-gray-200 mb-4">Other Spendings 💸</h2>
       {renderCategory('Technology', technologySpendings, setTechnologySpendings)}
       {renderCategory('Entertainment', entertainmentSpendings, setEntertainmentSpendings)}
       {renderCategory('Health', healthSpendings, setHealthSpendings)}

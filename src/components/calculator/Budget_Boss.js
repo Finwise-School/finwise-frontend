@@ -108,11 +108,11 @@ const BudgetCalculator = () => {
                           'You are over your budget!';
 
   return (
-    <div className="bg-gray-50 p-2">
-      <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-lg p-8">
+    <div className="bg-[#070707] p-2">
+      <div className="max-w-6xl mx-auto bg-[#070707] shadow-lg rounded-lg p-8">
         <div className="mb-6">
-          <h1 className="text-2xl font-semibold finwise-green">Budget Boss Calculator</h1>
-          <p className="finwise-blue">Manage your income and expenses effortlessly to achieve your financial goals.</p>
+          <h1 className="text-2xl font-semibold text-[#9B4DCA]">Budget Boss Calculator</h1>
+          <p className="text-gray-300">Manage your income and expenses effortlessly to achieve your financial goals.</p>
         </div>
 
         <IncomeSection incomes={incomes} setIncomes={setIncomes} />
@@ -171,7 +171,7 @@ const BudgetCalculator = () => {
               </h1>
               <p className="text-3xl mt-2">
                 After accounting for your monthly expenses, you'll face a shortfall of
-                <span className="font-bold text-red-500"> £{(totalSpending - totalIncome).toFixed(2)}</span>.
+                <span className="font-bold text-gray-900"> £{(totalSpending - totalIncome).toFixed(2)}</span>.
               </p>
             </>
           )}

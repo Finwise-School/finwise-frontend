@@ -118,31 +118,31 @@ const TaxCalculator = () => {
   };
 
   return (
-    <div className="bg-gray-50 p-2">
-      <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-lg p-8">
-        <h1 className="text-2xl font-bold mb-4 finwise-green">Tax Calculator</h1>
-        <p className="mb-6 text-base text-gray-700">
+    <div className="bg-[#070707] p-2">
+      <div className="max-w-6xl  mx-auto bg-[#070707] shadow-lg rounded-lg p-8">
+        <h1 className="text-2xl font-bold mb-4 text-[#9B4DCA]">Tax Calculator</h1>
+        <p className="mb-6 text-base text-gray-300">
           Calculate your take-home pay after tax deductions based on your gross salary.
         </p>
 
-        <h2 className="text-lg font-semibold mb-4 finwise-green">Input Your Details</h2>
+        <h2 className="text-lg font-semibold mb-4 text-[#9B4DCA]">Input Your Details</h2>
         <div className="space-y-4">
           <div className="flex items-center justify-between p-4 border rounded-lg">
-            <label className="text-gray-700">Gross Amount</label>
+            <label className="text-gray-300">Gross Amount</label>
             <input
               type="number"
               value={grossAmount}
               onChange={(e) => setGrossAmount(e.target.value)}
-              className="border bg-green-100 text-gray-800  p-2 rounded-lg w-32"
+              className="border bg-purple-300 text-gray-800  p-2 rounded-lg w-32"
             />
           </div>
 
           <div className="flex items-center justify-between p-4 border rounded-lg">
-            <label className="text-gray-700">Frequency of Payment</label>
+            <label className="text-gray-300">Frequency of Payment</label>
             <select
               value={frequency}
               onChange={(e) => setFrequency(e.target.value)}
-              className="border bg-green-100 text-gray-800  p-2 rounded-lg"
+              className="border bg-purple-300 text-gray-800  p-2 rounded-lg"
             >
               <option value="hourly">Hourly</option>
               <option value="daily">Daily</option>
@@ -154,22 +154,22 @@ const TaxCalculator = () => {
 
           {(frequency === "hourly" || frequency === "daily") && (
             <div className="flex items-center justify-between p-4 border rounded-lg">
-              <label className="text-gray-700">How many {frequency === "hourly" ? "hours" : "days"} do you work in a week?</label>
+              <label className="text-gray-300">How many {frequency === "hourly" ? "hours" : "days"} do you work in a week?</label>
               <input
                 type="number"
                 value={hoursOrDays}
                 onChange={(e) => setHoursOrDays(e.target.value)}
-                className="border bg-green-100 text-gray-800  p-2 rounded-lg w-32"
+                className="border bg-purple-300 text-gray-800  p-2 rounded-lg w-32"
               />
             </div>
           )}
 
           <div className="flex items-center justify-between p-4 border rounded-lg">
-            <label className="text-gray-700">Do you pay Scottish Income Tax?</label>
+            <label className="text-gray-300">Do you pay Scottish Income Tax?</label>
             <select
               value={isScottishTax}
               onChange={(e) => setIsScottishTax(e.target.value)}
-              className="border bg-green-100 text-gray-800  p-2 rounded-lg"
+              className="border bg-purple-300 text-gray-800  p-2 rounded-lg"
             >
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -179,32 +179,32 @@ const TaxCalculator = () => {
 
         {results && (
           <div className="mt-4">
-            <h2 className="text-3xl font-semibold mb-8 finwise-green">Calculation Results</h2>
+            <h2 className="text-3xl font-semibold mb-8 text-[#9B4DCA]">Calculation Results</h2>
             <div className="mb-4">
               <button
                 onClick={() => setView("yearly")}
-                className={`mr-2 p-2 rounded ${view === "yearly" ? "bg-green-500 text-white" : "bg-gray-300"}`}>
+                className={`mr-2 p-2 rounded ${view === "yearly" ? "bg-purple-600 text-white" : ""}`}>
                 Yearly
               </button>
               <button
                 onClick={() => setView("monthly")}
-                className={`mr-2 p-2 rounded ${view === "monthly" ? "bg-green-500 text-white" : "bg-gray-300"}`}>
+                className={`mr-2 p-2 rounded ${view === "monthly" ? "bg-purple-600 text-white" : ""}`}>
                 Monthly
               </button>
               <button
                 onClick={() => setView("weekly")}
-                className={`p-2 rounded ${view === "weekly" ? "bg-green-500 text-white" : "bg-gray-300"}`}>
+                className={`p-2 rounded ${view === "weekly" ? "bg-purple-600 text-white" : ""}`}>
                 Weekly
               </button>
             </div>
-            <div className="flex items-center justify-center text-3xl sm:text-4xl finwise-green-bg text-center font-bold p-6 w-full h-28 text-white">
+            <div className="flex items-center justify-center text-3xl sm:text-4xl text-[#9B4DCA]-bg text-center font-bold p-6 w-full h-28 text-white">
               £{(view === "yearly" ? results.takeHomePay : view === "monthly" ? (results.takeHomePay / 12) : (results.takeHomePay / 52)).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {view === "yearly" ? "a year" : view === "monthly" ? "a month" : "a week"}
             </div>
 
 
             <table className="border-collapse border text-center border-gray-300 w-full overflow-hidden">
               <thead>
-                <tr className="finwise-green">
+                <tr className="text-[#9B4DCA]">
                   <th className="border border-gray-300 p-2">Description</th>
                   <th className="border border-gray-300 p-2">Amount</th>
                 </tr>

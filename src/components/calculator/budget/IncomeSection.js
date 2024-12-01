@@ -15,8 +15,8 @@ const IncomeSection = ({ incomes, setIncomes }) => {
 
   return (
     <div className="section mt-16 mb-6">
-      <h2 className="text-2xl font-semibold text-green-600 mb-4">Enter Income Details</h2>
-      <div className="border rounded-lg p-4 mb-4 bg-gradient-to-r from-green-100 to-green-200">
+      <h2 className="text-2xl font-semibold text-gray-200 mb-4">Enter Income Details</h2>
+      <div className="border rounded-lg p-4 mb-4 bg-gradient-to-r from-purple-100 to-purple-500">
         {incomes.map((income, index) => (
           <div key={index} className="flex flex-col md:flex-row md:items-center md:space-x-4 mb-4">
             <span className="text-sm text-gray-600">Income Source {index + 1}</span>
@@ -25,7 +25,7 @@ const IncomeSection = ({ incomes, setIncomes }) => {
               value={income.source}
               onChange={(e) => handleIncomeChange(index, 'source', e.target.value)}
               placeholder="Income Source"
-              className="p-2 border rounded-lg flex-grow mb-2 md:mb-0"
+              className="p-2 border rounded-lg flex-grow mb-2 md:mb-0 text-gray-900"
             />
             <div className="flex items-center mb-2 md:mb-0">
               <div className="relative w-32">
@@ -35,21 +35,21 @@ const IncomeSection = ({ incomes, setIncomes }) => {
                   value={income.amount}
                   onChange={(e) => handleIncomeChange(index, 'amount', parseFloat(e.target.value) || 0)}
                   placeholder="Amount"
-                  className={`pl-6 p-2 border rounded-lg w-full ${income.amount < 0 ? 'border-red-500' : ''}`}
+                  className={`pl-6 p-2 border rounded-lg text-gray-900 w-full ${income.amount < 0 ? 'border-red-500' : ''}`}
                 />
               </div>
               <span className="ml-2">per</span>
               <select
                 value={income.frequency}
                 onChange={(e) => handleIncomeChange(index, 'frequency', e.target.value)}
-                className="p-2 border rounded-lg ml-2"
+                className="p-2 border text-gray-900 rounded-lg ml-2"
               >
                 <option value="weekly">Week</option>
                 <option value="monthly">Month</option>
               </select>
               <button 
                 onClick={() => removeIncome(index)} 
-                className="ml-2 text-red-500" 
+                className="ml-2 text-gray-900" 
                 aria-label={`Remove income source ${index + 1}`}
               >
                 <i className="fas fa-times"></i>
@@ -58,7 +58,7 @@ const IncomeSection = ({ incomes, setIncomes }) => {
           </div>
         ))}
       </div>
-        <button onClick={addIncome} className="bg-green-500 text-white p-3 rounded-lg hover:bg-green-600 text-sm">
+        <button onClick={addIncome} className="bg-purple-600 text-white p-3 rounded-lg hover:bg-purple-800 text-sm">
           <i className="fas fa-plus mr-2"></i>Add Income
         </button>
       {/* <div className="text-lg font-semibold text-gray-800">

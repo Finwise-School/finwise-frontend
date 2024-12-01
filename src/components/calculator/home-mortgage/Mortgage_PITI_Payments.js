@@ -72,7 +72,7 @@ export default function Mortgage_PITI_Payments({
                                 value={homeValue}
                                 readOnly
                                 onChange={(e) => setHomeValue(parseFloat(e.target.value) || 0)}
-                                className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                                className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                             />
                         </div>
                     </div>
@@ -85,7 +85,7 @@ export default function Mortgage_PITI_Payments({
                             id="propertyTaxRate"
                             value={propertyTaxRate}
                             onChange={(e) => setPropertyTaxRate(parseFloat(e.target.value) || 0)}
-                            className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                            className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                         />
                     </div>
 
@@ -99,7 +99,7 @@ export default function Mortgage_PITI_Payments({
                                 id="yearlyPropertyTaxes"
                                 value={yearlyPropertyTaxes.toFixed(2)}
                                 readOnly
-                                className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                                className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                             />
                         </div>
                     </div>
@@ -112,7 +112,7 @@ export default function Mortgage_PITI_Payments({
                             id="insuranceRate"
                             value={insuranceRate}
                             onChange={(e) => setInsuranceRate(parseFloat(e.target.value) || 0)}
-                            className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                            className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                         />
                     </div>
 
@@ -126,7 +126,7 @@ export default function Mortgage_PITI_Payments({
                                 id="yearlyInsurance"
                                 value={yearlyInsurance.toFixed(2)}
                                 readOnly
-                                className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                                className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                             />
                         </div>
                     </div>
@@ -141,7 +141,7 @@ export default function Mortgage_PITI_Payments({
                                 id="monthlyPMI"
                                 value={monthlyPMI}
                                 onChange={(e) => setMonthlyPMI(parseFloat(e.target.value) || 0)}
-                                className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                                className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                             />
                         </div>
                     </div>
@@ -156,7 +156,7 @@ export default function Mortgage_PITI_Payments({
                                 id="pitiPayment"
                                 value={pitiPayment}
                                 readOnly
-                                className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                                className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                             />
                         </div>
                     </div>

@@ -8,14 +8,14 @@ const GoalSipCalculatorInfo = () => {
   };
 
   return (
-    <div className="mt-8 bg-white">
-      <h1 className="text-2xl font-bold mb-4 finwise-green">About Goal SIP Calculator</h1>
-      <p className="mb-6 text-base text-gray-700">
+    <div className="mt-8 bg-[#070707]">
+      <h1 className="text-2xl font-bold mb-4 text-[#9B4DCA]">About Goal SIP Calculator</h1>
+      <p className="mb-6 text-base text-gray-300">
         Plan your investments effectively with our Goal SIP Calculator! Estimate whether your monthly investments will meet your financial goals over a specified period.
       </p>
       
-      <h2 className="text-xl font-semibold mb-4 finwise-green">How to Use the Goal SIP Calculator</h2>
-      <ol className="list-decimal list-inside mb-6 space-y-2 text-base text-gray-700">
+      <h2 className="text-xl font-semibold mb-4 text-[#9B4DCA]">How to Use the Goal SIP Calculator</h2>
+      <ol className="list-decimal list-inside mb-6 space-y-2 text-base text-gray-300">
         <li>
           <strong>Enter Your Investment Details:</strong>
           <ul className="list-disc list-inside ml-6 space-y-2">
@@ -38,26 +38,26 @@ const GoalSipCalculatorInfo = () => {
         </li>
       </ol>
 
-      <h2 className="text-xl font-semibold mb-4 finwise-green">Benefits of Using the Goal SIP Calculator</h2>
-      <ul className="list-disc list-inside mb-6 space-y-2 text-base text-gray-700">
+      <h2 className="text-xl font-semibold mb-4 text-[#9B4DCA]">Benefits of Using the Goal SIP Calculator</h2>
+      <ul className="list-disc list-inside mb-6 space-y-2 text-base text-gray-300">
         <li><strong>Plan Your Investments:</strong> Determine how much you need to invest monthly to achieve your financial goals within a specified time frame.</li>
         <li><strong>Track Your Progress:</strong> Get an estimate of how your SIP contributions will grow over time based on expected returns.</li>
         <li><strong>Adjust and Optimize:</strong> Explore different SIP amounts, durations, and return rates to find the optimal investment strategy for your goals.</li>
       </ul>
 
-      <h2 className="text-xl font-semibold mb-4 finwise-green">Frequently Asked Questions (FAQs)</h2>
+      <h2 className="text-xl font-semibold mb-4 text-[#9B4DCA]">Frequently Asked Questions (FAQs)</h2>
       <div className="mb-6">
         {/* FAQ 1 */}
         <div className="border-b border-gray-300 pb-2">
           <button
-            className="w-full text-left text-base font-bold text-finwise-green focus:outline-none flex justify-between items-center"
+            className="w-full text-left text-base font-bold text-text-[#9B4DCA] focus:outline-none flex justify-between items-center"
             onClick={() => toggleFaq(0)}
           >
             <span>Q: What is a Systematic Investment Plan (SIP)?</span>
             <span>{faqIndex === 0 ? "-" : "+"}</span>
           </button>
           {faqIndex === 0 && (
-            <p className="mt-2 text-base text-gray-700">
+            <p className="mt-2 text-base text-gray-300">
               A: SIP is an investment strategy where you invest a fixed amount regularly in mutual funds or other investment vehicles. It helps in disciplined investing and potentially benefits from market fluctuations through rupee cost averaging.
             </p>
           )}
@@ -66,14 +66,14 @@ const GoalSipCalculatorInfo = () => {
         {/* FAQ 2 */}
         <div className="border-b border-gray-300 pb-2 mt-4">
           <button
-            className="w-full text-left text-base font-bold text-finwise-green focus:outline-none flex justify-between items-center"
+            className="w-full text-left text-base font-bold text-text-[#9B4DCA] focus:outline-none flex justify-between items-center"
             onClick={() => toggleFaq(1)}
           >
             <span>Q: How accurate are the results from the calculator?</span>
             <span>{faqIndex === 1 ? "-" : "+"}</span>
           </button>
           {faqIndex === 1 && (
-            <p className="mt-2 text-base text-gray-700">
+            <p className="mt-2 text-base text-gray-300">
               A: The results are based on the inputs you provide and standard investment assumptions. Actual results may vary based on market conditions and changes in returns.
             </p>
           )}
@@ -82,21 +82,21 @@ const GoalSipCalculatorInfo = () => {
         {/* FAQ 3 */}
         <div className="border-b border-gray-300 pb-2 mt-4">
           <button
-            className="w-full text-left text-base font-bold text-finwise-green focus:outline-none flex justify-between items-center"
+            className="w-full text-left text-base font-bold text-text-[#9B4DCA] focus:outline-none flex justify-between items-center"
             onClick={() => toggleFaq(2)}
           >
             <span>Q: Can I adjust the calculator for different investment scenarios?</span>
             <span>{faqIndex === 2 ? "-" : "+"}</span>
           </button>
           {faqIndex === 2 && (
-            <p className="mt-2 text-base text-gray-700">
+            <p className="mt-2 text-base text-gray-300">
               A: Yes, you can adjust the monthly SIP amount, investment duration, and expected returns to explore various investment scenarios and strategies.
             </p>
           )}
         </div>
       </div>
 
-      <p className="text-base text-gray-700">
+      <p className="text-base text-gray-300">
         For more assistance with your investment planning or to explore other financial tools, please contact us. Use our calculators to make informed investment decisions and work towards achieving your financial goals.
       </p>
     </div>

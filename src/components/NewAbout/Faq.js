@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import gradient from '../../assets/images/about/gradient.svg'
 import arr from '../../assets/images/about/arr.svg'
+import {Link} from 'react-router-dom'
 
 const Faq = () => {
     return (
@@ -22,13 +23,19 @@ const Faq = () => {
                                 Gather valuable insights with ease. Our platform enables customers to leave feedback and reviews, helping you understand their preferences and improve your service.
                             </p>
                             {/* Button for all view */}
-                            <p className="mt-3 font-medium">View all</p>
+                            {/* <p className="mt-3 font-medium">View all</p> */}
+                            <div className="mt-4">
+
+                            <Link to="/viewall" className="font-medium bg-purple-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+                                View all
+                            </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div className="-mx-4 flex flex-wrap">
-                    
+
                     <div className="w-full px-4 lg:w-1/2">
                         <AccordionItem
                             header="What is FinWise School?"

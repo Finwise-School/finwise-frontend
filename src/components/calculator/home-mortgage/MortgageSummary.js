@@ -11,18 +11,18 @@ const SummaryTable = () => {
   };
 
   return (
-    <div className="bg-gray-50 p-2">
+    <div className="bg-[#070707] p-2">
       <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-lg p-8">
         <div className="mb-6">
-          <h1 className="text-2xl font-semibold finwise-green">Loan Summary</h1>
-          <p className="finwise-blue">Detailed Summary of Your Loan Repayment</p>
+          <h1 className="text-2xl font-semibold text-[#9B4DCA]">Loan Summary</h1>
+          <p className="text-gray-300">Detailed Summary of Your Loan Repayment</p>
         </div>
         
         {/* Summary Table */}
         <div className="overflow-x-auto">
           <table className="min-w-full bg-white border border-gray-300">
             <thead>
-              <tr className="bg-green-100">
+              <tr className="bg-purple-300">
                 <th className="text-left p-4 border-b border-gray-300 text-gray-700">Summary</th>
                 <th className="text-right p-4 border-b border-gray-300 text-gray-700">Details</th>
               </tr>
@@ -30,23 +30,23 @@ const SummaryTable = () => {
             <tbody>
               <tr>
                 <td className="text-left p-4 border-b border-gray-300 text-gray-700">Years Until Paid Off</td>
-                <td className="text-right p-4 border-b border-gray-300 text-gray-800 finwise-green font-semibold">{summaryData.yearsUntilPaidOff}</td>
+                <td className="text-right p-4 border-b border-gray-300 text-gray-800 text-[#9B4DCA] font-semibold">{summaryData.yearsUntilPaidOff}</td>
               </tr>
               <tr>
                 <td className="text-left p-4 border-b border-gray-300 text-gray-700">Number of Payments</td>
-                <td className="text-right p-4 border-b border-gray-300 text-gray-800 finwise-green font-semibold">{summaryData.numberOfPayments}</td>
+                <td className="text-right p-4 border-b border-gray-300 text-gray-800 text-[#9B4DCA] font-semibold">{summaryData.numberOfPayments}</td>
               </tr>
               <tr>
                 <td className="text-left p-4 border-b border-gray-300 text-gray-700">Last Payment Date</td>
-                <td className="text-right p-4 border-b border-gray-300 text-gray-800 finwise-green font-semibold">{summaryData.lastPaymentDate}</td>
+                <td className="text-right p-4 border-b border-gray-300 text-gray-800 text-[#9B4DCA] font-semibold">{summaryData.lastPaymentDate}</td>
               </tr>
               <tr>
                 <td className="text-left p-4 border-b border-gray-300 text-gray-700">Total Payments</td>
-                <td className="text-right p-4 border-b border-gray-300 text-gray-800 finwise-green font-semibold">&#163;{summaryData.totalPayments.toLocaleString()}</td>
+                <td className="text-right p-4 border-b border-gray-300 text-gray-800 text-[#9B4DCA] font-semibold">&#163;{summaryData.totalPayments.toLocaleString()}</td>
               </tr>
               <tr>
                 <td className="text-left p-4 border-b border-gray-300 text-gray-700">Total Interest</td>
-                <td className="text-right p-4 border-b border-gray-300 text-gray-800 finwise-green font-semibold">&#163;{summaryData.totalInterest.toLocaleString()}</td>
+                <td className="text-right p-4 border-b border-gray-300 text-gray-800 text-[#9B4DCA] font-semibold">&#163;{summaryData.totalInterest.toLocaleString()}</td>
               </tr>
             </tbody>
           </table>

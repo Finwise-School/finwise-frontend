@@ -53,6 +53,7 @@ import Coming from "./components/comingSoon";
 import GetNow from "./components/Resources/getNow";
 import Resources from "./components/NewResources";
 import ViewAllFAQs from "./components/ViewAllFAQs";
+import Animate from "./components/NewAbout/Cards";
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated } = useAuth();
@@ -116,7 +117,7 @@ const App = () => {
             <Route path="/finance" element={<Finance baseURL={baseURL} />} />
             <Route path="/comingSoon" element={<Coming baseURL={baseURL}/>} />
             <Route path="/getNow" element={<GetNow baseURL={baseURL}/>} />
-            <Route path="/alls" element={<ViewAllFAQs baseURL={baseURL}/>} />
+            <Route path="/viewall" element={<ViewAllFAQs baseURL={baseURL}/>} />
             <Route path="/tools/credit-card" element={<CreditCard />} />
             <Route
               path="/profile"

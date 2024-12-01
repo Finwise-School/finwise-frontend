@@ -46,7 +46,7 @@ const images =[
 const Retirement = () => {
   return (
     <div className='p-[5%]'>
-    <h1 className="finwise-blue text-5xl md:text-5xl font-bold mb-[8%] text-center">Retirement Planning</h1>
+    <h1 className="text-gray-300 text-5xl md:text-5xl font-bold mb-[8%] text-center">Retirement Planning</h1>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-[8%]">
       {images.map((image, index) => (
         <div key={index} className="m-0 p-0">

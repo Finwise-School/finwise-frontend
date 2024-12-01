@@ -23,7 +23,7 @@ const AboutUs = () => {
     <div>
       <div className="flex flex-col-reverse md:flex-row items-center justify-between pt-[3%] pb-[3%] pr-[8%] pl-[8%]">
         <div className="w-full md:w-1/2 flex flex-col md:items-start items-center">
-          <h1 className="finwise-blue text-4xl font-bold mb-4 text-left">
+          <h1 className="text-gray-300 text-4xl font-bold mb-4 text-left">
             About Us
           </h1>{" "}
           <p className="text-base mb-6 text-justify">
@@ -54,7 +54,7 @@ const AboutUs = () => {
   <div className="flex flex-col md:flex-row mb-20 md:pr-[8%] md:pl-[7%]">
     <div className="w-full md:w-1/2 mb-8 md:mb-0">
       <div className="flex">
-        <h1 className="finwise-blue text-3xl md:text-4xl font-bold mb-4 md:mb-[1%]">
+        <h1 className="text-gray-300 text-3xl md:text-4xl font-bold mb-4 md:mb-[1%]">
           Our Values
         </h1>
       </div>
@@ -71,9 +71,9 @@ const AboutUs = () => {
         <div className="flex-1 mb-5 md:mb-0">
           <div className="flex items-center mb-5">
             <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-green-500 mr-4 hover:shadow-green-500 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
-              <FaStar className="finwise-blue text-xl shiny-effect transition-transform duration-300 ease-in-out" />
+              <FaStar className="text-gray-300 text-xl shiny-effect transition-transform duration-300 ease-in-out" />
             </div>
-            <h1 className="finwise-blue text-lg font-bold">Trust</h1>
+            <h1 className="text-gray-300 text-lg font-bold">Trust</h1>
           </div>
           <p className=" mb-10">
             We build lasting relationships through integrity, transparency, and
@@ -88,9 +88,9 @@ const AboutUs = () => {
         <div className="flex-1 mb-5 md:mb-0">
           <div className="flex items-center mb-5">
             <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-green-500 mr-4 hover:shadow-green-500 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
-              <FaGraduationCap className="finwise-blue text-xl shiny-effect transition-transform duration-300 ease-in-out" />
+              <FaGraduationCap className="text-gray-300 text-xl shiny-effect transition-transform duration-300 ease-in-out" />
             </div>
-            <h1 className="finwise-blue text-lg font-bold">Excellence</h1>
+            <h1 className="text-gray-300 text-lg font-bold">Excellence</h1>
           </div>
           <p className=" mb-10">
             We strive for excellence in everything we do, ensuring high
@@ -107,9 +107,9 @@ const AboutUs = () => {
         <div className="flex-1 mb-5 md:mb-0">
           <div className="flex items-center mb-5">
             <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-green-500 mr-4 hover:shadow-green-500 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
-              <IoIosPeople className="finwise-blue text-xl shiny-effect transition-transform duration-300 ease-in-out" />
+              <IoIosPeople className="text-gray-300 text-xl shiny-effect transition-transform duration-300 ease-in-out" />
             </div>
-            <h1 className="finwise-blue text-lg font-bold">Community Focus</h1>
+            <h1 className="text-gray-300 text-lg font-bold">Community Focus</h1>
           </div>
           <p className=" mb-10">
             We are committed to fostering a sense of community and support among
@@ -124,9 +124,9 @@ const AboutUs = () => {
         <div className="flex-1">
           <div className="flex items-center mb-5">
             <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-green-500 mr-4 hover:shadow-green-500 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
-              <FaStar className="finwise-blue text-xl shiny-effect transition-transform duration-300 ease-in-out" />
+              <FaStar className="text-gray-300 text-xl shiny-effect transition-transform duration-300 ease-in-out" />
             </div>
-            <h1 className="finwise-blue text-lg font-bold">Our Commitment</h1>
+            <h1 className="text-gray-300 text-lg font-bold">Our Commitment</h1>
           </div>
           <p className=" mb-5">
             We are dedicated to our mission and to helping our users achieve

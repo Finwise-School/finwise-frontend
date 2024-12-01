@@ -135,7 +135,7 @@ const ContactUs = () => {
                                     placeholder="Enter First Name"
                                     className={`mt-1 block w-full px-4 py-2 bg-transparent  bg-transparent border ${errors.firstName ? 'border-red-500' : 'border-gray-300'} rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                                 />
-                                {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
+                                {errors.firstName && <p className="text-gray-900 text-sm">{errors.firstName}</p>}
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-gray-200">Last Name</label>
@@ -147,7 +147,7 @@ const ContactUs = () => {
                                     placeholder="Enter Last Name"
                                     className={`mt-1 block w-full px-4 py-2  bg-transparent border ${errors.lastName ? 'border-red-500' : 'border-gray-300'} rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                                 />
-                                {errors.lastName && <p className="text-red-500 text-sm">{errors.lastName}</p>}
+                                {errors.lastName && <p className="text-gray-900 text-sm">{errors.lastName}</p>}
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-gray-200">Email</label>
@@ -159,7 +159,7 @@ const ContactUs = () => {
                                     placeholder="Enter your Email"
                                     className={`mt-1 block w-full px-4 py-2  bg-transparent border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                                 />
-                                {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+                                {errors.email && <p className="text-gray-900 text-sm">{errors.email}</p>}
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-gray-200">Phone</label>
@@ -171,7 +171,7 @@ const ContactUs = () => {
                                     placeholder="Enter Phone Number"
                                     className={`mt-1 block w-full px-4 py-2  bg-transparent border ${errors.phone ? 'border-red-500' : 'border-gray-300'} rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                                 />
-                                {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
+                                {errors.phone && <p className="text-gray-900 text-sm">{errors.phone}</p>}
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-gray-200">Inquiry Type</label>
@@ -186,7 +186,7 @@ const ContactUs = () => {
                                     <option value="feedback">Feedback</option>
                                     <option value="support">Support</option>
                                 </select>
-                                {errors.inquiryType && <p className="text-red-500 text-sm">{errors.inquiryType}</p>}
+                                {errors.inquiryType && <p className="text-gray-900 text-sm">{errors.inquiryType}</p>}
                             </div>
                             <div>
                                 <label className="block text-sm font-medium text-gray-200">How Did You Hear About Us?</label>
@@ -201,7 +201,7 @@ const ContactUs = () => {
                                     <option value="referral">Referral</option>
                                     <option value="web_search">Web Search</option>
                                 </select>
-                                {errors.hearAboutUs && <p className="text-red-500 text-sm">{errors.hearAboutUs}</p>}
+                                {errors.hearAboutUs && <p className="text-gray-900 text-sm">{errors.hearAboutUs}</p>}
                             </div>
                         </div>
 
@@ -215,7 +215,7 @@ const ContactUs = () => {
                                 placeholder="Enter your Message here."
                                 className={`mt-1 block w-full px-4 py-2  bg-transparent border ${errors.message ? 'border-red-500' : 'border-gray-300'} rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm`}
                             ></textarea>
-                            {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
+                            {errors.message && <p className="text-gray-900 text-sm">{errors.message}</p>}
                         </div>
 
 
@@ -233,7 +233,7 @@ const ContactUs = () => {
                                 <label htmlFor="terms" className="ml-2 text-sm font-medium text-gray-200">
                                     I agree with <a href="#" className="text-indigo-600 hover:text-indigo-500">Terms of Use and Privacy Policy</a>
                                 </label>
-                                {errors.terms && <p className="text-red-500 text-sm">{errors.terms}</p>}
+                                {errors.terms && <p className="text-gray-900 text-sm">{errors.terms}</p>}
                             </div>
 
 

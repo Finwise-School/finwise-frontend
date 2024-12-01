@@ -45,7 +45,7 @@ const images =[
 const Finance = () => {
   return (
     <div className="p-[5%]">
-    <h1 className="finwise-blue text-5xl md:text-5xl font-bold mb-[8%] text-center">
+    <h1 className="text-gray-300 text-5xl md:text-5xl font-bold mb-[8%] text-center">
       Finance Hacks
     </h1>
   

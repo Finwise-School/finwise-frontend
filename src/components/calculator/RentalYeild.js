@@ -89,68 +89,68 @@ const RentalYieldCalculator = () => {
   }, [purchaseCost, monthlyRent, annualCosts]);
 
   return (
-    <div className="bg-gray-50 p-2">
-      <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-lg p-8">
+    <div className="bg-[#070707] p-2">
+      <div className="max-w-6xl mx-auto bg-[#070707] shadow-lg rounded-lg p-8">
         <div className="mb-6">
-          <h1 className="text-2xl font-semibold finwise-green">Rental Yield Calculator</h1>
-          <p className="finwise-blue">Calculate your Gross and Net Rental Yield based on property details</p>
+          <h1 className="text-2xl font-semibold text-[#9B4DCA]">Rental Yield Calculator</h1>
+          <p className="text-gray-300">Calculate your Gross and Net Rental Yield based on property details</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Input Fields */}
           <div>
-            <h2 className="text-lg font-semibold text-gray-800 mb-4">Input fields:</h2>
+            <h2 className="text-lg font-semibold text-gray-300 mb-4">Input fields:</h2>
             <div className="space-y-4">
               <div className={`flex items-center justify-between p-4 border rounded-lg ${errors.purchaseCost ? 'border-red-500' : 'border-gray-300'}`}>
-                <label htmlFor="purchaseCost" className="text-gray-700">Property Purchase Cost</label>
+                <label htmlFor="purchaseCost" className="text-gray-300">Property Purchase Cost</label>
                 <div className="flex items-center space-x-2">
-                  <span className="text-gray-500">&#163;</span>
+                  <span className="text-gray-300">&#163;</span>
                   <input
                     type="number"
                     id="purchaseCost"
                     value={purchaseCost}
                     onChange={(e) => setPurchaseCost(e.target.value)}
-                    className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                    className="bg-purple-300 text-gray-900 font-semibold text-right p-2 rounded-lg w-24"
                   />
                 </div>
               </div>
-              {errors.purchaseCost && <p className="text-red-500 text-sm">{errors.purchaseCost}</p>}
+              {errors.purchaseCost && <p className="text-gray-900 text-sm">{errors.purchaseCost}</p>}
               
               <div className={`flex items-center justify-between p-4 border rounded-lg ${errors.monthlyRent ? 'border-red-500' : 'border-gray-300'}`}>
-                <label htmlFor="monthlyRent" className="text-gray-700">Monthly Rent</label>
+                <label htmlFor="monthlyRent" className="text-gray-300">Monthly Rent</label>
                 <input
                   type="number"
                   id="monthlyRent"
                   value={monthlyRent}
                   onChange={(e) => setMonthlyRent(e.target.value)}
-                  className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                  className="bg-purple-300 text-gray-900 font-semibold text-right p-2 rounded-lg w-24"
                 />
               </div>
-              {errors.monthlyRent && <p className="text-red-500 text-sm">{errors.monthlyRent}</p>}
+              {errors.monthlyRent && <p className="text-gray-900 text-sm">{errors.monthlyRent}</p>}
 
               <div className={`flex items-center justify-between p-4 border rounded-lg ${errors.annualCosts ? 'border-red-500' : 'border-gray-300'}`}>
-                <label htmlFor="annualCosts" className="text-gray-700">Annual Costs</label>
+                <label htmlFor="annualCosts" className="text-gray-300">Annual Costs</label>
                 <input
                   type="number"
                   id="annualCosts"
                   value={annualCosts}
                   onChange={(e) => setAnnualCosts(e.target.value)}
-                  className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                  className="bg-purple-300 text-gray-900 font-semibold text-right p-2 rounded-lg w-24"
                 />
               </div>
-              {errors.annualCosts && <p className="text-red-500 text-sm">{errors.annualCosts}</p>}
+              {errors.annualCosts && <p className="text-gray-900 text-sm">{errors.annualCosts}</p>}
             </div>
           </div>
           {/* Output Fields */}
-          <div className="output-fields -mt-28 md:mt-0">
-            <h2 className="text-lg font-semibold text-gray-800 mb-4">Results:</h2>
+          <div className="output-fields mt-0 md:mt-0">
+            <h2 className="text-lg font-semibold text-gray-300 mb-4">Results:</h2>
             <div className="space-y-2">
               <div className="p-4 border border-gray-300 rounded-lg">
-                <p className="finwise-blue">Gross Rental Yield</p>
-                <p className="finwise-green font-semibold text-xl">{result.grossYield}%</p>
+                <p className="text-gray-300">Gross Rental Yield</p>
+                <p className="text-[#9B4DCA] font-semibold text-xl">{result.grossYield}%</p>
               </div>
               <div className="p-4 border border-gray-300 rounded-lg">
-                <p className="finwise-blue">Net Rental Yield</p>
-                <p className="finwise-green font-semibold text-xl">{result.netYield}%</p>
+                <p className="text-gray-300">Net Rental Yield</p>
+                <p className="text-[#9B4DCA] font-semibold text-xl">{result.netYield}%</p>
               </div>
             </div>
           </div>

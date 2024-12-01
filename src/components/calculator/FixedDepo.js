@@ -104,51 +104,51 @@ const FixedDepo = () => {
   }, [amountInvested, annualInterestRate, fdInterestStructure, timePeriod]);
 
   return (
-    <div className="bg-gray-50 p-2">
-      <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-lg p-8">
+    <div className="bg-[#070707] p-2">
+      <div className="max-w-6xl mx-auto bg-[#070707] shadow-lg rounded-lg p-8">
         <div className="mb-0">
-          <h1 className="text-2xl font-semibold finwise-green">Fixed Deposit Calculator</h1>
-          <p className="finwise-blue">Find out the maturity amount of your fixed deposits and optimize your savings</p>
+          <h1 className="text-2xl font-semibold text-[#9B4DCA]">Fixed Deposit Calculator</h1>
+          <p className="text-gray-400">Find out the maturity amount of your fixed deposits and optimize your savings</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Input Fields */}
           <div>
-            <h2 className="text-lg font-semibold text-gray-800 mb-4">Input fields:</h2>
+            <h2 className="text-lg font-semibold text-gray-200 mb-4">Input fields:</h2>
             <div className="space-y-4">
               <div className={`flex items-center justify-between p-4 border rounded-lg ${errors.amountInvested ? 'border-red-500' : 'border-gray-300'}`}>
-                <label htmlFor="amount-invested" className="text-gray-700">Amount Invested</label>
+                <label htmlFor="amount-invested" className="text-gray-200">Amount Invested</label>
                 <div className="flex items-center space-x-2">
-                  <span className="text-gray-500">&#163;</span>
+                  <span className="text-gray-300">&#163;</span>
                   <input
                     type="number"
                     id="amount-invested"
                     value={amountInvested}
                     onChange={(e) => setAmountInvested(e.target.value)}
-                    className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                    className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                   />
                 </div>
               </div>
-              {errors.amountInvested && <p className="text-red-500 text-sm mt-1">{errors.amountInvested}</p>}
+              {errors.amountInvested && <p className="text-gray-900 text-sm mt-1">{errors.amountInvested}</p>}
 
               <div className={`flex items-center justify-between p-4 border rounded-lg ${errors.annualInterestRate ? 'border-red-500' : 'border-gray-300'}`}>
-                <label htmlFor="annual-interest-rate" className="text-gray-700">Annual Interest Rate (%)</label>
+                <label htmlFor="annual-interest-rate" className="text-gray-200">Annual Interest Rate (%)</label>
                 <input
                   type="number"
                   id="annual-interest-rate"
                   value={annualInterestRate}
                   onChange={(e) => setAnnualInterestRate(e.target.value)}
-                  className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                  className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                 />
               </div>
-              {errors.annualInterestRate && <p className="text-red-500 text-sm mt-1">{errors.annualInterestRate}</p>}
+              {errors.annualInterestRate && <p className="text-gray-900 text-sm mt-1">{errors.annualInterestRate}</p>}
 
               <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                <label htmlFor="fd-interest-structure" className="text-gray-700">FD Interest Structure</label>
+                <label htmlFor="fd-interest-structure" className="text-gray-200">FD Interest Structure</label>
                 <select
                   id="fd-interest-structure"
                   value={fdInterestStructure}
                   onChange={(e) => setFdInterestStructure(e.target.value)}
-                  className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                  className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                 >
                   <option value="monthly">Monthly</option>
                   <option value="quarterly">Quarterly</option>
@@ -158,36 +158,36 @@ const FixedDepo = () => {
               </div>
 
               <div className={`flex items-center justify-between p-4 border rounded-lg ${errors.timePeriod ? 'border-red-500' : 'border-gray-300'}`}>
-                <label htmlFor="time-period" className="text-gray-700">Time Period (Years)</label>
+                <label htmlFor="time-period" className="text-gray-200">Time Period (Years)</label>
                 <input
                   type="number"
                   id="time-period"
                   value={timePeriod}
                   onChange={(e) => setTimePeriod(e.target.value)}
-                  className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                  className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                 />
               </div>
-              {errors.timePeriod && <p className="text-red-500 text-sm mt-1">{errors.timePeriod}</p>}
+              {errors.timePeriod && <p className="text-gray-900 text-sm mt-1">{errors.timePeriod}</p>}
             </div>
           </div>
 
           {/* Output Fields */}
-          <div className="output-fields -mt-28 md:mt-0">
-            <h2 className="text-lg font-semibold text-gray-800 mb-4">Results:</h2>
+          <div className="output-fields mt-0 md:mt-0">
+            <h2 className="text-lg font-semibold text-gray-200 mb-4">Results:</h2>
             {result && (
               <div className="space-y-2">
                 <div className="grid grid-cols-1 gap-2" style={{ "row-gap": "0.6rem" }}>
                   <div className="p-4 border border-gray-300 rounded-lg">
-                    <p className="finwise-blue">Total Investment</p>
-                    <p className="finwise-green font-semibold text-xl">&#163;{result.totalInvestment}</p>
+                    <p className="text-gray-400">Total Investment</p>
+                    <p className="text-[#9B4DCA] font-semibold text-xl">&#163;{result.totalInvestment}</p>
                   </div>
                   <div className="p-4 border border-gray-300 rounded-lg">
-                    <p className="finwise-blue flex items-center">Total Interest Earned  </p>
-                    <p className="finwise-green font-semibold text-xl">&#163;{result.totalInterest}</p>
+                    <p className="text-gray-400 flex items-center">Total Interest Earned  </p>
+                    <p className="text-[#9B4DCA] font-semibold text-xl">&#163;{result.totalInterest}</p>
                   </div>
                   <div className="p-4 border border-gray-300 rounded-lg" >
-                    <p className="finwise-blue flex items-center">Maturity Value  </p>
-                    <p className="finwise-green font-semibold text-xl">&#163;{result.maturityValue}</p>
+                    <p className="text-gray-400 flex items-center">Maturity Value  </p>
+                    <p className="text-[#9B4DCA] font-semibold text-xl">&#163;{result.maturityValue}</p>
                   </div>
                 </div>
               </div>
@@ -197,8 +197,9 @@ const FixedDepo = () => {
 
         {/* Line Graph */}
         <div className="">
-          <h2 className="text-lg font-semibold text-gray-800 mb-4">Investment Over Time</h2>
+          <h2 className="text-lg font-semibold text-gray-200 mb-4">Investment Over Time</h2>
           <Line
+          className='bg-gray-900'
             data={chartData}
             options={{
               responsive: true,

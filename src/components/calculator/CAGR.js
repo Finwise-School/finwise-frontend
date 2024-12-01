@@ -75,87 +75,87 @@ const CAGRCalculator = () => {
     }, [buyPrice, sellPrice, buyDate, sellDate]);
 
     return (
-        <div className="bg-gray-50 p-2">
-            <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-lg p-8">
+        <div className="bg-[#070707] p-2">
+            <div className="max-w-6xl mx-auto bg-[#070707] shadow-lg rounded-lg p-8">
                 <div className="mb-6">
-                    <h1 className="text-2xl font-semibold finwise-green">CAGR Calculator</h1>
-                    <p className="finwise-blue">Calculate your absolute return and CAGR based on buy/sell price and dates</p>
+                    <h1 className="text-2xl font-semibold text-[#9B4DCA]">CAGR Calculator</h1>
+                    <p className="text-gray-300">Calculate your absolute return and CAGR based on buy/sell price and dates</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Input Fields */}
                     <div>
-                        <h2 className="text-lg font-semibold text-gray-800 mb-4">Input fields:</h2>
+                        <h2 className="text-lg font-semibold text-gray-300 mb-4">Input fields:</h2>
                         <div className="space-y-4">
                             {/* Buy Price */}
                             <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                                <label htmlFor="buyPrice" className="text-gray-700">Buy Price</label>
+                                <label htmlFor="buyPrice" className="text-gray-300">Buy Price</label>
                                 <div className="flex items-center space-x-2">
-                                    <span className="text-gray-500">&#163;</span>
+                                    <span className="text-gray-300">&#163;</span>
                                     <input
                                         type="number"
                                         id="buyPrice"
                                         value={buyPrice}
                                         onChange={(e) => setBuyPrice(e.target.value)}
-                                        className={`bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24 ${errors.buyPrice ? 'border-red-500' : ''}`}
+                                        className={`bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24 ${errors.buyPrice ? 'border-red-500' : ''}`}
                                     />
                                 </div>
                             </div>
-                            {errors.buyPrice && <p className="text-red-500 text-sm">{errors.buyPrice}</p>}
+                            {errors.buyPrice && <p className="text-gray-900 text-sm">{errors.buyPrice}</p>}
 
                             {/* Buy Date */}
                             <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                                <label htmlFor="buyDate" className="text-gray-700">Buy Date</label>
+                                <label htmlFor="buyDate" className="text-gray-300">Buy Date</label>
                                 <input
                                     type="date"
                                     id="buyDate"
                                     value={buyDate}
                                     onChange={(e) => setBuyDate(e.target.value)}
-                                    className={`bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-40 ${errors.dates ? 'border-red-500' : ''}`}
+                                    className={`bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-40 ${errors.dates ? 'border-red-500' : ''}`}
                                 />
                             </div>
 
                             {/* Sell Price */}
                             <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                                <label htmlFor="sellPrice" className="text-gray-700">Sell Price</label>
+                                <label htmlFor="sellPrice" className="text-gray-300">Sell Price</label>
                                 <div className="flex items-center space-x-2">
-                                    <span className="text-gray-500">&#163;</span>
+                                    <span className="text-gray-300">&#163;</span>
                                     <input
                                         type="number"
                                         id="sellPrice"
                                         value={sellPrice}
                                         onChange={(e) => setSellPrice(e.target.value)}
-                                        className={`bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24 ${errors.sellPrice ? 'border-red-500' : ''}`}
+                                        className={`bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24 ${errors.sellPrice ? 'border-red-500' : ''}`}
                                     />
                                 </div>
                             </div>
-                            {errors.sellPrice && <p className="text-red-500 text-sm">{errors.sellPrice}</p>}
+                            {errors.sellPrice && <p className="text-gray-900 text-sm">{errors.sellPrice}</p>}
 
                             {/* Sell Date */}
                             <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                                <label htmlFor="sellDate" className="text-gray-700">Sell Date</label>
+                                <label htmlFor="sellDate" className="text-gray-300">Sell Date</label>
                                 <input
                                     type="date"
                                     id="sellDate"
                                     value={sellDate}
                                     onChange={(e) => setSellDate(e.target.value)}
-                                    className={`bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-40 ${errors.dates ? 'border-red-500' : ''}`}
+                                    className={`bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-40 ${errors.dates ? 'border-red-500' : ''}`}
                                 />
                             </div>
-                            {errors.dates && <p className="text-red-500 text-sm">{errors.dates}</p>}
+                            {errors.dates && <p className="text-gray-900 text-sm">{errors.dates}</p>}
                         </div>
                     </div>
 
                     {/* Output Fields */}
-                    <div className="output-fields -mt-28 md:mt-0">
-                        <h2 className="text-lg font-semibold text-gray-800 mb-4">Results:</h2>
+                    <div className="output-fields mt-0 md:mt-0">
+                        <h2 className="text-lg font-semibold text-gray-300 mb-4">Results:</h2>
                         <div className="space-y-2">
                             <div className="p-4 border border-gray-300 rounded-lg">
-                                <p className="finwise-blue">Percentage Return (%)</p>
-                                <p className="finwise-green font-semibold text-xl">{result.percentageReturn}%</p>
+                                <p className="text-gray-300">Percentage Return (%)</p>
+                                <p className="text-[#9B4DCA] font-semibold text-xl">{result.percentageReturn}%</p>
                             </div>
                             <div className="p-4 border border-gray-300 rounded-lg">
-                                <p className="finwise-blue">CAGR Return (%)</p>
-                                <p className="finwise-green font-semibold text-xl">{result.cagrReturn}%</p>
+                                <p className="text-gray-300">CAGR Return (%)</p>
+                                <p className="text-[#9B4DCA] font-semibold text-xl">{result.cagrReturn}%</p>
                             </div>
                         </div>
                     </div>

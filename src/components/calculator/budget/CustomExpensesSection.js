@@ -90,8 +90,8 @@ const CustomExpensesSection = ({ customExpenses, setCustomExpenses }) => {
 
   return (
     <div className="section mt-16 mb-6">
-      <h2 className="text-2xl font-semibold text-green-600 mb-4">Custom Expenses</h2>
-      <div className="border rounded-lg p-4 mb-4 bg-gradient-to-r from-green-100 to-green-200">
+      <h2 className="text-2xl font-semibold text-gray-200 mb-4">Custom Expenses</h2>
+      <div className="border rounded-lg p-4 mb-4 bg-gradient-to-r from-purple-100 to-purple-500">
         {customExpenses.map((expense, index) => (
           <div key={index} className="mb-6">
             <div className="flex justify-between items-center cursor-pointer" onClick={() => toggleExpenseDropdown(index)}>
@@ -99,7 +99,7 @@ const CustomExpensesSection = ({ customExpenses, setCustomExpenses }) => {
               <div className="flex items-center">
                 <button 
                   onClick={() => removeCustomExpense(index)} 
-                  className="ml-2 text-red-500" 
+                  className="ml-2 text-gray-900" 
                   aria-label={`Remove custom expense ${expense.name}`}
                 >
                   <i className="fas fa-times"></i>
@@ -115,7 +115,7 @@ const CustomExpensesSection = ({ customExpenses, setCustomExpenses }) => {
             
             {/* Dropdown content (sub-expenses and form) */}
             {openExpenseIndexes.includes(index) && (
-              <div className="border rounded-lg p-4 mt-2 bg-gradient-to-r from-green-50 to-green-100">
+              <div className="border rounded-lg p-4 mt-2 bg-gradient-to-r from-purple-50 to-purple-100">
                 {/* Display sub-expenses in a premium, styled format */}
                 {expense.subExpenses.map((subExpense, subIndex) => (
                   <div key={subIndex} className="flex justify-between items-center mb-4 border-b border-gray-300 pb-2">
@@ -125,7 +125,7 @@ const CustomExpensesSection = ({ customExpenses, setCustomExpenses }) => {
                     </div>
                     <button 
                       onClick={() => removeSubExpense(index, subIndex)} 
-                      className="text-red-500 hover:text-red-600"
+                      className="text-gray-900 hover:text-red-600"
                       aria-label={`Remove sub-expense ${subExpense.name}`}
                     >
                       <i className="fas fa-times"></i>
@@ -139,7 +139,7 @@ const CustomExpensesSection = ({ customExpenses, setCustomExpenses }) => {
                     value={subExpenseInputs[index]?.name || ''}
                     onChange={(e) => handleSubExpenseInputChange(index, 'name', e.target.value)}
                     placeholder="Sub-Expense Name"
-                    className="p-2 border rounded-lg flex-grow mb-2 md:mb-0"
+                    className="p-2 border rounded-lg flex-grow mb-2 md:mb-0 text-gray-800"
                   />
                   <div className="relative w-32 mb-2 md:mb-0">
                     <span className="absolute left-2 top-1/2 transform -translate-y-1/2">£</span>
@@ -148,20 +148,20 @@ const CustomExpensesSection = ({ customExpenses, setCustomExpenses }) => {
                       value={subExpenseInputs[index]?.amount || ''}
                       onChange={(e) => handleSubExpenseInputChange(index, 'amount', e.target.value)}
                       placeholder="Amount"
-                      className={`pl-6 p-2 border rounded-lg w-full ${subExpenseInputs[index]?.amount < 0 ? 'border-red-500' : ''}`}
+                      className={`pl-6 p-2 border rounded-lg text-gray-800 w-full ${subExpenseInputs[index]?.amount < 0 ? 'border-red-500' : ''}`}
                     />
                   </div>
                   <select
                     value={subExpenseInputs[index]?.frequency || 'monthly'}
                     onChange={(e) => handleSubExpenseInputChange(index, 'frequency', e.target.value)}
-                    className="p-2 border rounded-lg"
+                    className="p-2 border text-gray-800 rounded-lg"
                   >
                     <option value="monthly">Monthly</option>
                     <option value="weekly">Weekly</option>
                   </select>
                   <button 
                     onClick={() => addSubExpense(index)} 
-                    className="bg-green-500 mt-2 text-white p-2 rounded-lg hover:bg-green-600"
+                    className="bg-purple-600 mt-2 text-white p-2 rounded-lg hover:bg-purple-700"
                   >
                     <i className="fas fa-plus mr-1"></i>Add Sub-Expense
                   </button>
@@ -176,7 +176,7 @@ const CustomExpensesSection = ({ customExpenses, setCustomExpenses }) => {
           {!showNewExpenseInput && (
             <button 
               onClick={() => setShowNewExpenseInput(true)} 
-              className="bg-green-500 text-white p-3 rounded-lg hover:bg-green-600 text-sm"
+              className="bg-purple-600 text-white p-3 rounded-lg hover:bg-purple-800 text-sm"
             >
               <i className="fas fa-plus mr-1"></i>Add Custom Expense
             </button>
@@ -190,11 +190,11 @@ const CustomExpensesSection = ({ customExpenses, setCustomExpenses }) => {
                 value={newExpenseName}
                 onChange={(e) => setNewExpenseName(e.target.value)}
                 placeholder="New Custom Expense Name"
-                className="p-2 border rounded-lg mb-4 w-full"
+                className="p-2 border text-gray-800 rounded-lg mb-4 w-full"
               />
               <button 
                 onClick={addCustomExpense} 
-                className="bg-green-500 text-white p-3 rounded-lg hover:bg-green-600 text-sm"
+                className="bg-purple-600 text-white p-3 rounded-lg hover:bg-green-600 text-sm"
               >
                 <i className="fas fa-plus mr-1"></i>Save Custom Expense
               </button>

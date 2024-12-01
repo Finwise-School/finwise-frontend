@@ -110,52 +110,52 @@ const MortgageBorrowerCalculator = () => {
     };
 
     return (
-        <div className="bg-gray-50 p-2">
-            <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-lg p-8">
+        <div className="bg-[#070707] p-2">
+            <div className="max-w-6xl mx-auto bg-[#070707] shadow-lg rounded-lg p-8">
                 <div className="mb-6">
-                    <h1 className="text-2xl font-semibold finwise-green">Mortgage Borrower Calculator</h1>
-                    <p className="finwise-blue">Calculate how much you can borrow based on your income and deposit</p>
+                    <h1 className="text-2xl font-semibold text-[#9B4DCA]">Mortgage Borrower Calculator</h1>
+                    <p className="text-gray-300">Calculate how much you can borrow based on your income and deposit</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Input Fields */}
                     <div>
-                        <h2 className="text-lg font-semibold text-gray-800 mb-4">Input fields:</h2>
+                        <h2 className="text-lg font-semibold text-gray-300 mb-4">Input fields:</h2>
                         <div className="space-y-4">
                             {/* Input fields for salaries, deposit, and second applicant */}
                             <div className={`flex items-center justify-between p-4 border rounded-lg ${errors.annualSalary ? 'border-red-500' : 'border-gray-300'}`}>
-                                <label htmlFor="annualSalary" className="text-gray-700">Your Annual Salary</label>
+                                <label htmlFor="annualSalary" className="text-gray-300">Your Annual Salary</label>
                                 <div className="flex items-center space-x-2">
-                                    <span className="text-gray-500">&#163;</span>
+                                    <span className="text-gray-300">&#163;</span>
                                     <input
                                         type="number"
                                         id="annualSalary"
                                         value={annualSalary}
                                         onChange={(e) => setAnnualSalary(e.target.value)}
-                                        className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                                        className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                                     />
                                 </div>
                             </div>
-                            {errors.annualSalary && <p className="text-red-500 text-sm">{errors.annualSalary}</p>}
+                            {errors.annualSalary && <p className="text-gray-900 text-sm">{errors.annualSalary}</p>}
 
                             <div className={`flex items-center justify-between p-4 border rounded-lg ${errors.otherIncome ? 'border-red-500' : 'border-gray-300'}`}>
-                                <label htmlFor="otherIncome" className="text-gray-700">Other Income</label>
+                                <label htmlFor="otherIncome" className="text-gray-300">Other Income</label>
                                 <input
                                     type="number"
                                     id="otherIncome"
                                     value={otherIncome}
                                     onChange={(e) => setOtherIncome(e.target.value)}
-                                    className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                                    className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                                 />
                             </div>
-                            {errors.otherIncome && <p className="text-red-500 text-sm">{errors.otherIncome}</p>}
+                            {errors.otherIncome && <p className="text-gray-900 text-sm">{errors.otherIncome}</p>}
 
                             <div className={`flex items-center justify-between p-4 border rounded-lg`}>
-                                <label htmlFor="secondApplicant" className="text-gray-700">Do you have a second applicant?</label>
+                                <label htmlFor="secondApplicant" className="text-gray-300">Do you have a second applicant?</label>
                                 <select
                                     id="secondApplicant"
                                     value={secondApplicant ? 'yes' : 'no'}
                                     onChange={(e) => setSecondApplicant(e.target.value === 'yes')}
-                                    className="bg-green-100 text-gray-800 font-semibold p-2 rounded-lg"
+                                    className="bg-purple-300 text-gray-800 font-semibold p-2 rounded-lg"
                                 >
                                     <option value="no">No</option>
                                     <option value="yes">Yes</option>
@@ -165,66 +165,66 @@ const MortgageBorrowerCalculator = () => {
                             {secondApplicant && (
                                 <>
                                     <div className={`flex items-center justify-between p-4 border rounded-lg ${errors.secondAnnualSalary ? 'border-red-500' : 'border-gray-300'}`}>
-                                        <label htmlFor="secondAnnualSalary" className="text-gray-700">Second Applicant Annual Salary</label>
+                                        <label htmlFor="secondAnnualSalary" className="text-gray-300">Second Applicant Annual Salary</label>
                                         <input
                                             type="number"
                                             id="secondAnnualSalary"
                                             value={secondAnnualSalary}
                                             onChange={(e) => setSecondAnnualSalary(e.target.value)}
-                                            className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                                            className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                                         />
                                     </div>
-                                    {errors.secondAnnualSalary && <p className="text-red-500 text-sm">{errors.secondAnnualSalary}</p>}
+                                    {errors.secondAnnualSalary && <p className="text-gray-900 text-sm">{errors.secondAnnualSalary}</p>}
 
                                     <div className={`flex items-center justify-between p-4 border rounded-lg ${errors.secondOtherIncome ? 'border-red-500' : 'border-gray-300'}`}>
-                                        <label htmlFor="secondOtherIncome" className="text-gray-700">Second Applicant Other Income</label>
+                                        <label htmlFor="secondOtherIncome" className="text-gray-300">Second Applicant Other Income</label>
                                         <input
                                             type="number"
                                             id="secondOtherIncome"
                                             value={secondOtherIncome}
                                             onChange={(e) => setSecondOtherIncome(e.target.value)}
-                                            className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                                            className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                                         />
                                     </div>
-                                    {errors.secondOtherIncome && <p className="text-red-500 text-sm">{errors.secondOtherIncome}</p>}
+                                    {errors.secondOtherIncome && <p className="text-gray-900 text-sm">{errors.secondOtherIncome}</p>}
                                 </>
                             )}
 
                             <div className={`flex items-center justify-between p-4 border rounded-lg ${errors.deposit ? 'border-red-500' : 'border-gray-300'}`}>
-                                <label htmlFor="deposit" className="text-gray-700">Deposit Amount</label>
+                                <label htmlFor="deposit" className="text-gray-300">Deposit Amount</label>
                                 <div className="flex items-center space-x-2">
-                                    <span className="text-gray-500">&#163;</span>
+                                    <span className="text-gray-300">&#163;</span>
                                     <input
                                         type="number"
                                         id="deposit"
                                         value={deposit}
                                         onChange={(e) => setDeposit(e.target.value)}
-                                        className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                                        className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                                     />
                                 </div>
                             </div>
-                            {errors.deposit && <p className="text-red-500 text-sm">{errors.deposit}</p>}
+                            {errors.deposit && <p className="text-gray-900 text-sm">{errors.deposit}</p>}
                         </div>
                     </div>
 
                     {/* Output Fields and Graph */}
-                    <div className="output-fields -mt-28 md:mt-0">
-                        <h2 className="text-lg font-semibold text-gray-800 mb-4">Results:</h2>
+                    <div className="output-fields mt-0 md:mt-0">
+                        <h2 className="text-lg font-semibold text-gray-300 mb-4">Results:</h2>
                         <div className="space-y-2">
                             <div className="p-4 border border-gray-300 rounded-lg">
-                                <p className="finwise-blue">Borrowing Amount</p>
-                                <p className="finwise-green font-semibold text-xl">&#163;{result.borrowingAmount}</p>
+                                <p className="text-gray-300">Borrowing Amount</p>
+                                <p className="text-[#9B4DCA] font-semibold text-xl">&#163;{result.borrowingAmount}</p>
                             </div>
                             <div className="p-4 border border-gray-300 rounded-lg">
-                                <p className="finwise-blue">Deposit Amount</p>
-                                <p className="finwise-green font-semibold text-xl">&#163;{result.depositAmount}</p>
+                                <p className="text-gray-300">Deposit Amount</p>
+                                <p className="text-[#9B4DCA] font-semibold text-xl">&#163;{result.depositAmount}</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div style={{marginTop: "-100px"}} className="flex items-center justify-center">
-                    <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
+                    <div className="bg-purple-200 shadow-lg rounded-lg p-6 w-full max-w-md">
                         <h1 className="text-center text-lg font-bold text-[#004B87] mb-6">You could borrow up to</h1>
 
                         <div className="flex items-center justify-center mb-6">

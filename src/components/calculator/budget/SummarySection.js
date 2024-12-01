@@ -26,11 +26,11 @@ const SummarySection = ({ totals, homeEssentials, otherSpendings, customExpenses
   ];
 
   return (
-    <div className="section my-8 p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold text-green-600 mb-4">Summary</h2>
+    <div className="section my-8 p-6 bg-[#070707] border rounded-lg shadow-md">
+      <h2 className="text-2xl font-bold text-purple-600 mb-4">Summary</h2>
       <table className="min-w-full border border-gray-300">
         <thead>
-          <tr className="bg-green-100">
+          <tr className="bg-purple-500 text-center">
             <th className="border p-4 text-left">Category</th>
             <th className="border p-4 text-right">Total (£)</th>
           </tr>
@@ -52,7 +52,7 @@ const SummarySection = ({ totals, homeEssentials, otherSpendings, customExpenses
             <td className="border p-4 text-right">£{totals.totalHomeEssentials.toFixed(2)}</td>
           </tr>
           {showHomeEssentials && homeEssentials.map((essential, index) => (
-            <tr key={index} className="bg-gray-50">
+            <tr key={index} className="bg-[#070707]">
               <td className="border p-4 pl-8 text-left">• {essential.name}</td>
               <td className="border p-4 text-right">£{(calculateMonthlyAmount(parseFloat(essential.spending) || 0, essential.frequency)).toFixed(2)}</td>
             </tr>
@@ -70,8 +70,8 @@ const SummarySection = ({ totals, homeEssentials, otherSpendings, customExpenses
           </tr>
           {showOtherSpendings && otherSpendings.map((spending, index) => (
             <tr key={index} className={getSpendingRowClass(spending)}>
-              <td className="border p-4 pl-8 text-left">• {spending.name}</td>
-              <td className="border p-4 text-right">£{(calculateMonthlyAmount(parseFloat(spending.spending) || 0, spending.frequency)).toFixed(2)}</td>
+              <td className="border p-4 text-gray-700 pl-8 text-left">• {spending.name}</td>
+              <td className="border p-4 text-gray-700 text-right">£{(calculateMonthlyAmount(parseFloat(spending.spending) || 0, spending.frequency)).toFixed(2)}</td>
             </tr>
           ))}
 
@@ -89,12 +89,12 @@ const SummarySection = ({ totals, homeEssentials, otherSpendings, customExpenses
           </tr>
           {showCustomExpenses && customExpenses.map((expense, index) => (
             <React.Fragment key={index}>
-              <tr className="bg-gray-50">
+              <tr className="bg-[#070707]">
                 <td className="border p-4 pl-8 text-left">• {expense.name}</td>
                 <td className="border p-4 text-right"></td>
               </tr>
               {expense.subExpenses.map((subExpense, subIndex) => (
-                <tr key={subIndex} className="bg-gray-50">
+                <tr key={subIndex} className="bg-[#070707]">
                   <td className="border p-4 pl-12 text-left">- {subExpense.name}</td>
                   <td className="border p-4 text-right">£{calculateMonthlyAmount(parseFloat(subExpense.spending), subExpense.frequency).toFixed(2)}</td>
                 </tr>
@@ -195,7 +195,7 @@ const getSpendingRowClass = (spending) => {
   } else if (spendingCategories.entertainment.includes(name)) {
     return 'bg-yellow-100'; // Entertainment category
   } else if (spendingCategories.health.includes(name)) {
-    return 'bg-green-100'; // Health category
+    return 'bg-purple-300'; // Health category
   } else if (spendingCategories.transport.includes(name)) {
     return 'bg-red-100'; // Transport category
   } else if (spendingCategories.family.includes(name)) {
@@ -203,7 +203,7 @@ const getSpendingRowClass = (spending) => {
   } else if (spendingCategories.finance.includes(name)) {
     return 'bg-orange-100'; // Finance category
   } else {
-    return 'bg-gray-50'; // Default color for other categories
+    return 'bg-[#070707]'; // Default color for other categories
   }
 };
 

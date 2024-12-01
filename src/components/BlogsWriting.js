@@ -230,7 +230,7 @@ const BlogsWriting = ({ placeholder, baseURL }) => {
                       <p className={`cursor-pointer text-red-700 text-xl font-bold`} onClick={handleLogOut}>Logout</p>
                     </div>
                     <div>
-                        <h1 className='font-semibold text-[28px] leading-10 md:text-5xl md:leading-[72px] finwise-blue text-center md:text-left'>
+                        <h1 className='font-semibold text-[28px] leading-10 md:text-5xl md:leading-[72px] text-gray-300 text-center md:text-left'>
                             Compose Your Blog Here
                         </h1>
                         <p className='font-medium text-sm md:text-lg leading-7 finwise-para text-center md:text-left'>
@@ -285,7 +285,7 @@ const BlogsWriting = ({ placeholder, baseURL }) => {
                         <div className="flex justify-center my-4">
                          <button
                           onClick={handleSubmit}
-                          className={`finwise-blue-bg text-white font-semibold py-2 px-4 rounded transition duration-300 ease-in-out 
+                          className={`text-gray-300-bg text-white font-semibold py-2 px-4 rounded transition duration-300 ease-in-out 
                         hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 ${!(title && content) ? 'opacity-50 cursor-not-allowed' : 'hover:shadow-lg'}`}
                           disabled={!title || !content} // Disable button if title or content is missing
                         >
@@ -373,7 +373,7 @@ export default BlogsWriting;
 //        <> 
 //         <div className='flex flex-col md:mx-32 m-[14px] md:mb-16 mt-16'>
 //           <div>
-//             <h1 className='font-semibold text-[28px] leading-10 md:text-5xl md:leading-[72px] finwise-blue text-center md:text-left'>
+//             <h1 className='font-semibold text-[28px] leading-10 md:text-5xl md:leading-[72px] text-gray-300 text-center md:text-left'>
 //              Compose Your Blog Here
 //             </h1>
 //             <p className='font-medium text-sm md:text-lg leading-7 finwise-para text-center md:text-left'>

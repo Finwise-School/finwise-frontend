@@ -4,7 +4,7 @@ const Card = ({ id, index,step, title, description, image }) => {
   return (
     <div
       id={id}
-      className="sticky top-[calc(var(--index)*5rem)] transform transition-transform duration-500 bg-transparent"
+      className="sticky top-[calc(var(--index)*5rem)] transform transition-transform duration-500 bg-transparent mt-5"
       style={{
         "--index": index,
       }}

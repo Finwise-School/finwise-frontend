@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import gradient from '../assets/images/gradient.svg'
+// import gradient from '../assets/images/gradient.svg'
 import arr from '../assets/images/arr.svg'
 
 const Faq = () => {
@@ -19,6 +19,8 @@ const Faq = () => {
               <p className="mt-5 text-base text-body-color dark:text-dark-6">
               Gather valuable insights with ease. Our platform enables customers to leave feedback and reviews, helping you understand their preferences and improve your service.
               </p>
+              {/* Button for all view */}
+              <p className="mt-3 font-medium">View all</p>
             </div>
           </div>
         </div>
@@ -52,12 +54,63 @@ const Faq = () => {
               text="Signing up is easy! Simply visit our website, click on the 'Sign Up' button, and follow the prompts to create your account. You can start learning right away!"
             />
           </div>
+          <div className="w-full px-4 lg:w-1/2">
+            <AccordionItem
+              header="Can I access FinWise School on my mobile device?"
+              text="Yes, we are in the process of launching a mobile app that will allow you to access all our content and tools on the go. Stay tuned for updates!"
+            />
+            <AccordionItem
+              header="Do you offer certification for completing courses?"
+              text="Yes, we offer certificates of completion for our courses. These can be a valuable addition to your resume, showcasing your financial literacy skills to employers."
+            />
+            <AccordionItem
+              header="How does the gamification aspect work?"
+              text="We incorporated gamified elements such as quizzes, interactive simulations, and real-life scenarios to make learning finance fun and engaging. You can earn badges, points, and rewards as you progress through the courses."
+            />
+            <AccordionItem
+              header="How do I contact support if I have more questions?"
+              text="You can reach out to our support team via email or use the chat box on our website for immediate assistance."
+            />
+          </div>
+          <div className="w-full px-4 lg:w-1/2">
+            <AccordionItem
+              header="How much time will I take to complete the module?"
+              text="We recommend completing the course within one month to allow ample time for developing your personalized plan. However, it is a self-paced course, allowing you to adjust it according to your availability."
+            />
+            <AccordionItem
+              header="How can I access the Finwise School platform?"
+              text="We are excited to announce that our mobile app will soon be available for both Android and Apple devices, allowing you to learn on the go. In the meantime, you can request early access to the mobile app and be among the first to experience our new features as soon as they’re released."
+            />
+            <AccordionItem
+              header="Do I need to have a prior finance knowledge before accessing the program?"
+              text="Not necessarily. We have designed the program in a way that its completely jargon free, our program moderators use tools and techniques that are easily comprehensible, easy for beginner and learning curve for intermediates."
+            />
+            <AccordionItem
+               header="What are the benefits of joining Finwise school?"
+               text="Tailored Learning Paths
+               Experience a personalized financial education journey with courses and resources designed to match your specific knowledge level and financial goals.
+               
+               Engaging, Fun Learning
+               Enjoy a gamified learning experience with interactive simulations, quizzes, and real-life scenarios that make understanding finance both enjoyable and practical.
+               
+               Comprehensive Financial Coverage
+               Access a broad range of topics, from basic budgeting to advanced investment strategies, all crafted by financial experts to ensure accuracy and relevance.
+               
+               Earn Rewards and Recognition
+               As you progress, earn badges, points, and certificates that recognize your achievements. Plus, unlock exclusive rewards like coupons and discounts, adding extra value to your learning experience. These rewards can also enhance your professional profile and provide tangible benefits beyond education."
+             />
+          </div>
+            
+           
+            
+          
+          
         </div>
       </div>
 
-      <div className="absolute bottom-0 right-0 z-[-1]">
+      {/* <div className="absolute bottom-0 right-0 z-[100]">
         <img src={gradient}></img>
-      </div>
+      </div> */}
     </section>
   );
 };

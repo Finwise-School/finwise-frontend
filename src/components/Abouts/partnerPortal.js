@@ -33,7 +33,7 @@ export default function Partner() {
     <section id="auPortal" className="items-center">
       <div className="mainSupportersContainer flex flex-col justify-center items-center md:gap-3 gap-10 mt-8 mx-4 md:mx-10">
         <div className="msHeader">
-          <h1 className="font-semibold md:text-5xl text-[28px] md:leading-[72px] leading-[42px] finwise-blue text-center">
+          <h1 className="font-semibold md:text-5xl text-[28px] md:leading-[72px] leading-[42px] text-gray-300 text-center">
             Partner Portal
           </h1>
           <p className="font-medium md:text-lg text-sm md:leading-7 leading-5 finwise-para pr-[6%] pl-[6%] text-justify">

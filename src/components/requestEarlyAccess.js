@@ -104,7 +104,7 @@ const writeDate = formatDate(date);
           <img
             src={successImg}
             alt="Success"
-            className="mx-auto mb-4 w-32 md:w-48"
+            className="mx-auto mb-4 w-64 md:w-64"
           />
           <h1 className="text-2xl md:text-4xl font-semibold mb-4 text-gray-200">Success!</h1>
           <p className="text-lg md:text-xl text-gray-200">Thank you for submitting the form.</p>
@@ -170,7 +170,7 @@ const writeDate = formatDate(date);
                   onChange={handleInputChange}
                   className="w-full bg-transparent text-gray-200 placeholder-[#C8C8C8] mt-4 focus:outline-none focus:ring-0 text-lg md:text-xl"
                 />
-                {errors.name && <p className="text-red-500 mt-2">{errors.name}</p>}
+                {errors.name && <p className="text-gray-900 mt-2">{errors.name}</p>}
                 <div className="flex justify-end w-full mt-4">
                   <button
                     type="button"
@@ -200,7 +200,7 @@ const writeDate = formatDate(date);
                   onChange={handleInputChange}
                   className="w-full bg-transparent text-gray-200 placeholder-[#C8C8C8] mt-4 focus:outline-none focus:ring-0 text-lg md:text-xl"
                 />
-                {errors.email && <p className="text-red-500 mt-2">{errors.email}</p>}
+                {errors.email && <p className="text-gray-900 mt-2">{errors.email}</p>}
                 <div className="flex justify-between items-center mt-8 w-full">
                   <button
                     type="button"
@@ -250,7 +250,7 @@ const writeDate = formatDate(date);
                     countryCodeEditable={false}
                   />
                 </div>
-                {errors.phone && <p className="text-red-500 mt-2">{errors.phone}</p>}
+                {errors.phone && <p className="text-gray-900 mt-2">{errors.phone}</p>}
                 <div className="flex justify-between items-center mt-8 w-full">
                   <button
                     type="button"

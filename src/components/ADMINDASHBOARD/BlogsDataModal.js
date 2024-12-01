@@ -90,7 +90,7 @@ const BlogsDataModal = ({ setOpenModal, setApproveoption,
                       <h5 className="text-lg font-bold tracking-tight text-gray-900 dark:text-white">
                         {data.Name}
                       </h5>
-                      <button className="font-medium text-red-600 hover:text-red-800 dark:text-red-500" onClick={() => handleCommentDeleteOption(data._id)}>
+                      <button className="font-medium text-red-600 hover:text-red-800 dark:text-gray-900" onClick={() => handleCommentDeleteOption(data._id)}>
                           <HiTrash className="inline mr-1 m-auto" /> Delete
                       </button>
                       </div>

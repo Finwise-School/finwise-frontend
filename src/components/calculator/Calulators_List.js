@@ -21,16 +21,16 @@ const calculators = [
 const CalculatorList = ({ activeCalculator }) => {
   return (
     <div className="mt-16">
-      <h2 className="text-lg font-semibold text-gray-800 mb-4">Try our more Popular Calculators</h2>
+      <h2 className="text-lg font-semibold text-gray-200 mb-4">Try our more Popular Calculators</h2>
       <div className="space-y-2">
         {calculators.map(calculator => (
           <Link
             key={calculator.path}
             to={calculator.path}
-            className={`flex justify-between items-center p-4 border border-gray-300 rounded-lg hover:bg-gray-100 ${activeCalculator === calculator.name ? 'text-green-500' : 'text-gray-800'}`}
+            className={`flex justify-between items-center p-4 border border-gray-300 rounded-lg hover:bg-purple-600 hover:text-gray-800 ${activeCalculator === calculator.name ? 'text-green-500' : 'text-gray-800'}`}
           >
-            <p className={activeCalculator === calculator.name ? 'finwise-green' : ''}>{calculator.name}</p>
-            <FontAwesomeIcon icon={faChevronRight} className="text-gray-500" />
+            <p className={activeCalculator === calculator.name ? 'text-[#9B4DCA]' : 'text-gray-200'}>{calculator.name}</p>
+            <FontAwesomeIcon icon={faChevronRight} className="text-gray-300" />
           </Link>
         ))}
       </div>

@@ -35,7 +35,7 @@ const FAQ = () => {
         <h2 className="text-xl font-semibold text-blue-900 mt-15 md:text-5xl max-w-full">Frequently Asked Questions</h2>
         <p className="mt-3.5 text-lg font-medium text-neutral-400 max-w-full">Find answers to common questions about Finwise School.</p>
       <Link to="/faqs">
-      <button className="px-6 py-3 mt-8 tracking-normal leading-none text-white finwise-green-bg rounded-xl border border-solid border-neutral-800" style={{textAlign: "left"}}>
+      <button className="px-6 py-3 mt-8 tracking-normal leading-none text-white text-[#9B4DCA]-bg rounded-xl border border-solid border-neutral-800" style={{textAlign: "left"}}>
         View All FAQs
       </button>
     </Link>

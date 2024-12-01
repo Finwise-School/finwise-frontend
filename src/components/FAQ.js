@@ -43,7 +43,7 @@ const FAQ = () => {
       <div className='mainFaqContainer flex flex-col md:mx-32 m-[14px] md:mb-16 mt-16'>
         <div className='faqHeader flex flex-row md:justify-between md:items-start justify-center items-center'>
           <div>
-            <h1 className='font-semibold text-[28px] leading-10 md:text-5xl md:leading-[72px] finwise-blue'>
+            <h1 className='font-semibold text-[28px] leading-10 md:text-5xl md:leading-[72px] text-gray-300'>
               Frequently Asked Questions
             </h1>
             <p className='font-medium text-sm md:text-lg leading-7 finwise-para'>
@@ -51,7 +51,7 @@ const FAQ = () => {
             </p>
           </div>
           <button
-            className='py-[18px] px-6 finwise-green-bg border border-[#223876] rounded-lg h-16 md:inline-block hidden'
+            className='py-[18px] px-6 text-[#9B4DCA]-bg border border-[#223876] rounded-lg h-16 md:inline-block hidden'
             onClick={() => { setMainExpand(!mainExpand); }}
           >
             <p className='font-medium text-lg leading-7 m-auto text-white'>

@@ -30,7 +30,7 @@ export default function ExtraPayments({
                             id="startPaymentNo"
                             value={startPaymentNo}
                             onChange={(e) => setStartPaymentNo(parseFloat(e.target.value) || 0)}
-                            className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                            className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                         />
                     </div>
 
@@ -44,7 +44,7 @@ export default function ExtraPayments({
                                 id="extraPayment"
                                 value={extraPayment}
                                 onChange={(e) => setExtraPayment(parseFloat(e.target.value) || 0)}
-                                className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                                className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                             />
                         </div>
                     </div>
@@ -57,7 +57,7 @@ export default function ExtraPayments({
                             id="paymentInterval"
                             value={extraPaymentInterval}
                             onChange={(e) => setExtraPaymentInterval(parseFloat(e.target.value) || 0)}
-                            className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                            className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                         />
                     </div>
 
@@ -71,7 +71,7 @@ export default function ExtraPayments({
                                 id="extraAnnualPayment"
                                 value={extraAnnualPayment}
                                 onChange={(e) => setExtraAnnualPayment(parseFloat(e.target.value) || 0)}
-                                className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                                className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                             />
                         </div>
                     </div>
@@ -84,18 +84,18 @@ export default function ExtraPayments({
                             id="extraPaymentMonth"
                             value={extraPaymentMonth}
                             onChange={(e) => setExtraPaymentMonth(parseFloat(e.target.value) || 0)}
-                            className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                            className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                         />
                     </div>
 
                     {/* Output: Total Extra Payments */}
-                    <div className="p-4 border border-gray-300 rounded-lg bg-gray-50">
+                    <div className="p-4 border border-gray-300 rounded-lg bg-[#070707]">
                         <h3 className="text-gray-800 font-semibold mb-2">Total Extra Payments</h3>
                         <div className="text-2xl font-bold text-green-600">{totalExtraPayment}</div>
                     </div>
 
                     {/* Output: Interest Savings */}
-                    <div className="p-4 border border-gray-300 rounded-lg bg-gray-50">
+                    <div className="p-4 border border-gray-300 rounded-lg bg-[#070707]">
                         <h3 className="text-gray-800 font-semibold mb-2">Interest Savings</h3>
                         <div className="text-2xl font-bold text-green-600">{parseFloat(finalInterestSavings).toFixed(2)}</div>
                     </div>

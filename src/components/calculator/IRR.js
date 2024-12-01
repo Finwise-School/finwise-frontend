@@ -67,72 +67,72 @@ const IRRCalculator = () => {
   };
 
   return (
-    <div className="bg-gray-50 p-2">
-      <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-lg p-8">
+    <div className="bg-[#070707] p-2">
+      <div className="max-w-6xl mx-auto bg-[#070707] shadow-lg rounded-lg p-8">
         <div className="mb-6">
-          <h1 className="text-2xl font-semibold finwise-green">IRR Calculator</h1>
-          <p className="finwise-blue">Calculate the Internal Rate of Return for your investment.</p>
+          <h1 className="text-2xl font-semibold text-[#9B4DCA]">IRR Calculator</h1>
+          <p className="text-gray-300">Calculate the Internal Rate of Return for your investment.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <h2 className="text-lg font-semibold text-gray-800 mb-4">Input fields:</h2>
+            <h2 className="text-lg font-semibold text-gray-300 mb-4">Input fields:</h2>
             <div className="space-y-4">
               <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                <label htmlFor="initialInvestment" className="text-gray-700">Initial Investment</label>
+                <label htmlFor="initialInvestment" className="text-gray-300">Initial Investment</label>
                 <div className="flex items-center space-x-2">
-                  <span className="text-gray-500">&#163;</span>
+                  <span className="text-gray-300">&#163;</span>
                   <input
                     type="number"
                     id="initialInvestment"
                     value={initialInvestment}
                     onChange={(e) => setInitialInvestment(parseFloat(e.target.value) || 0)}
-                    className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                    className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                   />
                 </div>
               </div>
-              {errors.initialInvestment && <p className="text-red-500 text-sm">{errors.initialInvestment}</p>}
+              {errors.initialInvestment && <p className="text-gray-900 text-sm">{errors.initialInvestment}</p>}
 
               {cashFlows.map((cashFlow, index) => (
-                <div key={index} className="flex items-center justify-between p-4 border border-gray-300 rounded-lg bg-gray-50">
-                  <label className="text-gray-700">Year {index + 1} Cash Flow</label>
+                <div key={index} className="flex items-center justify-between p-4 border border-gray-300 rounded-lg bg-[#070707]">
+                  <label className="text-gray-300">Year {index + 1} Cash Flow</label>
                   <div className="flex items-center space-x-2">
-                    <span className="text-gray-500">&#163;</span>
+                    <span className="text-gray-300">&#163;</span>
                     <input
                       type="number"
                       value={cashFlow}
                       onChange={(e) => handleCashFlowChange(index, e.target.value)}
                       className="bg-gray-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                     />
-                    <button onClick={() => removeCashFlow(index)} className="text-red-500">
+                    <button onClick={() => removeCashFlow(index)} className="text-gray-900">
                       <FontAwesomeIcon icon={faTimes} />
                     </button>
                   </div>
-                  {errors[`cashFlow${index}`] && <p className="text-red-500 text-sm">{errors[`cashFlow${index}`]}</p>}
+                  {errors[`cashFlow${index}`] && <p className="text-gray-900 text-sm">{errors[`cashFlow${index}`]}</p>}
                 </div>
               ))}
 
               <button
                 onClick={addCashFlow}
-                className="text-white font-semibold px-4 py-2 rounded-lg finwise-green-bg">
+                className="text-white bg-purple-500 font-semibold px-4 py-2 rounded-lg text-[#9B4DCA]-bg">
                 Add Cash Flow <FontAwesomeIcon icon={faPlus} />
               </button>
             </div>
           </div>
 
-          <div className="output-fields -mt-28 md:mt-0">
-            <h2 className="text-lg font-semibold text-gray-800 mb-4">Results:</h2>
+          <div className="output-fields mt-0 md:mt-0">
+            <h2 className="text-lg font-semibold text-gray-300 mb-4">Results:</h2>
             <div className="space-y-2">
               <div className="p-4 border border-gray-300 rounded-lg">
-                <p className="finwise-blue">IRR</p>
-                <p className="finwise-green font-semibold text-xl">{irrResult}%</p>
+                <p className="text-gray-300">IRR</p>
+                <p className="text-[#9B4DCA] font-semibold text-xl">{irrResult}%</p>
               </div>
               <div className="p-4 border border-gray-300 rounded-lg">
-                <p className="finwise-blue">Gross Return</p>
-                <p className="finwise-green font-semibold text-xl">{grossReturn}%</p>
+                <p className="text-gray-300">Gross Return</p>
+                <p className="text-[#9B4DCA] font-semibold text-xl">{grossReturn}%</p>
               </div>
               <div className="p-4 border border-gray-300 rounded-lg">
-                <p className="finwise-blue">Return Above Investment</p>
-                <p className="finwise-green font-semibold text-xl">&#163;{returnAboveInvestment}</p>
+                <p className="text-gray-300">Return Above Investment</p>
+                <p className="text-[#9B4DCA] font-semibold text-xl">&#163;{returnAboveInvestment}</p>
               </div>
             </div>
           </div>

@@ -352,78 +352,78 @@ const EMICalculator = () => {
         }).catch(err => console.error(err));
     };
     return (
-        <div className="bg-gray-50 p-2">
-            <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-lg p-8">
+        <div className="bg-[#070707] p-2">
+            <div className="max-w-6xl mx-auto bg-[#070707] shadow-lg rounded-lg p-8">
                 <div className="mb-6">
-                    <h1 className="text-2xl font-semibold finwise-green">EMI Calculator</h1>
-                    <p className="finwise-blue">Calculate your dynamic EMI based on frequency</p>
+                    <h1 className="text-2xl font-semibold text-[#9B4DCA]">EMI Calculator</h1>
+                    <p className="text-gray-300">Calculate your dynamic EMI based on frequency</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Input Fields */}
                     <div>
-                        <h2 className="text-lg font-semibold text-gray-800 mb-4">Input fields:</h2>
+                        <h2 className="text-lg font-semibold text-gray-300 mb-4">Input fields:</h2>
                         <div className="space-y-4">
                             {/* Loan Amount */}
                             <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                                <label htmlFor="loanAmount" className="text-gray-700">Loan Amount</label>
+                                <label htmlFor="loanAmount" className="text-gray-300">Loan Amount</label>
                                 <div className="flex items-center space-x-2">
-                                    <span className="text-gray-500">&#163;</span>
+                                    <span className="text-gray-300">&#163;</span>
                                     <input
                                         type="number"
                                         id="loanAmount"
                                         value={loanAmount}
                                         onChange={(e) => setLoanAmount(e.target.value)}
-                                        className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                                        className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                                     />
                                 </div>
                             </div>
-                              {errors.loanAmount && <p className="text-red-500 text-sm mt-1">{errors.loanAmount}</p>}
+                              {errors.loanAmount && <p className="text-gray-900 text-sm mt-1">{errors.loanAmount}</p>}
 
                             {/* Annual Interest Rate */}
                             <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                                <label htmlFor="interestRate" className="text-gray-700">Annual Interest Rate (%)</label>
+                                <label htmlFor="interestRate" className="text-gray-300">Annual Interest Rate (%)</label>
                                 <input
                                     type="number"
                                     id="interestRate"
                                     value={interestRate}
                                     onChange={(e) => setInterestRate(e.target.value)}
-                                    className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                                    className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                                 />
                             </div>
-                            {errors.interestRate && <p className="text-red-500 text-sm mt-1">{errors.interestRate}</p>}
+                            {errors.interestRate && <p className="text-gray-900 text-sm mt-1">{errors.interestRate}</p>}
 
                             {/* Term Length */}
                             <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                                <label htmlFor="termLength" className="text-gray-700">Term Length (in Years)</label>
+                                <label htmlFor="termLength" className="text-gray-300">Term Length (in Years)</label>
                                 <input
                                     type="number"
                                     id="termLength"
                                     value={termLength}
                                     onChange={(e) => setTermLength(e.target.value)}
-                                    className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                                    className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                                 />
                             </div>
-                            {errors.termLength && <p className="text-red-500 text-sm mt-1">{errors.termLength}</p>}
+                            {errors.termLength && <p className="text-gray-900 text-sm mt-1">{errors.termLength}</p>}
 
                             {/* First Payment Date */}
                             <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                                <label htmlFor="firstPaymentDate" className="text-gray-700">First Payment Date</label>
+                                <label htmlFor="firstPaymentDate" className="text-gray-300">First Payment Date</label>
                                 <input
                                     type="date"
                                     id="firstPaymentDate"
                                     value={firstPaymentDate}
                                     onChange={(e) => setFirstPaymentDate(e.target.value)}
-                                    className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-40"
+                                    className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-40"
                                 />
                             </div>
                             {/* Compound Period */}
                             <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                                <label htmlFor="compoundPeriod" className="text-gray-700">Compound Period</label>
+                                <label htmlFor="compoundPeriod" className="text-gray-300">Compound Period</label>
                                 <select
                                     id="compoundPeriod"
                                     value={compoundPeriod}
                                     onChange={(e) => setCompoundPeriod(e.target.value)}
-                                    className="bg-green-100 text-gray-800 font-semibold p-2 rounded-lg w-40"
+                                    className="bg-purple-300 text-gray-800 font-semibold p-2 rounded-lg w-40"
                                 >
                                     <option value="Monthly">Monthly</option>
                                     <option value="Semi-Annually">Semi-Annually</option>
@@ -431,12 +431,12 @@ const EMICalculator = () => {
                             </div>
                             {/* Payment Frequency Dropdown */}
                             <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                                <label htmlFor="paymentFrequency" className="text-gray-700">Payment Frequency</label>
+                                <label htmlFor="paymentFrequency" className="text-gray-300">Payment Frequency</label>
                                 <select
                                     id="paymentFrequency"
                                     value={paymentFrequency}
                                     onChange={(e) => setPaymentFrequency(e.target.value)}
-                                    className="bg-green-100 text-gray-800 font-semibold p-2 rounded-lg w-40"
+                                    className="bg-purple-300 text-gray-800 font-semibold p-2 rounded-lg w-40"
                                 >
                                     <option value="Monthly">Monthly</option>
                                     <option value="Semi-Monthly">Semi-Monthly</option>
@@ -449,12 +449,12 @@ const EMICalculator = () => {
                     </div>
                     {/* Results Display */}
 
-                    <div className="output-fields -mt-28 md:mt-0">
-                        <h2 className="text-lg font-semibold text-gray-800 mb-4">Results:</h2>
+                    <div className="output-fields mt-0 md:mt-0">
+                        <h2 className="text-lg font-semibold text-gray-300 mb-4">Results:</h2>
                         <div className="space-y-2">
                             <div className="p-4 border border-gray-300 rounded-lg">
-                                <p className="finwise-blue">{paymentFrequency} Payment</p>
-                                <p className="finwise-green font-semibold text-xl">&#163;{result.payment}</p>
+                                <p className="text-gray-300">{paymentFrequency} Payment</p>
+                                <p className="text-[#9B4DCA] font-semibold text-xl">&#163;{result.payment}</p>
                             </div>
                         </div>
                     </div>
@@ -463,7 +463,7 @@ const EMICalculator = () => {
                 {/* Table Display */}
                 <div style={{ marginTop: "-105px" }}>
                     <div className="flex flex-col md:flex-row justify-between items-center">
-                        <h2 className="text-lg font-semibold text-gray-800 mb-4 md:mb-0">EMI Payment Schedule</h2>
+                        <h2 className="text-lg font-semibold text-gray-300 mb-4 md:mb-0">EMI Payment Schedule</h2>
                         <div className="flex flex-wrap gap-4 justify-center md:justify-start">
                             <button
                                 onClick={exportToPDF}
@@ -474,7 +474,7 @@ const EMICalculator = () => {
                             </button>
                             <button
                                 onClick={exportToExcel}
-                                className="bg-green-500 text-white mb-2 font-bold py-2 px-4 rounded-lg shadow-lg hover:bg-green-600 transition duration-200 flex items-center space-x-2"
+                                className="bg-purple-600 text-white mb-2 font-bold py-2 px-4 rounded-lg shadow-lg hover:bg-green-600 transition duration-200 flex items-center space-x-2"
                             >
                                 <i className="fas fa-file-excel"></i>
                                 <span>Excel</span>
@@ -483,18 +483,18 @@ const EMICalculator = () => {
                     </div>
 
                     <div className="overflow-x-auto max-h-[500px] border border-gray-300 rounded-lg shadow-lg">
-                        <table className="min-w-full bg-white">
+                        <table className="min-w-full bg-[#070707]">
                             <thead>
                                 <tr className="bg-gray-100">
-                                    <th className="border p-2 text-left">Payment No</th>
-                                    <th className="border p-2 text-left">Payment Date</th>
-                                    <th className="border p-2 text-left">Interest Rate</th>
-                                    <th className="border p-2 text-left">Interest Due</th>
-                                    <th className="border p-2 text-left">Payment Due</th>
+                                    <th className="border p-2 text-left text-gray-900">Payment No</th>
+                                    <th className="border p-2 text-left text-gray-900">Payment Date</th>
+                                    <th className="border p-2 text-left text-gray-900">Interest Rate</th>
+                                    <th className="border p-2 text-left text-gray-900">Interest Due</th>
+                                    <th className="border p-2 text-left text-gray-900">Payment Due</th>
                                     {/* <th className="border p-2 text-left">Extra Payments</th>
                                     <th className="border p-2 text-left">Additional Payments</th> */}
-                                    <th className="border p-2 text-left">Principal Paid</th>
-                                    <th className="border p-2 text-left">Balance</th>
+                                    <th className="border p-2 text-left text-gray-900">Principal Paid</th>
+                                    <th className="border p-2 text-left text-gray-900">Balance</th>
                                     {/* <th className="border p-2 text-left">Tax Returned</th>
                                     <th className="border p-2 text-left">Cumulative Tax Returned</th> */}
                                 </tr>

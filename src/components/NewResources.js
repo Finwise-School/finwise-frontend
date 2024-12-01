@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React, { useEffect } from 'react'
 import '../index.css'
 import budgetb1 from '../assets/images/newresource/1.jpg'
 import budgetb2 from '../assets/images/newresource/2.png'
@@ -261,38 +261,32 @@ const Guideofday = () => {
 }
 
 const Main = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0); 
-    }, []);
     return (
-    <>
-      <div className='bgadd h-auto '>
-        <div class="mx-auto  flex  items-center justify-center">
-          <div
-            class="text-white w-[96%] h-auto rounded-2xl bg-gradient-to-b from-[#8A3FF2] via-[#50248C] to-[#50248C]  p-[2px]">
-    
-            <div className='bgresrc h-[70vh]'>
-              <div className='p-5 w-[100%] sm:w-[60%] h-full flex flex-col justify-center items-start'>
-                <p className='text-[20px]'>Free Guide to Jump-Start Your Financial Journey</p>
-                <h1 className='font-sora font-semibold text-3xl my-4'>Take Control of Your Finances in Just 2 Weeks</h1>
-                <p>Get started with our free, expert-created guide designed to help you build strong financial habits
-                  and
-                  achieve your goals.</p>
-                <button>Get</button>
-              </div>
+        <>
+            <div className=' bgadd h-auto '>
+                <div class="mx-auto  flex  items-center justify-center p-4">
+                    <div class="text-white w-[96%] h-auto rounded-2xl bg-gradient-to-b from-[#8A3FF2] via-[#50248C] to-[#50248C]  p-[2px]">
+
+                        <div className='bgresrc h-[50vh] md:h-[70vh]'>
+                            <div className='p-5 md:p-14 w-[100%] sm:w-[60%] h-full flex flex-col justify-center items-start'>
+                                <p className='text-[20px]'>Free Guide to Jump-Start Your Financial Journey</p>
+                                <h1 className='font-sora font-semibold text-3xl my-4'>Take Control of Your Finances in Just 2 Weeks</h1>
+                                <p>Get started with our free, expert-created guide designed to help you build strong financial habits and achieve your goals.</p>
+                                <button>Get</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-    
-          </div>
-        </div>
-      </div>
-      <Category />
-      <Ads />
-      <Newarr />
-      <Guideofday />
-      <EarlyAccessTemplate />
-    
-    </>
+            <Category />
+            <Ads />
+            <Newarr />
+            <Guideofday />
+
+            {/* final end */}
+        </>
     )
-    }
-    
-    export default Main;
+}
+
+export default Main;

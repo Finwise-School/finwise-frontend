@@ -11,10 +11,10 @@
   box-sizing: border-box;
 }
 
-html {
+/* html {
   font-size: 100%;
   overflow-x: hidden;
-}
+} */
 
 
 body{
@@ -79,11 +79,11 @@ body{
 }
 
 
-.container {
+/* .container {
   max-width: 120rem;
   margin: 0 auto;
   padding: 0 3.2rem;
-}
+} */
 
 /* commented coz causing conflict in calculator section by abhisheksingh on 27/8/2024*/
  .grid {
@@ -260,23 +260,17 @@ strong {
   font-weight: 500;
 }
 
-.finwise-green{
-  color: #3CB371;
-}
 
 .finwise-para{
   color: #999999;
 }
 
-.finwise-green-bg{
-  background-color: #3CB371;
-}
 
-.finwise-blue{
+.text-gray-300{
   color: #223876;
 }
 
-.finwise-blue-bg{
+.text-gray-300-bg{
   background-color: #223876;
 }
 

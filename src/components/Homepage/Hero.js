@@ -37,7 +37,7 @@ const Hero = () => {
 
           {/* Left Content - Displayed below the image in mobile view */}
           <div className="content-wrapper flex flex-col items-center md:items-start justify-center h-full space-y-6 text-center md:text-left w-full md:w-1/2 order-2 md:order-1">
-            <p id="heading" className="finwise-blue text-5xl md:text-5xl font-bold mb-4">
+            <p id="heading" className="text-gray-300 text-5xl md:text-5xl font-bold mb-4">
               Master Your Money with Finwise School
             </p>
             <p id="para" className="text-base md:text-lg mb-4 text-gray-500">

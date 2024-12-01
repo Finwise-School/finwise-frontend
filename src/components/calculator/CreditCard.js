@@ -120,15 +120,15 @@ const CreditCardPaymentCalculator = () => {
     return (
         <div className="bg-gradient-to-br p-4 rounded-xl shadow-lg max-w-6xl mx-auto mt-8">
             <div className="mb-6">
-                <h1 className="text-2xl font-semibold finwise-green">Credit Card Calculator</h1>
-                <p className="finwise-blue">Easily manage your credit card payments and get debt-free faster!</p>
+                <h1 className="text-2xl font-semibold text-[#9B4DCA]">Credit Card Calculator</h1>
+                <p className="text-gray-300">Easily manage your credit card payments and get debt-free faster!</p>
             </div>
 
             {/* Tabs */}
             <div className="flex justify-center space-x-2 mb-6">
     <button
         className={`text-sm sm:text-lg font-semibold px-3 sm:px-4 py-1 sm:py-2 rounded-full focus:outline-none transition-transform transform ${activeTab === 'payOff'
-            ? 'finwise-green-bg text-white shadow-md'
+            ? 'text-[#9B4DCA]-bg text-white shadow-md'
             : 'bg-white text-black border border-gray-300 shadow-sm'
             }`}
         onClick={() => setActiveTab('payOff')}
@@ -137,7 +137,7 @@ const CreditCardPaymentCalculator = () => {
     </button>
     <button
         className={`text-sm sm:text-lg font-semibold px-3 sm:px-4 py-1 sm:py-2 rounded-full focus:outline-none transition-transform transform ${activeTab === 'monthly'
-            ? 'finwise-green-bg text-white shadow-md'
+            ? 'text-[#9B4DCA]-bg text-white shadow-md'
             : 'bg-white text-black border border-gray-300 shadow-sm'
             }`}
         onClick={() => setActiveTab('monthly')}
@@ -150,49 +150,49 @@ const CreditCardPaymentCalculator = () => {
             {/* Pay Off Calculator */}
             {activeTab === 'payOff' && (
                 <div className="glass-card p-4 rounded-xl  mb-6">
-                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">Pay Off Calculator</h2>
+                    <h2 className="text-2xl font-semibold text-gray-300 mb-4">Pay Off Calculator</h2>
                     <div className="space-y-4">
                         <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                            <label htmlFor="credit-card-balance" className="text-lg text-gray-700">Credit Card Balance (£)</label>
+                            <label htmlFor="credit-card-balance" className="text-lg text-gray-300">Credit Card Balance (£)</label>
                             <input
                                 type="number"
                                 id="credit-card-balance"
                                 value={creditCardBalance}
                                 onChange={(e) => setCreditCardBalance(e.target.value)}
-                                className="glass-input p-3 rounded-lg text-lg bg-green-100 text-gray-800 font-semibold text-right w-24 focus:outline-none"
+                                className="glass-input p-3 rounded-lg text-lg bg-purple-300 text-gray-800 font-semibold text-right w-24 focus:outline-none"
                             />
                         </div>
-                        {payOffErrors.creditCardBalance && <p className="text-red-500">{payOffErrors.creditCardBalance}</p>}
+                        {payOffErrors.creditCardBalance && <p className="text-gray-900">{payOffErrors.creditCardBalance}</p>}
 
                         <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                            <label htmlFor="annual-interest-rate" className="text-lg text-gray-700">Interest Rate (APR %)</label>
+                            <label htmlFor="annual-interest-rate" className="text-lg text-gray-300">Interest Rate (APR %)</label>
                             <input
                                 type="number"
                                 id="annual-interest-rate"
                                 value={annualInterestRate}
                                 onChange={(e) => setAnnualInterestRate(e.target.value)}
-                                className="glass-input p-3 rounded-lg text-lg bg-green-100 text-gray-800 font-semibold text-right w-24 focus:outline-none"
+                                className="glass-input p-3 rounded-lg text-lg bg-purple-300 text-gray-800 font-semibold text-right w-24 focus:outline-none"
                             />
                         </div>
-                        {payOffErrors.annualInterestRate && <p className="text-red-500">{payOffErrors.annualInterestRate}</p>}
+                        {payOffErrors.annualInterestRate && <p className="text-gray-900">{payOffErrors.annualInterestRate}</p>}
 
                         <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                            <label htmlFor="monthly-payment-amount" className="text-lg text-gray-700">Payment Amount Per Month (£)</label>
+                            <label htmlFor="monthly-payment-amount" className="text-lg text-gray-300">Payment Amount Per Month (£)</label>
                             <input
                                 type="number"
                                 id="monthly-payment-amount"
                                 value={monthlyPaymentAmount}
                                 onChange={(e) => setMonthlyPaymentAmount(e.target.value)}
-                                className="glass-input p-3 rounded-lg text-lg bg-green-100 text-gray-800 font-semibold text-right w-24 focus:outline-none"
+                                className="glass-input p-3 rounded-lg text-lg bg-purple-300 text-gray-800 font-semibold text-right w-24 focus:outline-none"
                             />
                         </div>
-                        {payOffErrors.monthlyPaymentAmount && <p className="text-red-500">{payOffErrors.monthlyPaymentAmount}</p>}
+                        {payOffErrors.monthlyPaymentAmount && <p className="text-gray-900">{payOffErrors.monthlyPaymentAmount}</p>}
 
-                        {payOffMessage && <p className="text-red-500">{payOffMessage}</p>}
+                        {payOffMessage && <p className="text-gray-900">{payOffMessage}</p>}
 
                         {payOffResult && (
-                            <div className="bg-white bg-opacity-90 p-6 rounded-lg shadow-lg">
-                                <h3 className="text-xl font-semibold text-gray-800 mb-4">Results Summary</h3>
+                            <div className="bg-black border bg-opacity-90 p-6 rounded-lg shadow-lg">
+                                <h3 className="text-xl font-semibold text-gray-300 mb-4">Results Summary</h3>
                                 <div className="space-y-4">
                                     <div className="flex justify-between p-4 bg-green-50 border-l-4 border-green-400 rounded-lg shadow-md">
                                         <span className="text-lg font-semibold text-green-500">Months to Pay Off:</span>
@@ -217,48 +217,48 @@ const CreditCardPaymentCalculator = () => {
             {/* Monthly Repayment Calculator */}
             {activeTab === 'monthly' && (
                 <div className="glass-card p-4 rounded-xl  mb-6">
-                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">Monthly Repayment Calculator</h2>
+                    <h2 className="text-2xl font-semibold text-gray-300 mb-4">Monthly Repayment Calculator</h2>
                     <div className="space-y-4">
                         <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                            <label htmlFor="balance" className="text-lg text-gray-700">Credit Card Balance (£)</label>
+                            <label htmlFor="balance" className="text-lg text-gray-300">Credit Card Balance (£)</label>
                             <input
                                 type="number"
                                 id="balance"
                                 value={balance}
                                 onChange={(e) => setBalance(e.target.value)}
-                                className="glass-input p-3 rounded-lg text-lg bg-green-100 text-gray-800 font-semibold text-right w-24 focus:outline-none"
+                                className="glass-input p-3 rounded-lg text-lg bg-purple-300 text-gray-800 font-semibold text-right w-24 focus:outline-none"
                             />
                         </div>
-                        {monthlyErrors.balance && <p className="text-red-500">{monthlyErrors.balance}</p>}
+                        {monthlyErrors.balance && <p className="text-gray-900">{monthlyErrors.balance}</p>}
 
                         <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                            <label htmlFor="interest-rate" className="text-lg text-gray-700">Interest Rate (APR %)</label>
+                            <label htmlFor="interest-rate" className="text-lg text-gray-300">Interest Rate (APR %)</label>
                             <input
                                 type="number"
                                 id="interest-rate"
                                 value={interestRate}
                                 onChange={(e) => setInterestRate(e.target.value)}
-                                className="glass-input p-3 rounded-lg text-lg bg-green-100 text-gray-800 font-semibold text-right w-24 focus:outline-none"
+                                className="glass-input p-3 rounded-lg text-lg bg-purple-300 text-gray-800 font-semibold text-right w-24 focus:outline-none"
                             />
                         </div>
-                        {monthlyErrors.interestRate && <p className="text-red-500">{monthlyErrors.interestRate}</p>}
+                        {monthlyErrors.interestRate && <p className="text-gray-900">{monthlyErrors.interestRate}</p>}
 
                         <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                            <label htmlFor="months" className="text-lg text-gray-700">In how many months u are willing to pay ?</label>
+                            <label htmlFor="months" className="text-lg text-gray-300">In how many months u are willing to pay ?</label>
                             <input
                                 type="number"
                                 id="months"
                                 value={months}
                                 onChange={(e) => setMonths(e.target.value)}
-                                className="glass-input p-3 rounded-lg text-lg bg-green-100 text-gray-800 font-semibold text-right w-24 focus:outline-none"
+                                className="glass-input p-3 rounded-lg text-lg bg-purple-300 text-gray-800 font-semibold text-right w-24 focus:outline-none"
                             />
                         </div>
-                        {monthlyErrors.months && <p className="text-red-500">{monthlyErrors.months}</p>}
+                        {monthlyErrors.months && <p className="text-gray-900">{monthlyErrors.months}</p>}
 
                         <div className="mt-6">
                             {monthlyResult && (
-                                <div className="bg-white bg-opacity-90 p-6 rounded-lg shadow-lg">
-                                    <h3 className="text-xl font-semibold text-gray-800 mb-4">Results Summary</h3>
+                                <div className="bg-black border bg-opacity-90 p-6 rounded-lg shadow-lg">
+                                    <h3 className="text-xl font-semibold text-gray-300 mb-4">Results Summary</h3>
                                     <div className="space-y-4">
                                         <div className="flex justify-between p-4 bg-green-50 border-l-4 border-green-400 rounded-lg shadow-md">
                                             <span className="text-lg font-semibold text-green-500">Monthly Payment:</span>
@@ -283,7 +283,7 @@ const CreditCardPaymentCalculator = () => {
 
             <Tool_Footer message='Take Control of Your Credit Card Payments!. Start managing your credit wisely!'/>
             <Info/>
-            <CalculatorList activeCalculator="Cre dit Card Calculator"/>
+            <CalculatorList activeCalculator="Credit Card Calculator"/>
         </div>
     );
 };

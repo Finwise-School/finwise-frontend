@@ -20,7 +20,7 @@ const VideoPopup = () => {
             {/* Close Button */}
             <button
               onClick={handleClose}
-              className="absolute top-1 right-1 text-gray-500 hover:text-red-500 transition duration-300 text-2xl"
+              className="absolute top-1 right-1 text-gray-500 hover:text-gray-900 transition duration-300 text-2xl"
             >
               &#x2715;
             </button>

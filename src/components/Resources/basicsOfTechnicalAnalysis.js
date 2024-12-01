@@ -136,7 +136,7 @@ const BasicsOfTechnicalAnalysis = () => {
                   <input
                     type="email"
                     placeholder="Enter your email"
-                    className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mb-[6%]"
+                    className="w-full p-2 border text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mb-[6%]"
                     required
                     onChange={handleEmailChange}
                     value={email}

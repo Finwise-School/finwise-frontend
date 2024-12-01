@@ -136,24 +136,24 @@ const SIP = () => {
     }, [investmentMethod, monthlyInvestment, lumpSumInvestment, annualReturns, timePeriod]);
 
     return (
-        <div style={{ marginTop: "0px" }} className="bg-gray-50 p-2">
-            <div className="max-w-6xl mx-auto bg-white shadow-lg rounded-lg p-8">
+        <div style={{ marginTop: "0px" }} className="bg-[#070707] p-2">
+            <div className="max-w-6xl mx-auto bg-[#070707] shadow-lg rounded-lg p-8">
                 <div className="mb-6">
-                    <h1 className="text-2xl font-semibold finwise-green">SIP Calculator</h1>
-                    <p className="finwise-blue">Calculate your mutual funds investment returns</p>
+                    <h1 className="text-2xl font-semibold text-[#9B4DCA]">SIP Calculator</h1>
+                    <p className="text-gray-300">Calculate your mutual funds investment returns</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {/* Input Fields Box */}
-                    <div className="p-4 border border-gray-300 rounded-lg">
-                        <h2 className="text-lg font-semibold text-gray-800 mb-4">Input fields:</h2>
+                    <div className="p-4">
+                        <h2 className="text-lg font-semibold text-gray-200 mb-4">Input fields:</h2>
                         <div className="space-y-4">
                             <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                                <label htmlFor="investment-method" className="text-gray-700">Investment Method</label>
+                                <label htmlFor="investment-method" className="text-gray-300">Investment Method</label>
                                 <select
                                     id="investment-method"
                                     value={investmentMethod}
                                     onChange={(e) => setInvestmentMethod(e.target.value)}
-                                    className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-30"
+                                    className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-30"
                                 >
                                     <option value="sip">SIP</option>
                                     <option value="lumpSum">Lump Sum</option>
@@ -161,7 +161,7 @@ const SIP = () => {
                             </div>
                             {investmentMethod === 'sip' && (
                                 <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                                    <label htmlFor="monthly-investment" className="text-gray-700">Monthly Investment</label>
+                                    <label htmlFor="monthly-investment" className="text-gray-300">Monthly Investment</label>
                                     <div className="flex items-center space-x-2">
                                         <span className="text-gray-500">£</span>
                                         <input
@@ -169,16 +169,16 @@ const SIP = () => {
                                             id="monthly-investment"
                                             value={monthlyInvestment}
                                             onChange={(e) => setMonthlyInvestment(e.target.value)}
-                                            className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                                            className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                                         />
                                     </div>
                                 </div>
                             )}
-                            {errors.monthlyInvestment && <p className="text-red-500 text-sm">{errors.monthlyInvestment}</p>}
+                            {errors.monthlyInvestment && <p className="text-gray-900 text-sm">{errors.monthlyInvestment}</p>}
 
                             {investmentMethod === 'lumpSum' && (
                                 <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                                    <label htmlFor="lump-sum-investment" className="text-gray-700">Lump Sum Investment</label>
+                                    <label htmlFor="lump-sum-investment" className="text-gray-300">Lump Sum Investment</label>
                                     <div className="flex items-center space-x-2">
                                         <span className="text-gray-500">£</span>
                                         <input
@@ -186,56 +186,56 @@ const SIP = () => {
                                             id="lump-sum-investment"
                                             value={lumpSumInvestment}
                                             onChange={(e) => setLumpSumInvestment(e.target.value)}
-                                            className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                                            className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                                         />
                                     </div>
                                 </div>
                             )}
-                            {errors.lumpSumInvestment && <p className="text-red-500 text-sm">{errors.lumpSumInvestment}</p>}
+                            {errors.lumpSumInvestment && <p className="text-gray-900 text-sm">{errors.lumpSumInvestment}</p>}
 
                             <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                                <label htmlFor="annual-returns" className="text-gray-700">Expected Annual Returns (%)</label>
+                                <label htmlFor="annual-returns" className="text-gray-300">Expected Annual Returns (%)</label>
                                 <input
                                     type="number"
                                     id="annual-returns"
                                     value={annualReturns}
                                     onChange={(e) => setAnnualReturns(e.target.value)}
-                                    className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                                    className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                                 />
                             </div>
-                            {errors.annualReturns && <p className="text-red-500 text-sm">{errors.annualReturns}</p>}
+                            {errors.annualReturns && <p className="text-gray-900 text-sm">{errors.annualReturns}</p>}
 
                             <div className="flex items-center justify-between p-4 border border-gray-300 rounded-lg">
-                                <label htmlFor="time-period" className="text-gray-700">Time Period (Years)</label>
+                                <label htmlFor="time-period" className="text-gray-300">Time Period (Years)</label>
                                 <input
                                     type="number"
                                     id="time-period"
                                     value={timePeriod}
                                     onChange={(e) => setTimePeriod(e.target.value)}
-                                    className="bg-green-100 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
+                                    className="bg-purple-300 text-gray-800 font-semibold text-right p-2 rounded-lg w-24"
                                 />
                             </div>
-                            {errors.timePeriod && <p className="text-red-500 text-sm">{errors.timePeriod}</p>}
+                            {errors.timePeriod && <p className="text-gray-900 text-sm">{errors.timePeriod}</p>}
                         </div>
                     </div>
 
                     {/* Results Box */}
-                    <div className="" style={{marginTop: "-5rem"}}>
-                        <h2 className="text-lg font-semibold text-gray-800 mb-4">Results:</h2>
+                    <div className="">
+                        <h2 className="text-lg font-semibold text-gray-300 mb-4">Results:</h2>
                         {result && (
                             <div className="space-y-4">
                                 <div className="grid grid-cols-1 gap-2" style={{ rowGap: '0.6rem' }}>
                                     <div className="p-4 border border-gray-300 rounded-lg">
-                                        <p className="finwise-blue">Invested Amount</p>
-                                        <p className="finwise-green font-semibold text-xl">£{result.investedAmount}</p>
+                                        <p className="text-gray-300">Invested Amount</p>
+                                        <p className="text-[#9B4DCA] font-semibold text-xl">£{result.investedAmount}</p>
                                     </div>
                                     <div className="p-4 border border-gray-300 rounded-lg">
-                                        <p className="finwise-blue">Returns Generated</p>
-                                        <p className="finwise-green font-semibold text-xl">£{result.returnsGenerated}</p>
+                                        <p className="text-gray-300">Returns Generated</p>
+                                        <p className="text-[#9B4DCA] font-semibold text-xl">£{result.returnsGenerated}</p>
                                     </div>
                                     <div className="p-4 border border-gray-300 rounded-lg">
-                                        <p className="finwise-blue">Total Amount</p>
-                                        <p className="finwise-green font-semibold text-xl">£{result.totalAmount}</p>
+                                        <p className="text-gray-300">Total Amount</p>
+                                        <p className="text-[#9B4DCA] font-semibold text-xl">£{result.totalAmount}</p>
                                     </div>
                                 </div>
                             </div>
@@ -244,12 +244,13 @@ const SIP = () => {
                 </div>
 
                 {result && (
-                    <div className="" style={{marginTop: "-5rem"}}>
-                        <h2 className="text-lg font-semibold text-gray-800 mb-4">Investment Growth Over Time</h2>
-                        <div className="grid-for-calci grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="" >
+                        <h2 className="text-lg font-semibold text-gray-300 mb-4">Investment Growth Over Time</h2>
+                        <div className="grid-for-calci bg-gray-900 rounded-lg grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="flex justify-center">
-                                <div className="w-full" style={{ maxWidth: '600px', maxHeight: '600px' }}>
+                                <div className="w-full " style={{ maxWidth: '600px', maxHeight: '600px' }}>
                                     <Line
+                                    className='bg-gray-900'
                                         data={getLineChartData()}
                                         options={{
                                             responsive: true,
@@ -292,6 +293,7 @@ const SIP = () => {
                             <div className="flex justify-center">
                                 <div className="w-full" style={{ maxWidth: '300px', maxHeight: '300px' }}>
                                     <Doughnut
+                                    className='bg-gray-900'
                                         data={getChartData()}
                                         options={{
                                             responsive: true,

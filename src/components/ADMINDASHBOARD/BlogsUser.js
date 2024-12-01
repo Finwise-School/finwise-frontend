@@ -164,7 +164,7 @@ const BlogsUser = ({ majorRights, baseURL }) => {
                   ))}</Table.Cell> */}
                   {majorRights && (
                   <Table.Cell>
-                    <button className="font-medium text-red-600 hover:text-red-800 dark:text-red-500" onClick={() => handleOpenDeleteModal(item._id)}>
+                    <button className="font-medium text-red-600 hover:text-red-800 dark:text-gray-900" onClick={() => handleOpenDeleteModal(item._id)}>
                       <HiTrash className="inline-block mr-1" /> Delete
                     </button>
                   </Table.Cell>
