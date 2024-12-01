@@ -77,7 +77,7 @@ const BasicsOfTechnicalAnalysis = () => {
           </h1>
           <button
             onClick={() => setOpenModal(true)}
-            className="bg-[#223876] text-white py-3 px-8 sm:py-4 sm:px-10 lg:py-4 lg:px-12 rounded-full text-base sm:text-lg lg:text-2xl w-full max-w-[250px] sm:max-w-[300px] lg:max-w-[350px] mx-auto transition-all duration-300"
+            className="bg-[#8A3FF2] text-white py-3 px-8 sm:py-4 sm:px-10 lg:py-4 lg:px-12 rounded-full text-base sm:text-lg lg:text-2xl w-full max-w-[250px] sm:max-w-[300px] lg:max-w-[350px] mx-auto transition-all duration-300"
           >
             Download Now
           </button>
