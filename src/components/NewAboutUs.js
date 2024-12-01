@@ -14,8 +14,8 @@ const About = () => {
     return (
         <>
             {/* <Navigation /> */}
-            <div className=' bgadd h-auto '>
-                <div class="mx-auto  flex  items-center justify-center">
+            <div className=' bgadd h-auto mt-16 '>
+                <div class="mx-auto flex  items-center justify-center">
                     <div class="text-white w-[96%] h-auto rounded-md bg-gradient-to-br from-[#8a3ff25c] via-[#090909] bgcard p-[2px]">
                         <div class="text-white h-auto w-[100%] rounded-lg bgaddsab bg-gradient-to-br from-[#070707] via-[rgba(38,38,38,0.2)] p-4">
                             <div>

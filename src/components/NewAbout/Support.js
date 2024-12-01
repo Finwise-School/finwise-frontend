@@ -5,7 +5,7 @@ import sup3 from '../../assets/images/about/sup3.svg'
 
 const Support = () => {
   return (
-    <div className='bg-gradient-radial from-[#8a3ff240] via-[#070707] h-[70vh] md:h-[90vh] flex flex-col justify-center '>
+    <div className='bg-gradient-radial from-[#8a3ff240] via-[#070707] h-[80vh] md:h-[90vh] flex flex-col justify-center '>
       <div className='flex flex-col justify-center text-center items-center'>
         <h1 className='text-3xl font-bold py-2'>Meet Our Supporters</h1>
         <p className='text-[#888888] text-center'>At Finwise School, our success is fueled by the support and expertise of our valued partners.</p>

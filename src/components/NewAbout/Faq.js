@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import gradient from '../../assets/images/about/gradient.svg'
+// import gradient from '../../assets/images/about/gradient.svg'
 import arr from '../../assets/images/about/arr.svg'
 import {Link} from 'react-router-dom'
 
 const Faq = () => {
     return (
         <section className="relative z-20 overflow-hidden bg-[#070707] px-5 pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]">
-            <div className="container mx-auto">
+            <div className="containe    r mx-auto">
                 <div className="-mx-4 flex flex-wrap">
                     <div className="w-full px-4">
                         <div className="mx-auto mb-[60px] max-w-[680px] text-center lg:mb-20">
@@ -67,9 +67,9 @@ const Faq = () => {
                 </div>
             </div>
 
-            <div className="absolute bottom-0 right-0 z-[-1]">
+            {/* <div className="absolute bottom-0 right-0 z-[-1]">
                 <img src={gradient}></img>
-            </div>
+            </div> */}
         </section>
     );
 };

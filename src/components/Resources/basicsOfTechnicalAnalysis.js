@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Modal, Button } from "flowbite-react";
 import axios from "axios";
 import bookImage from "../../assets/images/books/analysis.png";
+import { Link } from 'react-router-dom';
 
 const BasicsOfTechnicalAnalysis = () => {
   const [email, setEmail] = useState("");
@@ -58,10 +59,10 @@ const BasicsOfTechnicalAnalysis = () => {
     <div className="bg-[#0c0c0c] font-inter flex justify-center items-center min-h-screen">
       <div className="w-full max-w-[calc(100%-40px)] lg:max-w-[calc(100%-160px)] bg-[#070707] rounded-2xl p-4 sm:p-6 lg:p-8 backdrop-blur-xl bg-opacity-60 border border-gray-600 shadow-lg">
         <div className="bg-[#223876] bg-opacity-40 rounded-t-2xl p-4 sm:p-6 lg:p-8 flex justify-center relative w-full">
-          <div className="absolute top-2 sm:top-4 left-2 sm:left-4 flex items-center text-white">
+          <Link to="/resources" className="absolute top-2 sm:top-4 left-2 sm:left-4 flex items-center text-white">
             <i className="fas fa-arrow-left text-sm sm:text-lg"></i>
             <span className="ml-2 text-sm sm:text-lg">Back</span>
-          </div>
+          </Link>
 
           <img
             src={bookImage}

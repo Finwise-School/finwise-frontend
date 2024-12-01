@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import phoneImage from '../../assets/images/homeimages/phonebackhero.svg';
 import arrowRight from '../../assets/images/homeimages/rea-arrow.svg';
 import './AppHome.css';
+import REAButton from '../REAButton';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -58,18 +59,12 @@ const LandingPage = () => {
                             through personalized, gamified experiences.
                         </p>
                         <div className="flex justify-center">
-                            <a
-                                href="asdasd"
-                                className="inline-block bg-gradient-to-r from-green-400 to-purple-500 text-white font-semibold py-3 px-5 rounded-full text-lg hover:opacity-90 transition-opacity flex justify-between items-center w-max"
-                            >
-                                <span className="mr-2">Request early access</span>
-                                <img src={arrowRight} alt="Right Arrow" className="ml-2 w-8 h-8" />
-                            </a>
+                            <REAButton/>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col md:flex-row justify-around px-6 bg-[#070707]">
+            <div className="flex flex-col md:flex-row md:mt-0 justify-around px-6 bg-[#070707]">
                 <div className="text-center">
                     <div className="relative w-64 h-32 rounded-[30px] flex flex-col items-center justify-center mx-auto mb-4">
                         <div className="absolute inset-0 rounded-[30px] bg-radial-custom"></div>

@@ -12,7 +12,7 @@ import VideoFrame from '../components/VideoFrame';
 
 function NewLandingPage() {
     return (
-        <div>
+        <div className='overflow-hidden'>
             <Hero/>
             <Features/>
             <GameMode/>
