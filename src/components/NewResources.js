@@ -98,7 +98,7 @@ const Ads = () => {
                             <p className='text-[20px]'><span className='text-2xl font-bold'>100% OFF</span> on all guides</p>
                             <h1 className='font-sora font-semibold text-5xl my-4'><span className='text-[25px] text-green-400'> Free for all</span> <br />
                                 Early members</h1>
-                            <button className='bg-black px-8 py-4 rounded-xl mt-3'>Get now</button>
+                            <Link to='/budgetBlue' className='bg-black px-8 py-4 rounded-xl mt-3'>Get now</Link>
                         </div>
 
                     </div>

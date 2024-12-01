@@ -128,7 +128,7 @@ const Footer = () => {
                 <li><Link to="/tools/goal-sip">Goal SIP</Link></li>
                 <li><Link to="/tools/sip">SIP Calculator</Link></li>
                 <li><Link to="/tools/fire">F.I.R.E</Link></li>
-                <li><Link to="/tools/">Many more</Link></li>
+                <li><Link to="/tools">Many more</Link></li>
               </ul>
             </div>
             <div>
@@ -148,7 +148,7 @@ const Footer = () => {
                 <li><Link to="/stock">Stock Market</Link></li>
                 <li><Link to="/taxation">Taxation</Link></li>
                 <li><Link to="/retirement">Retirement Planning</Link></li>
-                <li><Link to="/books">More</Link></li>
+                <li><Link to="/resources">More</Link></li>
               </ul>
             </div>
             <div className=' h-4'>
@@ -184,7 +184,7 @@ const Footer = () => {
               <a href="#" className="text-gray-400 hover:text-white">
                 <i className="fab fa-spotify"></i>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a href="https://www.facebook.com/profile.php?id=61568556151993" className="text-gray-400 hover:text-white">
                 <i className="fab fa-facebook-f"></i>
               </a>
               <a href="https://www.instagram.com/finwiseschool?igsh=MWNkNHNsam1kcXM5dQ==" className="text-gray-400 hover:text-white">
