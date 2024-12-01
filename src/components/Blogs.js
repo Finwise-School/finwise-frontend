@@ -51,8 +51,8 @@ function Blogs({ baseURL }) {
                   <div className='content p-6'>
                     <div className="flex flex-col justify-start gap-4">
                       <>
-                        <h3 className="text-3xl font-bold text-gray-800 hover:text-blue-600 transition-colors duration-300">{front.title}</h3>
-                        <div className={`blogPara text-gray-600 ${isOpen ? 'h-auto' : 'h-14 overflow-hidden'}`}>
+                        <h3 className="text-3xl font-bold text-gray-300 hover:text-purple-600 transition-colors duration-300">{front.title}</h3>
+                        <div className={`blogPara text-gray-300 ${isOpen ? 'h-auto' : 'h-14 overflow-hidden'}`}>
                           <p dangerouslySetInnerHTML={{ __html: front.content }} />
                           <div className='commentSection my-10'>
                             <CommentSection baseURL={baseURL} blogID={front._id} />
@@ -62,8 +62,8 @@ function Blogs({ baseURL }) {
                     </div>
                     <div className="footer flex justify-between items-center my-4">
                       <div>
-                        <h1 className='font-bold text-gray-700 my-4'>{front.writeDate}</h1>
-                        <h1 className='font-semibold text-gray-600 my-4'>{front.By}</h1>
+                        <h1 className='font-bold text-gray-300 my-4'>{front.writeDate}</h1>
+                        <h1 className='font-semibold text-gray-300 my-4'>{front.By}</h1>
                       </div>
                       <button
                         onClick={handleIsOpen}
