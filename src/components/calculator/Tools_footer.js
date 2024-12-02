@@ -10,7 +10,7 @@ const InfoSection = ({ message }) => {
                 <div className="flex-shrink-0">
                     <img src={CalculatorHome} alt="boy with money" className="w-24 h-24 object-cover rounded-full md:w-32 md:h-32" />
                 </div>
-                <p className="text-gray-200 text-center md:text-left">
+                <p className="text-gray-200 text-sm text-center md:text-left">
                     {message}
                 </p>
             </div>

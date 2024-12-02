@@ -108,7 +108,7 @@ const writeDate = formatDate(date);
           />
           <h1 className="text-2xl md:text-4xl font-semibold mb-4 text-gray-200">Success!</h1>
           <p className="text-lg md:text-xl text-gray-200">Thank you for submitting the form.</p>
-          <p className="text-lg md:text-xl mt-4 text-gray-200">Check your email for further details.</p>
+          <p className="text-lg md:text-xl mt-4 text-gray-200">We will get back to you within 24 hrs</p>
           <div className="mt-6">
             <a href="/" className="inline-flex items-center bg-[#9061f9] text-white text-lg md:text-xl font-semibold py-2 px-6 rounded-full">
               <FaHome className="mr-2" />

@@ -74,43 +74,53 @@ const Footer = () => {
           <div className="flex flex-col lg:flex-row items-center justify-between lg:items-start">
             {/* Newsletter Section */}
             <div className="text-center lg:text-left w-full mb-8 lg:mb-0">
-              
+
               <form
                 onSubmit={onSubmit}
                 className="flex flex-row justify-center   items-center mt-6 space-x-4"
               >
                 <div className="flex flex-col md:flex-row justify-between items-center w-full mt-6 space-x-4">
-                <h1
-                className="md:text-4xl md:text-left text-center text-3xl font-bold text-transparent"
-                style={{
-                  backgroundImage: "linear-gradient(to right, #22c55e, #a855f7)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                Master your Finance with Finwise
-              </h1>
-              <div className='flex flex-col justify-center items-center mt-2 md:mt-0 md:flex-row'>
-                  <input
-                    type="text"
-                    value={phone}
-                    onChange={handlePhoneChange}
-                    placeholder="Enter Your Phone Number"
-                    className="bg-gray-800 text-white px-4 py-3 rounded-full w-[300px] focus:outline-none focus:ring-2 focus:ring-purple-500"
-                    required
-                  />
-                  <div className="pl-3 mt-4 md:mt-0">
-                    {submit ? (
-                      <Spinner aria-label="Submitting" />
-                    ) : (
-                      <button
-                        type="submit"
-                        className="bg-purple-500 text-white px-6 py-3 rounded-full flex items-center hover:bg-purple-600"
-                      >
-                        Send <i className="fas fa-paper-plane ml-2"></i>
-                      </button>
-                    )}
-                  </div>
+                  <h1
+                    className="md:text-4xl md:text-left text-center text-3xl font-bold text-transparent"
+                    style={{
+                      backgroundImage: "linear-gradient(to right, #22c55e, #a855f7)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
+                    Master your Finance with Finwise School
+                  </h1>
+
+                  <div className="flex flex-col justify-center items-center mt-8 md:mt-0">
+                    {/* Text at the top */}
+                    <p className="text-center text-gray-400 mb-4 md:mb-6 text-lg font-medium">
+                      Subscribe to our Newsletter <i className="fas fa-paper-plane ml-2"></i>
+                    </p>
+
+                    {/* Input and button container */}
+                    <div className="flex flex-col md:flex-row items-center">
+                      <input
+                        type="text"
+                        value={phone}
+                        onChange={handlePhoneChange}
+                        placeholder="Enter Your Phone Number"
+                        className="bg-gray-800 text-white px-4 py-3 rounded-full w-[300px] focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        required
+                      />
+                      <div className="pl-3 mt-4 md:mt-0">
+                        {submit ? (
+                          <Spinner aria-label="Submitting" />
+                        ) : (
+                          <button
+                            type="submit"
+                            className="bg-purple-500 text-white px-6 py-3 rounded-full flex items-center hover:bg-purple-600"
+                          >
+                            Send <i className="fas fa-paper-plane ml-2"></i>
+                          </button>
+                        )}
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </form>

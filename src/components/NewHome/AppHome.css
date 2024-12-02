@@ -23,3 +23,23 @@ body{
     }
 }
 
+@media (max-width: 667px) {
+    #home-container {
+        height: 120vh;
+    }
+}
+@media (max-width: 812px) {
+    #home-container {
+        height: 104vh;
+    }
+}
+@media (max-width: 768px) {
+    #home-container {
+        height: 110vh;
+    }
+}
+@media (max-width: 926px) {
+    #home-container {
+        height: 105vh;
+    }
+}

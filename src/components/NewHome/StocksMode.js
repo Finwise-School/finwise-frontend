@@ -28,11 +28,10 @@ const PlayWithStock = () => {
         {/* Text Section (on the right in desktop, swapped to the top in mobile) */}
         <div className="w-full text-center md:text-left space-y-6" data-aos="fade-right">
           <h1 className="text-5xl md:text-6xl text-white font-semibold leading-tight">
-            Play with <br /> stocks and learn
+          Level Up  <br /> Your Stock Game
           </h1>
           <p className="text-gray-400 text-sm w-full md:w-[28rem] leading-relaxed md:text-lg">
-            Finwise transformed my approach to financial planning. Their financial tools have made it so easy to
-            set clear goals and track my progress. I finally feel that I am in control of my financial future.
+            Learn stocks the fun way! Dive into gamified modules, explore simulators like technical and fundamental analysis, and master investing skills—all while playing. Your financial glow-up starts here!
           </p>
           <div className="w-full flex justify-center md:justify-start">
             {/* <REAButton /> */}

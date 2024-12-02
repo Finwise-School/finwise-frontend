@@ -20,7 +20,7 @@ const Faq = () => {
               Gather valuable insights with ease. Our platform enables customers to leave feedback and reviews, helping you understand their preferences and improve your service.
               </p>
               {/* Button for all view */}
-              <p className="mt-3 font-medium">View all</p>
+              {/* <p className="mt-3 font-medium">View all</p> */}
             </div>
           </div>
         </div>
@@ -87,17 +87,7 @@ const Faq = () => {
             />
             <AccordionItem
                header="What are the benefits of joining Finwise school?"
-               text="Tailored Learning Paths
-               Experience a personalized financial education journey with courses and resources designed to match your specific knowledge level and financial goals.
-               
-               Engaging, Fun Learning
-               Enjoy a gamified learning experience with interactive simulations, quizzes, and real-life scenarios that make understanding finance both enjoyable and practical.
-               
-               Comprehensive Financial Coverage
-               Access a broad range of topics, from basic budgeting to advanced investment strategies, all crafted by financial experts to ensure accuracy and relevance.
-               
-               Earn Rewards and Recognition
-               As you progress, earn badges, points, and certificates that recognize your achievements. Plus, unlock exclusive rewards like coupons and discounts, adding extra value to your learning experience. These rewards can also enhance your professional profile and provide tangible benefits beyond education."
+               text="Discover personalized financial courses tailored to your goals, with engaging, gamified learning and expert insights. Earn rewards, badges, and exclusive perks while mastering finance from budgeting to advanced investing."
              />
           </div>
             

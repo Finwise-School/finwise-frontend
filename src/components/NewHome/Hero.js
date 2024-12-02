@@ -38,7 +38,7 @@ const LandingPage = () => {
 
     return (
         <div className="bg-[#070707] text-white">
-            <div className="relative h-[110vh] sm:h-[100vh] md:h-[130vh] text-center pt-10 pb-6">
+            <div id="home-container" className="relative h-[107vh] sm:h-[100vh] md:h-[130vh] text-center pt-10 pb-6">
                 <div className="absolute h-[100vh] bgaddsback inset-0"></div>
 
                 <div className="relative z-10 w-full h-auto flex justify-center mt-2">

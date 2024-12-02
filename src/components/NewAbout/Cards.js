@@ -9,7 +9,7 @@ const Card = ({ id, index,step, title, description, image }) => {
         "--index": index,
       }}
     >
-      <div className="bg-gradient-to-br from-[#0e0e0e] via-[#121212] to-[#2b095bd6] rounded-3xl border-gray-800 border-2   shadow-lg overflow-hidden flex flex-col sm:flex-row">
+      <div className="py-20 bg-gradient-to-br from-[#0e0e0e] via-[#121212] to-[#2b095bd6] rounded-3xl border-gray-800 border-2   shadow-lg overflow-hidden flex flex-col sm:flex-row">
         {/* <div className="w-full sm:w-2/5">
           {/* <img
             className="w-full h-full object-cover aspect-square sm:aspect-video"

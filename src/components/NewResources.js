@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import '../index.css'
+import '../assets/css/about.css'
 import budgetb1 from '../assets/images/newresource/1.jpg'
 import budgetb2 from '../assets/images/newresource/2.png'
 import budgetb3 from '../assets/images/newresource/3.png'
@@ -23,7 +24,7 @@ const Category = () => {
                             <img src={budgetb1} className='h-[250px]'></img>
                         </div>
                         <div className='bg-[#121212] rounded-r-3xl p-3 flex flex-col justify-center items-start'>
-                            <h1 className='font-semibold text-xl'>Budgeting</h1>
+                            <h1 className='font-semibold text-xl'>Budgeting &nbsp;&nbsp;&nbsp;&nbsp;</h1>
                         </div>
                     </div>
                 </Link>
@@ -44,8 +45,11 @@ const Category = () => {
                         <div>
                             <img src={budgetb3} className='h-[250px]'></img>
                         </div>
-                        <div className='bg-[#121212] rounded-r-3xl p-3 flex flex-col justify-center items-start'>
+                        {/* <div className='bg-[#121212] rounded-r-3xl p-3 flex flex-col justify-center items-start'>
                             <h1 className='font-semibold text-xl'>Taxation</h1>
+                        </div> */}
+                        <div className='bg-[#121212] rounded-r-3xl p-3 flex flex-col justify-center items-start'>
+                            <h1 className='font-semibold text-xl'>Taxation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
                         </div>
                     </div>
                 </Link>
@@ -92,13 +96,13 @@ const Ads = () => {
     return (
         <div className=''>
             <div class="mx-auto flex items-center justify-center">
-                <div class="text-white my-20 w-[96%] h-auto rounded-2xl bg-gradient-to-b from-[#8A3FF2] via-[#50248C] to-[#50248C]  p-[2px]">
+                <div class="bgaddsab border border-gray-500 text-white my-20 w-[96%] h-auto rounded-3xl bg-gradient-to-b from-[#8A3FF2] via-[#50248C] to-[#50248C]  p-[2px]">
                     <div className='bgresrcads h-[70vh]'>
                         <div className='p-12 w-[100%] sm:w-[60%] h-full flex flex-col md:justify-center items-start'>
                             <p className='text-[20px]'><span className='text-2xl font-bold'>100% OFF</span> on all guides</p>
-                            <h1 className='font-sora font-semibold text-5xl my-4'><span className='text-[25px] text-green-400'> Free for all</span> <br />
+                            <h1 className='font-sora font-semibold md:text-7xl text-5xl my-4'><span className='text-[25px] md:text-[46px] text-green-400'> Free for all</span> <br />
                                 Early members</h1>
-                            <Link to='/budgetBlue' className='bg-black px-8 py-4 rounded-xl mt-3'>Get now</Link>
+                            <Link to='/budgetBlue' className='bg-purple-500 px-8 py-2 rounded-xl mt-3'>Get now</Link>
                         </div>
 
                     </div>
@@ -199,9 +203,14 @@ const Newarr = () => {
 }
 
 const Guideofday = () => {
+    const currentDate = new Date().toLocaleDateString('en-GB', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric',
+      });
     return (
         <div className='my-10 flex flex-col justify-center items-center'>
-            <h1 className='text-2xl font-semibold '>Guide of Day - 29 Nov 2024 </h1>
+            <h1 className='text-2xl font-semibold '>Guide of Day - {currentDate} </h1>
             <div className='flex flex-wrap justify-center items-center'>
                 {/* cat-1 */}
                 <div className='flex flex-row  md:m-6 mt-2'>
@@ -228,9 +237,8 @@ const Guideofday = () => {
                     <div className='bg-gradient-to-tr from-green-500 to-violet-900 rounded-r-3xl p-1 '>
                         <div className='bg-[#171717] w-[250px] h-full rounded-r-3xl flex flex-col justify-center  items-start p-4'>
                             <p className='italic'>By finwise school</p>
-                            <h1 className='font-bold text-base md:text-lg mb-2'>Basics of Technical Analysis</h1>
-                            <p className='text-[12px] md:text-[18px]'>This is your go-to guide for understanding and applying technical analysis in
-                                financial markets.</p>
+                            <h1 className='font-bold text-base md:text-lg mb-2'>The Budgeting Blueprint</h1>
+                            <p className='text-[12px] md:text-[18px]'>This is a practical guide designed to help you master the art of budgeting and achieve financial freedom.</p>
                         </div>
                     </div>
                 </div>
@@ -244,9 +252,8 @@ const Guideofday = () => {
                     <div className='bg-gradient-to-tr from-green-500 to-violet-900 rounded-r-3xl p-1 '>
                         <div className='bg-[#171717] w-[250px] h-full rounded-r-3xl flex flex-col justify-center  items-start p-4'>
                             <p className='italic'>By finwise school</p>
-                            <h1 className='font-bold text-base md:text-lg mb-2'>Basics of Technical Analysis</h1>
-                            <p className='text-[12px] md:text-[18px]'>This is your go-to guide for understanding and applying technical analysis in
-                                financial markets.</p>
+                            <h1 className='font-bold text-base md:text-lg mb-2'>Magic of Moving Averages</h1>
+                            <p className='text-[12px] md:text-[18px]'></p>
                         </div>
                     </div>
                 </div>
