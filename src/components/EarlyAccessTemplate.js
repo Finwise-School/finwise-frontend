@@ -1,5 +1,5 @@
 import React from 'react';
-import phoneImage from '../assets/images/calltoaction.svg';
+import phoneImage from '../assets/images/calltoaction3.svg';
 import REAButton from './REAButton';
 
 const Calltoaction = () => {
@@ -25,7 +25,7 @@ const Calltoaction = () => {
           <img
             src={phoneImage}
             alt="Phone mockup"
-            className="w-64 md:w-70 lg:w-[250px]  rounded-md shadow-md hidden md:block"
+            className="w-64 md:w-70 lg:w-[250px]  rounded-md hidden md:block"
           />
         </div>
       </div>
