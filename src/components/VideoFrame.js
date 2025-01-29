@@ -3,7 +3,10 @@ import React from 'react';
 const VideoFrame = () => {
   const videoUrl = "https://youtu.be/r64mqNS8G58?si=HUlsqmTS1bh1ZYW6"; 
 
-  const videoId = videoUrl.split('v=')[1].split('&')[0];
+  // Extract the video ID from the URL
+  const videoId = videoUrl.includes("youtu.be")
+    ? videoUrl.split("youtu.be/")[1].split("?")[0]
+    : videoUrl.split("v=")[1]?.split("&")[0];
 
   return (
     <div className="p-3">
@@ -27,3 +30,4 @@ const VideoFrame = () => {
 };
 
 export default VideoFrame;
+
