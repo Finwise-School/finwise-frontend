@@ -1,7 +1,7 @@
 import React from 'react';
 
 const VideoFrame = () => {
-  const videoUrl = "https://www.youtube.com/watch?v=qi2yx_S4C_0"; 
+  const videoUrl = "https://youtu.be/r64mqNS8G58?si=HUlsqmTS1bh1ZYW6"; 
 
   const videoId = videoUrl.split('v=')[1].split('&')[0];
 
