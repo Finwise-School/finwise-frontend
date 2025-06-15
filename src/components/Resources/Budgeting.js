@@ -1,72 +1,25 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-const images =[
-    // {
-    //     imageSrc:require("../../assets/images/books/budget.png"),
-    //     name:"Da Vinci Code",
-    //      path:"/basics"
-    // },
-    // {
-    //     imageSrc:require("../../assets/images/books/analysis.png"),
-    //      name:"Basics of technical Analysis",
-    //      path:"/basics"
-    // },
-    // {
-    //     imageSrc:require("../../assets/images/books/book1.png"),
-    //      name:"Angels and Demons",
-    //      path:"/basics"
-    // },
-    // {
-    //     imageSrc:require("../../assets/images/books/butch.png"),
-    //      name:"TFIOS",
-    //      path:"/basics"
-    // },
-    {
-        imageSrc:require("../../assets/images/books/blueprint.jpg"),
-         name:"The Budgeting Blueprint",
-         path:"https://finwiseschool.gumroad.com/l/fwsbudgetboss"
-    },
-    // {
-    //     imageSrc:require("../../assets/images/books/guide2.png"),
-    //      name:"Kite Runner",
-    //      path:"/basics"
-    // },
-    // {
-    //     imageSrc:require("../../assets/images/books/guide3.png"),
-    //      name:"Castle in sky",
-    //      path:"/basics"
-    // },
-    // {
-    //     imageSrc:require("../../assets/images/books/guide1.png"),
-    //      name:"Immortals of Meluha",
-    //      path:"/basics"
-    // },
-]
+import React, { useEffect } from 'react';
 
-const Budgetings = () => {
+// Your budgeting page component
+const Budgeting = () => {
+  // Image, name, and path info (you can still use them if needed)
+  const imageSrc = require("../../assets/images/books/blueprint.jpg");
+  const name = "The Budgeting Blueprint";
+  const path = "https://finwiseschool.gumroad.com/l/fwsbudgetboss";
+
+  useEffect(() => {
+    // Redirect to the Gumroad product
+    window.location.href = path;
+  }, []);
+
   return (
-    <div className='p-[5%]'>
-    <h1 className="text-gray-200 text-5xl md:text-5xl font-bold mb-[8%] text-center">Budgeting</h1>
-   
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-[8%]">
-      {images.map((image, index) => (
-        <div key={index} className="m-0 p-0">
-          <Link to={image.path}>
-            <img
-              src={image.imageSrc}
-              alt={`Book ${index}`}
-              className="w-full h-[80%] mt-0 m-0"
-            />
-          </Link>
-          <h2 className="font-bold mt-4 mb-2 text-sm text-center text-gray-200">
-            {image.name}
-          </h2>
-        </div>
-      ))}
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <img src={imageSrc} alt={name} style={{ maxWidth: "300px" }} />
+      <h2>{name}</h2>
+      <p>Redirecting you to the budgeting product...</p>
+      <a href={path}>Click here if you are not redirected automatically.</a>
     </div>
-  </div>
+  );
+};
 
-  )
-}
-
-export default Budgetings
+export default Budgeting;
