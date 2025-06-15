@@ -61,10 +61,25 @@ const GuidesGrid = ({ guides }) => {
 // Book and guide data
 const bookList = [
   {
-    imageSrc: require("../assets/images/books/blueprint.jpg"),
-    author: "Finwise School",
-    title: "The Budgeting Blueprint",
-    path: "https://finwiseschool.gumroad.com/l/fwsbudgetboss",
+    import React from "react";
+
+const BookComponent = () => {
+  return (
+    <a 
+      href="https://finwiseschool.gumroad.com/l/fwsbudgetboss" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <img 
+        src={require("../assets/images/books/blueprint.jpg")} 
+        alt="The Budgeting Blueprint" 
+        style={{ cursor: "pointer", width: "100%" }}
+      />
+    </a>
+  );
+};
+
+export default BookComponent;
   },
   {
     imageSrc: require("../assets/images/books/Retirement.png"),
