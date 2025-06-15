@@ -9,7 +9,7 @@ const images =[
     {
         imageSrc:require("../../assets/images/books/analysis.png"),
          name:"Basics of technical Analysis",
-         path:"/basics"
+         path:"https://finwiseschool.gumroad.com/l/fwsbudgetboss"
     },
     {
         imageSrc:require("../../assets/images/books/book1.png"),
