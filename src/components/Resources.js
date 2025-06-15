@@ -114,11 +114,25 @@ export default BookComponent;
 ];
 
 const bookImages = [
-  {
-    imageSrc: require("../assets/images/books/blueprint.jpg"),
-    title: "Budgeting",
-    path: "https://finwiseschool.gumroad.com/l/fwsbudgetboss",
-  },
+  import React from "react";
+
+const BookComponent = () => {
+  return (
+    <a 
+      href="https://finwiseschool.gumroad.com/l/fwsbudgetboss" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <img 
+        src={require("../assets/images/books/blueprint.jpg")} 
+        alt="The Budgeting Blueprint" 
+        style={{ cursor: "pointer", width: "100%" }}
+      />
+    </a>
+  );
+};
+
+export default BookComponent;
   {
     imageSrc: require("../assets/images/books/cover.png"),
     title: "Stock Market",
