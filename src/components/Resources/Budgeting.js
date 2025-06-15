@@ -2,8 +2,7 @@ import React from 'react';
 
 const images = [
   {
-    imageSrc: require("../../assets/images/books/blueprint.jpg"),
-    name: "The Budgeting Blueprint",
+    
     path: "https://finwiseschool.gumroad.com/l/fwsbudgetboss"
   },
 ];
