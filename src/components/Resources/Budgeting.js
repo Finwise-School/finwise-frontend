@@ -1,25 +1,36 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-// Your budgeting page component
-const Budgeting = () => {
-  // Image, name, and path info (you can still use them if needed)
-  const imageSrc = require("../../assets/images/books/blueprint.jpg");
-  const name = "The Budgeting Blueprint";
-  const path = "https://finwiseschool.gumroad.com/l/fwsbudgetboss";
+const images = [
+  {
+    imageSrc: require("../../assets/images/books/blueprint.jpg"),
+    name: "The Budgeting Blueprint",
+    path: "https://finwiseschool.gumroad.com/l/fwsbudgetboss"
+  },
+];
 
-  useEffect(() => {
-    // Redirect to the Gumroad product
-    window.location.href = path;
-  }, []);
-
+const Budgetings = () => {
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <img src={imageSrc} alt={name} style={{ maxWidth: "300px" }} />
-      <h2>{name}</h2>
-      <p>Redirecting you to the budgeting product...</p>
-      <a href={path}>Click here if you are not redirected automatically.</a>
-    </div>
-  );
-};
+    <div className='p-[5%]'>
+      <h1 className="finwise-blue text-5xl md:text-5xl font-bold mb-[8%] text-center">
+        Budgeting
+      </h1>
 
-export default Budgeting;
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-[8%]">
+        {images.map((image, index) => (
+          <div key={index} className="m-0 p-0">
+            <a
+              href={image.path}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={image.imageSrc}
+                alt={image.name}
+                className="w-full h-[80%] mt-0 m-0"
+              />
+            </a>
+            <h2 className="font-bold mt-4 mb-2 text-sm text-center text-black">
+              {image.name}
+            </h2>
+          </div>
+        ))}
