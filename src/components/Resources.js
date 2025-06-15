@@ -64,7 +64,7 @@ const bookList = [
     imageSrc: require("../assets/images/books/blueprint.jpg"),
     author: "Finwise School",
     title: "The Budgeting Blueprint",
-    path: "/budgetBlue",
+    path: "https://finwiseschool.gumroad.com/l/fwsbudgetboss",
   },
   {
     imageSrc: require("../assets/images/books/Retirement.png"),
@@ -102,7 +102,7 @@ const bookImages = [
   {
     imageSrc: require("../assets/images/books/blueprint.jpg"),
     title: "Budgeting",
-    path: "/budgeting",
+    path: "https://finwiseschool.gumroad.com/l/fwsbudgetboss",
   },
   {
     imageSrc: require("../assets/images/books/cover.png"),
@@ -145,9 +145,8 @@ const guides = [
     imageSrc: require("../assets/images/books/guide2.png"),
     author: "By Finwise School",
     title: "The Budgeting Blueprint",
-    path: "/budgetBlue",
-    description:
-      "This is a practical guide designed to help you master the art of budgeting and achieve financial freedom.",
+    path: "https://finwiseschool.gumroad.com/l/fwsbudgetboss",
+    
   },
   {
     imageSrc: require("../assets/images/books/guide3.png"),
