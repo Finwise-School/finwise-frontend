@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import '../index.css'
 import '../assets/css/about.css'
 import budgetb1 from '../assets/images/newresource/1.jpg'
@@ -18,7 +18,7 @@ const Category = () => {
             <h1 className='text-3xl font-semibold my-6'>Browse by Category</h1>
             <div className='flex flex-wrap justify-start md:justify-center items-center'>
                 {/* cat-1 */}
-                <Link to="https://finwiseschool.gumroad.com/l/fwsbudgetboss">
+                <a href="https://finwiseschool.gumroad.com/l/fwsbudgetboss" target="_blank" rel="noopener noreferrer">
                     <div className='flex flex-row m-2'>
                         <div>
                             <img src={budgetb1} className='h-[250px]'></img>
@@ -27,7 +27,7 @@ const Category = () => {
                             <h1 className='font-semibold text-xl'>Budgeting &nbsp;&nbsp;&nbsp;&nbsp;</h1>
                         </div>
                     </div>
-                </Link>
+                </a>
                 {/* cat-1 */}
                 <Link to="/stock">
                     <div className='flex flex-row m-2'>
@@ -45,9 +45,6 @@ const Category = () => {
                         <div>
                             <img src={budgetb3} className='h-[250px]'></img>
                         </div>
-                        {/* <div className='bg-[#121212] rounded-r-3xl p-3 flex flex-col justify-center items-start'>
-                            <h1 className='font-semibold text-xl'>Taxation</h1>
-                        </div> */}
                         <div className='bg-[#121212] rounded-r-3xl p-3 flex flex-col justify-center items-start'>
                             <h1 className='font-semibold text-xl'>Taxation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
                         </div>
@@ -102,7 +99,7 @@ const Ads = () => {
                             <p className='text-[20px]'><span className='text-2xl font-bold'>100% OFF</span> on all guides</p>
                             <h1 className='font-sora font-semibold md:text-7xl text-5xl my-4'><span className='text-[25px] md:text-[46px] text-green-400'> Free for all</span> <br />
                                 Early members</h1>
-                            <Link to='/budgetBlue' className='bg-purple-500 px-8 py-2 rounded-xl mt-3'>Get now</Link>
+                            <a href='https://finwiseschool.gumroad.com/l/fwsbudgetboss' target="_blank" rel="noopener noreferrer" className='bg-purple-500 px-8 py-2 rounded-xl mt-3'>Get now</a>
                         </div>
 
                     </div>
@@ -119,7 +116,7 @@ const Newarr = () => {
             <h1 className='text-2xl font-semibold '>New Arrivals</h1>
             <div className='flex flex-wrap justify-center items-center'>
                 {/* cat-1 */}
-                <Link to="https://finwiseschool.gumroad.com/l/fwsbudgetboss">
+                <a href="https://finwiseschool.gumroad.com/l/fwsbudgetboss" target="_blank" rel="noopener noreferrer">
                     <div className='flex flex-col m-2'>
                         <div className='bg-[#121212] rounded-t-xl pt-2'>
                             <img src={budgetb1} className='w-[150px] h-[200px] md:w-[250px] md:h-[300px]'></img>
@@ -130,7 +127,7 @@ const Newarr = () => {
                             <p>The Budgeting Blueprint</p>
                         </div>
                     </div>
-                </Link>
+                </a>
                 {/* cat-1 */}
                 <Link to="/comingSoon">
                     <div className='flex flex-col m-2'>
@@ -229,11 +226,11 @@ const Guideofday = () => {
                 </div>
                 {/* cat-1 */}
                 <div className='flex flex-row md:m-6 mt-2'>
-                    <Link to="https://finwiseschool.gumroad.com/l/fwsbudgetboss">
+                    <a href="https://finwiseschool.gumroad.com/l/fwsbudgetboss" target="_blank" rel="noopener noreferrer">
                         <div>
                             <img src={budgetb1} className='w-[250px]'></img>
                         </div>
-                    </Link>
+                    </a>
                     <div className='bg-gradient-to-tr from-green-500 to-violet-900 rounded-r-3xl p-1 '>
                         <div className='bg-[#171717] w-[250px] h-full rounded-r-3xl flex flex-col justify-center  items-start p-4'>
                             <p className='italic'>By finwise school</p>
@@ -274,7 +271,7 @@ const Main = () => {
                                 <p className='text-[20px]'>Free Guide to Jump-Start Your Financial Journey</p>
                                 <h1 className='font-sora font-semibold text-3xl my-4'>Take Control of Your Finances in Just 2 Weeks</h1>
                                 <p>Get started with our free, expert-created guide designed to help you build strong financial habits and achieve your goals.</p>
-                                <button>Get</button>
+                                <a href='https://finwiseschool.gumroad.com/l/fwsbudgetboss' target="_blank" rel="noopener noreferrer" className='bg-purple-500 px-8 py-2 rounded-xl mt-3'>Get</a>
                             </div>
                         </div>
 
