@@ -18,7 +18,7 @@ const Category = () => {
             <h1 className='text-3xl font-semibold my-6'>Browse by Category</h1>
             <div className='flex flex-wrap justify-start md:justify-center items-center'>
                 {/* cat-1 */}
-                <Link to="/budgeting">
+                <Link to="https://finwiseschool.gumroad.com/l/fwsbudgetboss">
                     <div className='flex flex-row m-2'>
                         <div>
                             <img src={budgetb1} className='h-[250px]'></img>
@@ -119,7 +119,7 @@ const Newarr = () => {
             <h1 className='text-2xl font-semibold '>New Arrivals</h1>
             <div className='flex flex-wrap justify-center items-center'>
                 {/* cat-1 */}
-                <Link to="/budgetBlue">
+                <Link to="https://finwiseschool.gumroad.com/l/fwsbudgetboss">
                     <div className='flex flex-col m-2'>
                         <div className='bg-[#121212] rounded-t-xl pt-2'>
                             <img src={budgetb1} className='w-[150px] h-[200px] md:w-[250px] md:h-[300px]'></img>
@@ -229,7 +229,7 @@ const Guideofday = () => {
                 </div>
                 {/* cat-1 */}
                 <div className='flex flex-row md:m-6 mt-2'>
-                    <Link to="/budgetBlue">
+                    <Link to="https://finwiseschool.gumroad.com/l/fwsbudgetboss">
                         <div>
                             <img src={budgetb1} className='w-[250px]'></img>
                         </div>
