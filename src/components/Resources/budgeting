@@ -1,14 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Redirecting...</title>
-  <script>
-    // Immediately redirect to your target link
+import React, { useEffect } from 'react';
+
+const RedirectPage = () => {
+  useEffect(() => {
+    // Redirect on component mount
     window.location.replace('https://finwiseschool.gumroad.com/l/fwsbudgetboss');
-  </script>
-</head>
-<body>
-  Redirecting... If you are not redirected, <a href="https://finwiseschool.gumroad.com/l/fwsbudgetboss">click here</a>.
-</body>
-</html>
+  }, []);
+
+  return (
+    <div>
+      Redirecting... If you are not redirected,{' '}
+      <a href="https://finwiseschool.gumroad.com/l/fwsbudgetboss">click here</a>.
+    </div>
+  );
+};
+
+export default RedirectPage;
