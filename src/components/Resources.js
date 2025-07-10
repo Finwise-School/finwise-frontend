@@ -225,4 +225,13 @@ const Books = () => {
         </div>
       </div>
 
-     
+      {/* Guides Section */}
+      <div className="mt-10 px-6">
+        <h2 className="text-xl font-bold text-center mb-6">Free Resources</h2>
+        <GuidesGrid guides={guides} />
+      </div>
+    </div>
+  );
+};
+
+export default Books;
