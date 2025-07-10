@@ -1,12 +1,13 @@
-// EarlyAccessRedirect.jsx
 import { useEffect } from 'react';
 
 const EarlyAccessRedirect = () => {
   useEffect(() => {
-    window.location.href = 'https://forms.gle/wEWKCcHjYmEtoAQw9';
+    // Replace current route in history to prevent back-loop
+    window.location.replace('https://forms.gle/wEWKCcHjYmEtoAQw9');
   }, []);
 
-  return null;               // nothing renders — user is instantly redirected
+  return null;
 };
 
 export default EarlyAccessRedirect;
+
