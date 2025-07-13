@@ -216,7 +216,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col lg:flex-row justify-between items-center mt-4">
             <p className="text-gray-400 text-center lg:text-left order-2 lg:order-1 mt-4 lg:mt-0 w-full lg:w-auto">
-              &copy; 2024 Finwise School All Rights Reserved
+              &copy; 2025 Finwise School All Rights Reserved
             </p>
 
             <div className="flex flex-col lg:flex-row lg:space-x-4 text-center lg:text-left space-y-2 lg:space-y-0 order-1 lg:order-2">
