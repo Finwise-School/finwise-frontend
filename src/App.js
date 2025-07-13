@@ -35,6 +35,7 @@ import BlogsWriting from "./components/BlogsWriting";
 import QuotesHeader from "./components/QuotesHeader";
 import UnderConst from "./components/UnderDevelopement";
 import PrivacyNotice from "./components/Homepage/Footer Files/privacyNotice";
+import TermsAndConditions from "./components/Homepage/Footer Files/TermsAndConditions";
 import ADMINDASHBOARD from "./components/ADMINDASHBOARD";
 import Errors from "./components/error";
 import Books from "./components/Resources";
@@ -80,6 +81,7 @@ const App = () => {
           <Header />
           <Routes>
             <Route path="/privacy" element={<PrivacyNotice baseURL={baseURL} />} />
+            <Route path="/termsandconditions"   element={<TermsAndConditions />} />
             <Route path="/early-access" element={<EarlyAccess baseURL={baseURL} />} />
             <Route path="/" element={<HomePage baseURL={baseURL} />} />
             <Route path="/contact" element={<Contact baseURL={baseURL} />} />
