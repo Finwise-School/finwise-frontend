@@ -224,7 +224,7 @@ const Footer = () => {
                 <Link to="/privacy">Privacy Notice</Link>
               </p>
               <p className="text-gray-400">
-                <Link to="#">Terms and Conditions</Link>
+                <Link to="/termsandconditions">Terms and Conditions</Link>
               </p>
             </div>
           </div>
