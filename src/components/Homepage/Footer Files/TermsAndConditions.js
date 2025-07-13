@@ -2,10 +2,12 @@ import React from "react";
 
 const TermsAndConditions = () => {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-10 text-gray-800">
-      <h1 className="text-3xl font-bold mb-6">📜 Terms & Conditions</h1>
-      <p className="mb-2">Finwise School – Beta App</p>
-      <p className="mb-6">Effective Date: 01/07/2025<br />Version: Beta 1.0</p>
+    <div className="bg-gray-900 text-white px-6 py-10 space-y-8 leading-relaxed">
+      <h1 className="text-3xl font-bold text-yellow-400">📜 Terms & Conditions</h1>
+      <p><strong>Finwise School – Beta App</strong><br />
+        <strong>Effective Date:</strong> 01/07/2025<br />
+        <strong>Version:</strong> Beta 1.0</p>
+
 
       <section className="mb-8">
         <h2 className="text-xl font-semibold mb-2">1. Introduction</h2>
